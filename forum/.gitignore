@@ -1,0 +1,4 @@
+gnore
+*
+# .gitignore 는 추가
+!.gitignore
