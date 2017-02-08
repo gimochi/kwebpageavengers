@@ -1,17 +1,18 @@
+div{
+	border : 1px solid black; /* div구조의 이해를 위해... 컴파일시에만 확인 */
+}
 /*------------------------------------------*/
 /*	     HOME BODY
 /*------------------------------------------*/
 #body_home_userinfo{
 	width:92%;
+	margin-top: -6px;
 	margin-left:4%;
-	height:22.5px;
-	border:1px solid black;
-	padding : 10px;
+	padding : 3px;
 	font-size : 15px;
 }
 
 .body_home_title{
-	border: 1px solid black;
 	padding : 3px;
 }
 
@@ -21,7 +22,6 @@
 	margin-left:4%;
 	margin-top:10px;
 	height:600px;
-	border:1px solid black;
 
 }
 
@@ -36,7 +36,6 @@
 #body_home_jeong,#body_home_jun{
 	width:100%;
 	height:48%;
-	border:1px solid black;
 }
 
 #body_home_jun{
@@ -53,7 +52,124 @@
 #body_home_notification{
 	padding:10px;
 	margin-top: 635px;
+	margin-bottom: 30px;
 	margin-left:4%;
 	width:92%;
-	border: 1px solid black;
+}
+
+
+/*------------------------------------------*/
+/*	     FORUM BODY
+/*------------------------------------------*/
+
+#body_forum_left_container{
+	position:absolute;
+	margin-left: 0.8%;
+	width:17%;
+}
+
+#body_forum_left_name{
+	padding: 80px 0px;
+	width:100%;
+	text-align: center;
+}
+
+.body_forum_menu{
+	width: 100%;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 3px 0px;
+}
+
+#body_forum_right_container{
+	position: absolute;
+	width:78%;
+	height:600px;
+	margin-left: 20%;
+}
+
+#body_forum_right_name{
+	padding : 4px;
+	font-size: 18px;
+}
+
+#body_forum_info{
+	clear:both;
+	margin-top: 30px;
+	width:100%;
+}
+
+.body_forum_info_float{
+	position:absolute;
+	padding: 4px 0px;
+	font-size:15px;
+	text-align: center;
+}
+
+#body_forum_info_space{
+	position:static;
+	float: left;
+	visibility: hidden;
+}
+
+#body_forum_gongji_regdate{
+	right:88%;
+	width:11.9%;
+}
+#body_forum_gongji_duedate{
+	right:76%;
+	width:12%;
+}
+#body_forum_gongji_title{
+	right:22%;
+	width:54%;
+}
+#body_forum_gongji_writer{
+	right:10%;
+	width:12%;
+}
+#body_forum_gongji_hits{
+	right:0px;
+	width:10%;
+}
+
+#body_forum_number_container{
+	clear:both;
+	width: 294px;
+	height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+
+.body_forum_number{
+	float: left;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+}
+
+#body_forum_left_shift{
+	margin-right:15px;
+	width:30px;
+}
+
+#body_forum_left_shift2{
+	margin-right:3px;
+	width:40px;
+}
+
+#body_forum_right_shift{
+	margin-left:15px;
+	width:30px;
+}
+
+#body_forum_right_shift2{
+	margin-left:3px;
+	width:40px;
+}
+
+#body_forum_bottom_space{
+	width:100%;
+	height:600px;
 }
