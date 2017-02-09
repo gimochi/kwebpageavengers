@@ -31,8 +31,9 @@ var BodyGallery = React.createClass ({
         /*위 카테고리에 추가해서 쓰면됨.*/
 
         return(
-            <div>
-                <div id="body_gallery_category">
+            <div id="body_gallery">
+            
+                <div id="body_gallery_category" className="sidebar">
                     <ul>
                         <li className="postreport"><a href="#">Total</a></li>
                     </ul>
@@ -45,30 +46,31 @@ var BodyGallery = React.createClass ({
                             );
                         })}
                     </ul>
-                </div>  
-                <div id="body_gallery_right_container">
-                    <div id="body_gallery_name">
+                </div>
+                <div id="body_gallery_right_container" className="container">
+                    <div id="body_gallery_name" className="gallery_title">
                         사진첩
                     </div>
-
-                    {/*TODO : 아래 코드를 반복문으로 바꿔서 집어넣어야함.*/}
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
+                    <div className="gallery_content">
+                        {/*TODO : 아래 코드를 반복문으로 바꿔서 집어넣어야함.*/}
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
+                        <div className="body_gallery_sajin">
+                            사-진
+                        </div>
                     </div>
                 </div>
             </div>
