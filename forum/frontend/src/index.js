@@ -68,6 +68,6 @@ $('#index_gallery').click(function(){
 	root_gallery();
 });
 
-root_gallery();
+root_forum_gongji();
 
 //이파일을 webpack을 통해서 컴파일 해서 만든 bundle.js가 script로 쓰이는 구조.	
