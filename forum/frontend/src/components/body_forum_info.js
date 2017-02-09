@@ -1,6 +1,8 @@
 import React from 'react';
 import BodyForumGongji from './body_forum_gongji'
 
+
+
 var BodyForumInfo = React.createClass ({
     render: function () {
         /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보 */

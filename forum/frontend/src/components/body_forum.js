@@ -8,7 +8,7 @@ var BodyForum = React.createClass ({
     getInitialState() {
         return {
           fnum : 1,             /* 페이지 수, 초기값은 1 */
-          STATE : Number(this.props.STATE),           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보 */
+          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보 */
           name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판"]
         };
      },
@@ -31,16 +31,16 @@ var BodyForum = React.createClass ({
                         <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
                             공지사항
                         </div>
-                        <div className="body_forum_menu" id="body_forum_chamgo" onClick={this.state_change.bind(this,1)}>
+                        <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
                             준회원 스터디
                         </div>
                         <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
                             정회원 스터디
                         </div>
-                        <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,3)}>
+                        <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
                             자유 게시판
                         </div>
-                        <div className="body_forum_menu" id="body_forum_hongbo" onClick={this.state_change.bind(this,4)}>
+                        <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
                             정보 게시판
                         </div>
 
