@@ -24,6 +24,7 @@ header .container .top-logo{
 .navbar {
 	margin-bottom: 100;
 	background: #f84;
+    z-index:100;
     border-bottom: 1px solid #f2f2f2 !important;
 	border: none;
 	border-radius: 0;
@@ -113,6 +114,14 @@ a.navbar-brand {
 }
 .navbar-default .navbar-nav > li.dropdown ul.dropdown-menu > li > a{
     color:black;
+}
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
 }
 
 body{
