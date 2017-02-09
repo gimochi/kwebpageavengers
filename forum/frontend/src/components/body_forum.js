@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BodyForumGongji from './body_forum_gongji';
 import BodyForumInfo from './body_forum_info';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import BodyForumGongji from './body_forum_gongji'
+import BodyForumPannel from './body_forum_pannel'
 
 
 
@@ -7,42 +7,22 @@ var BodyForumInfo = React.createClass ({
     render: function () {
         /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보 */
         if(this.props.STATE == 0){  // 공지
-            var idbox = [ "body_forum_info_space", "body_forum_gongji_regdate", "body_forum_gongji_duedate", 
-                        "body_forum_gongji_title",  "body_forum_gongji_writer", "body_forum_gongji_hits" ];
+            var idbox = [ "body_forum_info_space", "body_forum_gongji_regdate",
+                        "body_forum_gongji_duedate", "body_forum_gongji_title",
+                        "body_forum_gongji_writer", "body_forum_gongji_hits"];
+            var content = ["등록일자", "마감일자", "제목", "작성자", "조회수"];
             return(
-                <BodyForumGongji content={idbox} />
+                <BodyForumPannel idbox={idbox} content={content} />
             );
         }
-        else if(this.props.STATE == 1){
-
+        else if(this.props.STATE == 1 || this.props.STATE == 2 || this.props.STATE == 3
+            || this.props.STATE == 4){
+            var idbox = [ "body_forum_info_space", "body_forum_not_gongji_post_number",
+                        "body_forum_not_gongji_title", "body_forum_not_gongji_regdate",
+                        "body_forum_not_gongji_writer", "body_forum_not_gongji_hits" ];
+            var content = ["번호", "제목", "등록일자", "작성자", "조회수"];
             return(
-                <div>
-                    1
-                </div>
-            );
-        }
-        else if(this.props.STATE == 2){
-
-            return(
-                <div>
-                    2
-                </div> 
-            );
-        }
-        else if(this.props.STATE == 3){
-
-            return(
-                <div>
-                    3
-                </div>
-            );
-        }
-        else if(this.props.STATE == 4){
-
-            return(
-                <div>
-                    4
-                </div>
+                <BodyForumPannel idbox={idbox} content={content} />
             );
         }
         else{
