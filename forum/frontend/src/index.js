@@ -1,7 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import BodyHome from './components/body_home'
-import BodyForum from './components/body_forum'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import BodyHome from './components/body_home';
+import BodyForum from './components/body_forum';
+import BodyGallery from './components/body_gallery';
 
 const rootElement = document.getElementById('root');
 
@@ -34,6 +35,10 @@ function root_forum_information(){
 	$('#body_forum_information').click();
 }	// 정보게시판
 
+function root_gallery(){
+	ReactDOM.render(<BodyGallery />, rootElement);
+}	// 사진첩
+
 
 $('#index_home').click(function(){
 	root_home();
@@ -59,6 +64,10 @@ $('#index_information').click(function(){
 	root_forum_information();
 });
 
-root_forum_gongji();
+$('#index_gallery').click(function(){
+	root_gallery();
+});
+
+root_gallery();
 
 //이파일을 webpack을 통해서 컴파일 해서 만든 bundle.js가 script로 쓰이는 구조.	
