@@ -48,87 +48,87 @@ var BodyGallery = React.createClass ({
                         </ul>
                     </div>
                     <div id="body_gallery_content" className="col-sm-9 container">
-                        <div id="body_gallery_name" className="gallery_title row">
-                            사진첩
+                        <div id="body_gallery_name" className="gallery_title row ">
+                            <p className="text-center">사진첩</p>
                         </div>
                         <div className="gallery row">
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        아
-                                    </div>
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
+                                    <div className="sajin_title text-center">
+                                        아
+                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        인생
-                                    </div>
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
+                                    <div className="sajin_title text-center">
+                                    인생
+                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        망했다
-                                    </div>
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
+                                    <div className="sajin_title text-center">
+                                        망했다
+                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        Ah
-                                    </div>
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/5.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
+                                    <div className="sajin_title text-center">
+                                        Ah
+                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
                                         Life
                                     </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
-                                </a>
-                            </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
-                                <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
+                                    <div className="sajin_title text-center">
                                         Is
                                     </div>
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
                                 <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        Doomed
-                                    </div>
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
                                     </div>
+                                    <div className="sajin_title text-center">
+                                        Doomed
+                                    </div>
                                 </a>
                             </div>
-                            <div className="gallery_sajin col-lg-2 col-md-3 col-sm-4 col-xs-6">
-                                <a href="#" className="thumbnail">
-                                    <div className="sajin_title">
-                                        망했따
-                                    </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail text-center">
                                     <div className="sajin_image">
                                         <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title">
+                                        망했따
                                     </div>
                                 </a>
                             </div>
