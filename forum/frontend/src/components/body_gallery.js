@@ -31,44 +31,108 @@ var BodyGallery = React.createClass ({
         /*위 카테고리에 추가해서 쓰면됨.*/
 
         return(
-            <div>
-                <div id="body_gallery_category">
-                    <ul>
-                        <li className="postreport"><a href="#">Total</a></li>
-                    </ul>
-                    <ul>
-                        {categoryData.map((category, i) => {
-                            return(
-                                <li className="postreport">
-                                    <a href="#"> {category.name} <span>({category.num})</span></a>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>  
-                <div id="body_gallery_right_container">
-                    <div id="body_gallery_name">
-                        사진첩
+            <div id="body_gallery" className="container">
+                <div className="body_gallery_main row">
+                    <div id="body_gallery_category" className="sidebar col-sm-3">
+                        <ul className="list-group">
+                            <li className="postreport list-group-item"><a href="#">Total</a></li>
+                        </ul>
+                        <ul className="list-group">
+                            {categoryData.map((category, i) => {
+                                return(
+                                    <li className="postreport list-group-item">
+                                        <a href="#">{category.name}</a><span className="badge">{category.num}</span>
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
-
-                    {/*TODO : 아래 코드를 반복문으로 바꿔서 집어넣어야함.*/}
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
-                    </div>
-                    <div className="body_gallery_sajin">
-                        사-진
+                    <div id="body_gallery_content" className="col-sm-9 container">
+                        <div id="body_gallery_name" className="gallery_title row ">
+                            <p className="text-center">사진첩</p>
+                        </div>
+                        <div className="gallery row">
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        아
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                    인생
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        망했다
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/5.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        Ah
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        Life
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        Is
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title text-center">
+                                        Doomed
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                                <a href="#" className="thumbnail text-center">
+                                    <div className="sajin_image">
+                                        <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
+                                    </div>
+                                    <div className="sajin_title">
+                                        망했따
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

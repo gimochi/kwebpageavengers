@@ -14,6 +14,8 @@ frontend 에서 리액트 등등 이용해서 만든후 test 할경우에는  fr
 
 localhost:7777에서 확인할수있음
 
+(모듈 없다고하면 npm install 하면 모듈 깔림)
+
 테스트후 문제없으면 npm run build 하면  backend/public 에 bundle.js 로 리액트가 컴파일된 파일이 생성됨
 
 
