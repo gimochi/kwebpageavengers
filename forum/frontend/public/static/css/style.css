@@ -4,13 +4,15 @@
 
 
 div{
-	border : 1px solid black; /* div구조의 이해를 위해... 컴파일시에만 확인 */
+//	border : 1px solid black; /* div구조의 이해를 위해... 컴파일시에만 확인 */
 }
 
 hr{
     margin-bottom: 10px !important;
     margin-top: 10px !important;
 }
+
+
 /*------------------------------------------*/
 /*	     HOME BODY
 /*------------------------------------------*/
@@ -248,6 +250,10 @@ hr{
 }
 .gallery_sajin .sajin_image img{
 	position:absolute;
+}
+
+#body_gallery .list-group-item{
+	padding:5px 5px;
 }
 /*
 @media (max-width: 768px) { 

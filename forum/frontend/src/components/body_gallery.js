@@ -33,21 +33,21 @@ var BodyGallery = React.createClass ({
         return(
             <div id="body_gallery" className="container">
                 <div className="body_gallery_main row">
-                    <div id="body_gallery_category" className="sidebar col-sm-2">
-                        <ul>
-                            <li className="postreport"><a href="#">Total</a></li>
+                    <div id="body_gallery_category" className="sidebar col-sm-3">
+                        <ul className="list-group">
+                            <li className="postreport list-group-item"><a href="#">Total</a></li>
                         </ul>
-                        <ul>
+                        <ul className="list-group">
                             {categoryData.map((category, i) => {
                                 return(
-                                    <li className="postreport">
-                                        <a href="#"> {category.name} <span>({category.num})</span></a>
+                                    <li className="postreport list-group-item">
+                                        <a href="#">{category.name}</a><span className="badge">{category.num}</span>
                                     </li>
                                 );
                             })}
                         </ul>
                     </div>
-                    <div id="body_gallery_content" className="col-sm-10 container">
+                    <div id="body_gallery_content" className="col-sm-9 container">
                         <div id="body_gallery_name" className="gallery_title row">
                             사진첩
                         </div>
