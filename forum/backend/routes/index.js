@@ -1,14 +1,13 @@
 var express = require('express');
+var board = require('./board');
+var users = require('./users');
 var router = express.Router();
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
 
-router.get('/', function (req, res, next) {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'))
-});
+router.use('/board', board);
+router.use('/users', users);
+
+
 
 
 module.exports = router;
