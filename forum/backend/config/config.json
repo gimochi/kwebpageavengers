@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "root",
+    "password": "zpdldnpqrhksflwk!@#",
+    "database": "kweb",
+    "host": "52.33.55.145",
+    "port": 3306,
+    "dialect": "mariadb",
+    "pool": { "max": 5, "min": 0, "idle": 10000 }
+  }
+}
