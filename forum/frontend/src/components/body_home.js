@@ -48,6 +48,7 @@ var BodyHome = React.createClass ({
                     </div>
                 </div> {/* 알림 */}
 
+
             </div>
         );
     }
