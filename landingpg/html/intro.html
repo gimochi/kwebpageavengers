@@ -7,11 +7,13 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/landingpg.css">
+    <!-- 윤진 추가 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Demo styles -->
     <style>
     html, body {
-    	
         position: relative;
         height: 100%;
     }
@@ -30,7 +32,6 @@
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -44,40 +45,353 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+        /*윤진 추가*/
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-content: center;
+        align-content: center;
+    }
+    /*이거 왜 css 파일에 분리 안되냐*/
+    a:link { color: #fff; text-decoration: none;}
+    u>a:hover { color: crimson; text-decoration: none;}
+    .login-btn{
+        background-color: #FF9000;
+        color: #fff;
     }
     </style>
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/landingpg.js"></script>
 </head>
 <body>
-	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide intro-kweb-img" data-class ="KWEB">
+                <div>
+                    <img id = "kweblogo_kweb" class = "kweblogo" src="../img/kweblogo_kweb_final.svg">
+                    <img id = "kweblogo_hexagon" class = "kweblogo" src="../img/kweblogo_hexagon_final.svg">
+                    <img id = "kweblogo_D" class = "kweblogo" src="../img/kweblogo_D_final.svg">
+                </div>
+                    <div id = "kwebchar">
+                        <span >KOREA UNIVERSITY WEBMASTER</span>
+                    </div>
+            </div>
+            <div class="swiper-slide intro-history-img" data-class ="HISTORY">
+                <div class="intro-titlebox HISTORY">
+                    HISTORY
+                </div>
+                <div class="intro-titlebox HISTORY">
+                    <hr class="intro-titleline HISTORY">
+                </div>
+                <div class="intro-content-box history-font">
+                    <span class="intro-import">K</span>orea University <span class="intro-import">WEB</span>master<br>
+                    <br>
+                    KWEB은 1998년 설립된 고려대학교 정보대학 컴퓨터학과 소속 웹개발 동아리입니다<br>
+                    &nbsp;<br>
+                    학기마다 세미나와 행사들을 진행하고
+                    다양한 스터디를 통해 웹을 공부합니다<br>
+                    <br>
+                    가족같은 분위기에서 웹을 배우고 제작하고 싶은<br>
+                    그 누구라도 환영합니다
+                </div>
+            </div>
+            <div class="swiper-slide intro-bg" data-class ="ACTIVITY">
+                <div class="intro-titlebox">
+                    ACTIVITY
+                </div>
+                <div class="intro-titlebox">
+                    <hr class="intro-titleline">
+                </div>
+                <div class="activity-flex">
+                    <div id="activity-01" class="activity-box intro-img01">
+                        <div class="activity-box-blur-wrapper">
+                            <div class="activity-box-blur intro-img01"></div>
+                        </div>
+                        <div class="activity-box-text font-midtitle bye">
+                            WEB<br>STUDY
+                        </div>
+                        <div class="activity-box-overlay overlay">
+                            <div class="activity-blur-content-1"><font class="font-midtitle">다양한 스터디</font></div>
+                            <font class="intro-font-mid">  
+                                <div class="activity-blur-content-2 blur-ht">
+                                    <div class="blur-item" style="text-align: right">
+                                        HTML/CSS<br>
+                                        Javascript<br>
+                                        Angular<br>
+                                        Django
+                                    </div>
+                                    <div class="blur-item">
+                                        Database<br>
+                                        Node.js<br>
+                                        EXPRESS<br>
+                                        MariaDB
+                                    </div>
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+                    <div id="activity-02" class="activity-box intro-img02">
+                        <div class="activity-box-blur-wrapper">
+                            <div class="activity-box-blur intro-blur-img02"></div>
+                        </div>
+                        <div class="activity-box-text font-midtitle bye">
+                            JOINT<br>SEMINA
+                        </div>
+                        <div class="activity-box-overlay overlay">
+                            <div class="activity-blur-content-1"><font class="font-midtitle">연합 세미나</font></div>   
+                            <font class="intro-font-mid">
+                                <div class="activity-blur-content-2">
+                                    서울여대와 함께<br>
+                                    진행하는<br>
+                                    연합 웹 세미나<br>
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+                    <div id="activity-03" class="activity-box intro-img03">
+                        <div class="activity-box-blur-wrapper">
+                            <div class="activity-box-blur intro-blur-img03"></div>
+                        </div>
+                        <div class="activity-box-text font-midtitle bye">
+                            HARMONY<br>DAY
+                        </div>
+                        <div class="activity-box-overlay overlay">
+                            <div class="activity-blur-content-1"><font class="font-midtitle">화합의 날</font></div>   
+                            <font class="intro-font-mid">
+                                <div class="activity-blur-content-2">
+                                    96학번부터<br>
+                                    16학번까지<br>
+                                    선배들과의 화합
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+                    <div id="activity-04" class="activity-box intro-img04">
+                        <div class="activity-box-blur-wrapper">
+                            <div class="activity-box-blur intro-blur-img04"></div>
+                        </div>
+                        <div class="activity-box-text font-midtitle bye">
+                            PARTNERSHIP
+                        </div>
+                        <div class="activity-box-overlay overlay">
+                            <div class="activity-blur-content-1"><font class="font-midtitle">파트너쉽</font></div>   
+                            <font class="intro-font-mid">
+                                <div class="activity-blur-content-2">
+                                    NAVER D2<br>
+                                    YONG9 BEER
+                                </div>
+                            </font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide intro-bg" data-class ="ACHV.">
+                <div class="intro-titlebox">
+                    ACHEIVEMENT
+                </div>
+                <div class="intro-titlebox">
+                    <hr class="intro-titleline">
+                </div>
+                <div id="carousel-example-generic" class="carousel slide intro-content-box" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators intro-circle-color">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="../img/acheive_01.png" alt="http://cs.korea.ac.kr/">
+                      <div class="carousel-caption">
+                        <h4 class="intro-font-color">고려대 컴퓨터학과 홈페이지</h4>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/acheive_02.png" alt="http://klue.kr/">
+                      <div class="carousel-caption">
+                        <h4 class="intro-font-color">강의평가 사이트 KLUE</h4>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/acheive_03.png" alt="http://psy.korea.ac.kr/psy/index.do">
+                      <div class="carousel-caption">
+                        <h4 class="intro-font-color">고려대 심리학과 홈페이지</h4>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/acheive_04.png" alt="http://www.kumentalfitness.org/">
+                      <div class="carousel-caption">
+                        <h4 class="intro-font-color">KU Mental Fitness 홈페이지</h4>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/acheive_05.png" alt="http://www.coopera.kr/restaurant.asp">
+                      <div class="carousel-caption">
+                        <h4 class="intro-font-color">COOPERA 홈페이지</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+            <div class="swiper-slide intro-contact-img" data-class ="CONTACTUS">
+                <div class="intro-titlebox">
+                    CONTACT US
+                </div>
+                <div class="intro-titlebox">
+                    <hr class="intro-titleline">
+                </div>
+                <div class="contact-box">
+                    <p class="intro-font-big">KWEB Forum</p>
+                    <div class="contact-flex">
+                        <a href="/" class="f-btn f-btn-primary page-scroll" data-toggle="modal" data-target="#login-modal">로그인</a>
+                        <a href="/" class="f-btn f-btn-primary page-scroll" data-toggle="modal" data-target="#signup-modal">회원가입</a>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <a href="http://kr.battle.net/heroes/ko/" class="l-btn page-scroll sr-button">가입신청</a>
+                    </div>
+                    <p><font class="intro-font-big">회장</font> &nbsp;&nbsp;<span class="font-name">배민근&nbsp;&nbsp;chung1685@gmail.com</span></p>
+                    <p><font class="intro-font-big">부회장</font> &nbsp;&nbsp;<span class="font-name">정예주&nbsp;&nbsp;chung1685@gmail.com</span></p>
+                    <br>
+                    <footer class="footer-wrapper intro-font-small">
+                        <div class="intro-titlebox">
+                            <hr class="intro-titleline footer-line">
+                        </div>
+                        COPYRIGHT © 2017 KWEB All Rights Reserved.<br>
+                        Created by KWEB.
+                    </footer>
+                </div>
+            </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
+    <!-- login Modal -->
+    <div class="modal fade" id="login-modal" role="dialog">
+        <div class="modal-dialog">
 
-    <!-- Swiper JS -->
-    <script src="../js/swiper.min.js"></script>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="color:#FF9000; font-weight: bold;">로그인</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="usrname">아이디</label>
+                            <input type="text" class="form-control" id="usrname" placeholder="아이디를 입력하세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw">비밀번호</label>
+                            <input type="text" class="form-control" id="psw" placeholder="비밀번호를 입력하세요">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-block login-btn">로그인</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sign up Modal -->
+    <div id="signup-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 style="color:#FF9000; font-weight: bold;">회원 가입</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="id">아이디</label>
+                        <input type="text" class="form-control" id="signup-id" placeholder="아이디를 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" class="form-control" id="signup-pw" placeholder="비밀번호를 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwcheck">비밀번호 확인</label>
+                        <input type="password" class="form-control" id="signup-pwcheck" placeholder="비밀번호를 한번 더 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" class="form-control" id="signup-name" placeholder="이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="num">학번</label>
+                        <input type="text" class="form-control" id="signup-num" placeholder="학번을 입력하세요 예: 2015410008">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="text" class="form-control" id="signup-email" placeholder="이메일을 입력하세요">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-block login-btn">가입하기</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 닫기</button>
+            </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Initialize Swiper -->
     <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
+        // bullet 색깔을 바꾸고 싶으면 swiper.css 의 swiper-pagination-bullet 에 속성을 주면 됨.
+        paginationBulletRender: function (swiper, index, className) {
+            var slide = $('.' + this.wrapperClass).find('.swiper-slide')[index];
+            return '<span class="' + className + ' ' +$(slide).attr('data-class') + '">' + $(slide).attr('data-class') + '</span>';
+        },
         direction: 'vertical',
         mousewheelControl: true,
         speed: 600,
         scrollbarHide: true,
         keyboardControl: true,
         effect: 'slide',
+        onTransitionStart: function(swiper){
+            $('.intro-titlebox').css({opacity: '0'});
+            $('.intro-titleline').css({width: '0%'});
+        },
+        onTransitionEnd: function(swiper){
+            $('.intro-titlebox').animate({
+                    opacity: '1',
+            }, 1000);
+            $('.intro-titleline').animate({
+                    width: '30%',
+            }, 1000);
+            $('.intro-import').css({
+                'animation-name':'colorChange',
+                'animation-duration':'1s',
+                'color':'crimson'
+            });
+        }
     });
     </script>
+    <!-- 윤진 추가 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>

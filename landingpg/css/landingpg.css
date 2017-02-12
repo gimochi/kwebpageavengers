@@ -1,0 +1,415 @@
+﻿.mirror {
+     -moz-transform: scale(-1, 1);
+     -webkit-transform: scale(-1, 1);
+     transform: scale(-1, 1);
+}
+
+@keyframes logoRotate {
+	0% {transform: rotate(180deg);}
+	40% {transform: rotate(-20deg);}
+	100% {transform: rotate(0deg);}
+}
+#kweblogo_kweb {
+    position: relative;
+    left:0%;
+    height: 300px;
+    z-index: 2;
+}
+#kweblogo_hexagon {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top:-150px;
+    height: 300px;
+    z-index: 2;
+}
+
+#kweblogo_D{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top:-150px;
+    height: 300px;
+    z-index: 1;
+    animation-name: logoRotate;
+    animation-duration: 2.5s;
+}
+#kwebchar{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -250.9px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+}
+/*첫번째 페이지 미디어 쿼리*/
+@media screen and (max-width:768px){
+        #kweblogo_kweb {
+        position: relative;
+        left:0%;
+        height: 100px;
+        z-index: 2;
+    }
+    #kweblogo_hexagon {
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left:-50px;
+        margin-top:-50px;
+        height: 100px;
+        z-index: 2;
+    }
+
+    #kweblogo_D{
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left:-50px;
+        margin-top:-50px;
+        height: 100px;
+        z-index: 1;
+        animation-name: logoRotate;
+        animation-duration: 2.5s;
+    }
+    #kwebchar{
+        position: absolute;
+        top: 60%;
+        left: 80%;
+        margin-left: -250.9px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+
+/*윤진쓰 stylesheet*/
+/*모든 페이지 포함*/
+
+.intro-titleline{
+    width: 0%;
+    border:1px solid #FF9000;
+    margin: auto;
+}
+.intro-titlebox{
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+}
+.intro-content-box{
+    width:60%;
+    margin-top:30px;
+    text-align: center;
+}
+.intro-font-big{
+    font-size: 1.5rem;
+    font-weight: bold ;
+    color: #FF9000;
+    line-height: 1em;
+}
+.intro-font-small{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.intro-font-mid{
+    font-weight: 400;
+}
+.intro-font-thin{
+    font-weight: 200;
+}
+.intro-font-color{
+    font-weight: bold;
+    color: #FF9000;
+    font-size: 1.75rem;
+}
+.font-midtitle{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.font-name{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.bg-blur{
+    content:'';
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    filter:blur(6px);
+    -webkit-filter:blur(6px);
+    -moz-filter:blur(6px);
+    -o-filter:blur(6px);
+    filter: url(#blur);
+}
+/*각 페이지 별*/
+.activity-flex{
+    height: 30vw;
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.activity-box{
+    position: relative;
+    width: 20vw;
+    height: 30vw;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    opacity: 1;
+    background: no-repeat center center / cover scroll;
+}
+.activity-box-blur-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.activity-box-blur{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: no-repeat center center / cover scroll;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(20px);
+}
+.activity-box-text{
+    position: relative;
+    text-transform: uppercase;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+}
+.activity-box-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(230,134,8,0.8);
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+.activity-blur-content-1{
+    text-transform: uppercase;
+    padding: 1rem 1rem 2vw;
+    font-size: 1.5rem;
+    line-height: normal;
+    letter-spacing: -0.01875rem;
+}
+.activity-blur-content-2{
+    padding: 2vw 1rem 1rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.0125rem;
+    line-height: 2.5rem;
+}
+.blur-ht{
+    align-self: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: left;
+}
+.blur-item{
+    padding: 0 1rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0
+}
+.carousel-indicators li{
+    border: 2px solid #FFC257;
+}
+.carousel-indicators .active{
+    background-color: #FFC257;
+}
+.contact-flex{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contact-item {
+    padding: 0 1rem
+}
+.contact-btn{
+    width: 20%
+    height: 0.6rem;
+}
+.contact-box{
+    width:40%;
+    margin-top:30px;
+    text-align: center;
+    color: #fff;
+    padding: auto;
+}
+/*mouse over event->여기를 더 효율적으로 할 방법을 못 찾겠음..*/
+#activity-01:hover .overlay {
+    opacity: 1;
+}
+#activity-01:hover .bye {
+    opacity: 0;
+}
+#activity-02:hover .overlay {
+    opacity: 1;
+}
+#activity-02:hover .bye {
+    opacity: 0;
+}
+#activity-03:hover .overlay {
+    opacity: 1;
+}
+#activity-03:hover .bye {
+    opacity: 0;
+}
+#activity-04:hover .overlay {
+    opacity: 1;
+}
+#activity-04:hover .bye {
+    opacity: 0;
+}
+/*img 관련*/
+.intro-kweb-img{
+	background-image: url('../img/ku4.png');
+	background-size:cover;
+	background-position: center;
+}
+.intro-history-img{
+    background-image: url('../img/history_back.png');
+    background-size: cover;
+    background-position: center;
+}
+.intro-img01{
+    background-image: url('../img/active_01.jpg');
+}
+.intro-img02{
+    background-image: url('../img/active_02.png');
+}
+.intro-img03{
+    background-image: url('../img/active_03.jpg');
+}
+.intro-img04{
+    background-image: url('../img/active_04.jpg');
+}
+.intro-contact-img{
+    background-image: url('../img/contact.png');
+    background-size: cover;
+    background-position: center;
+}
+.intro-bg{
+    background-color: #3C3832;
+}
+@keyframes colorChange {
+    0% {color: #fff;}
+    100% {color: crimson;}
+ }
+.intro-import{
+    color: #fff;
+}
+.history-font{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    color: #EAE8E4;
+}
+.footer-wrapper{
+    margin-top: 20%;
+    text-align: center;
+    padding: auto;
+}
+/*button관련*/
+.f-btn{
+    border: none;
+    border-radius: 300px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 1.4rem;
+    width: 18%;
+    height: 10%;
+    margin: 1.5rem;
+}
+.f-btn-primary{
+    color: #fff;
+    background-color: #FF9000;
+    border-color: #FF9000;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+.l-btn{
+    display: inline-block;
+    margin-bottom: 0;   
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+    background-color: #fff;
+    padding: 8px 30px;
+}
+
