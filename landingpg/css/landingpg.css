@@ -1,4 +1,4 @@
-﻿.mirror {
+.mirror {
      -moz-transform: scale(-1, 1);
      -webkit-transform: scale(-1, 1);
      transform: scale(-1, 1);
@@ -107,6 +107,15 @@
     margin-top:30px;
     text-align: center;
 }
+/* 임시 미디어쿼리 
+@media screen and (max-width:768px){
+
+    .intro-content-box{
+        width:90%;
+        margin-top:30px;
+        text-align: center;
+    }
+}*/
 .intro-font-big{
     font-size: 1.5rem;
     font-weight: bold ;
@@ -148,6 +157,8 @@
     filter: url(#blur);
 }
 /*각 페이지 별*/
+
+/*세번째 페이지*/
 .activity-flex{
     height: 30vw;
     margin-top: 15px;
@@ -268,12 +279,138 @@
     -ms-flex: 1 1 0px;
     flex: 1 1 0
 }
+/*세번째 페이지 미디어쿼리 */
+@media screen and (max-width:768px){
+        .activity-flex{
+        height: 150vw;
+        margin-top: 15px;
+        display: block;
+        padding-left:40px;
+        /*-ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;*/
+    }
+    .activity-box{
+        position: relative;
+        width: 40vw;
+        height: 70vw;
+        margin: 5px;
+        float:left;
+        /*display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;*/
+        font-weight: 700;
+        color: #fff;
+        opacity: 1;
+        //background: no-repeat center center / cover scroll;
+    }
+    .activity-box-blur-wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .activity-box-blur{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: no-repeat center center / cover scroll;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(20px);
+    }
+    .activity-box-text{
+        position: relative;
+        text-transform: uppercase;
+        -webkit-transition: all .25s;
+        transition: all .25s;
+    }
+    .activity-box-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        background: rgba(230,134,8,0.8);
+        -webkit-transition: all .35s;
+        transition: all .35s;
+    }
+    .activity-blur-content-1{
+        text-transform: uppercase;
+        padding: 1rem 1rem 2vw;
+        font-size: 1.5rem;
+        line-height: normal;
+        letter-spacing: -0.01875rem;
+    }
+    .activity-blur-content-2{
+        padding: 2vw 1rem 1rem;
+        font-size: 1.5rem;
+        letter-spacing: -0.0125rem;
+        line-height: 2.5rem;
+    }
+    .blur-ht{
+        align-self: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .blur-item{
+        padding: 0 1rem;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0
+    }
+}
+/*네번째 페이지(Achievement)*/
 .carousel-indicators li{
     border: 2px solid #FFC257;
 }
 .carousel-indicators .active{
     background-color: #FFC257;
 }
+
+/*다섯번째 페이지 */
 .contact-flex{
     display: -webkit-flex;
     display: flex;
