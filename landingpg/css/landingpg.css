@@ -98,7 +98,7 @@
 }
 .intro-titlebox{
     width: 100%;
-    margin: 10px;
+    margin: 10px;f
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -416,7 +416,7 @@
 @media screen and (max-width:536px){
     .carousel{
         width:100%;
-        height:500px;
+        height:60vh;
     }
     .carousel-inner{
         height: 100%;
@@ -459,9 +459,15 @@
 }
 /*다섯번째 페이지 미디어쿼리*/
 @media screen and (max-width:768px){
+    .contact-intro-titlebox{
+        margin-bottom: 0;
+    }
+    .intro-titlebox{
+        margin-top: 0;
+    }
     .contact-box{
         width:100%;
-        
+        margin-top:1vh;
     }
     .contact-box a{
         margin-right:0;
@@ -537,8 +543,13 @@
     font-weight: 500;
     color: #EAE8E4;
 }
+.footer-titlebox{
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
 .footer-wrapper{
-    margin-top: 5%;
+    width:100%;
+    margin-top: 3vh;
     text-align: center;
     padding: auto;
 }
@@ -586,12 +597,13 @@
     padding: 8px 30px;
 }
 .president{
-    margin-top: 5%;
+    margin-top: 2vh;
 }
 .contact-icon{
     margin:5%;
+    margin-top:3vh;
     margin-bottom: 0;
-    margin-right: 3%;
+    margin-right: 3vh;
     width: 50px;
     height: 50px;
     -webkit-filter: invert();
