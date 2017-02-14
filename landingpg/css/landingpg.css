@@ -47,7 +47,7 @@
 }
 /*첫번째 페이지 미디어 쿼리*/
 @media screen and (max-width:768px){
-        #kweblogo_kweb {
+    #kweblogo_kweb {
         position: relative;
         left:0%;
         height: 100px;
@@ -538,7 +538,7 @@
     color: #EAE8E4;
 }
 .footer-wrapper{
-    margin-top: 20%;
+    margin-top: 5%;
     text-align: center;
     padding: auto;
 }
@@ -562,6 +562,7 @@
     -moz-transition: all .35s;
     transition: all .35s;
 }
+
 .l-btn{
     display: inline-block;
     margin-bottom: 0;   
@@ -584,4 +585,18 @@
     background-color: #fff;
     padding: 8px 30px;
 }
-
+.president{
+    margin-top: 5%;
+}
+.contact-icon{
+    margin:5%;
+    margin-bottom: 0;
+    margin-right: 3%;
+    width: 50px;
+    height: 50px;
+}
+#kweb-icon{
+    margin-left: 1%;
+    width: 68px;
+    height: 68px;
+}
