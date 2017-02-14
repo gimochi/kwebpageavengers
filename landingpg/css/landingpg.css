@@ -285,25 +285,25 @@
 @media screen and (max-width:768px){
         .activity-flex{
         height: 120vw;
+        margin-left: 10vw;
         margin-top: 15px;
         display: block;
-        padding-left:40px;
-        /*-ms-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;*/
+        align-items: center;
     }
     .activity-box{
         position: relative;
         width: 40vw;
         height: 55vw;
-        margin: 5px;
-        float:left;
-        /*display: -webkit-box;
+        margin: 0 auto;
+        float: left;
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-flow: row wrap;
@@ -314,7 +314,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        text-align: center;*/
+        text-align: center;
         font-weight: 700;
         color: #fff;
         opacity: 1;
@@ -413,7 +413,7 @@
 }
 
 /*네번째 페이지 미디어 쿼리 */
-@media screen and (max-width:768px){
+@media screen and (max-width:536px){
     .carousel{
         width:100%;
         height:500px;
@@ -594,7 +594,14 @@
     margin-right: 3%;
     width: 50px;
     height: 50px;
+    -webkit-filter: invert();
+    -moz-filter: invert();
+    -ms-filter: invert();
+    -o-filter: invert();
     filter: invert();
+}
+.contact-icon:hover{
+    filter: grayscale(100%);
 }
 #kweb-icon{
     margin-left: 1%;
