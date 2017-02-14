@@ -53,17 +53,16 @@
         align-content: center;
     }
     /*이거 왜 css 파일에 분리 안되냐*/
-    a:link { color: #fff; text-decoration: none;}
-    u>a:hover { color: crimson; text-decoration: none;}
     .login-btn{
         background-color: #FF9000;
         color: #fff;
     }
     </style>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../js/swiper.min.js"></script>
     <script type="text/javascript" src="../js/landingpg.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Swiper -->
@@ -110,8 +109,8 @@
                             WEB<br>STUDY
                         </div>
                         <div class="activity-box-overlay overlay">
-                            <div class="activity-blur-content-1"><font class="font-midtitle">다양한 스터디</font></div>
-                            <font class="intro-font-mid">  
+                            <div class="activity-blur-content-1">다양한 스터디</div>
+                              
                                 <div class="activity-blur-content-2 blur-ht">
                                     <div class="blur-item" style="text-align: right">
                                         HTML/CSS<br>
@@ -126,7 +125,6 @@
                                         Database
                                     </div>
                                 </div>
-                            </font>
                         </div>
                     </div>
                     <div id="activity-02" class="activity-box intro-img02">
@@ -377,6 +375,8 @@
                     width: '35%',
             }, 1000);
             $('.swiper-slide-active').find('.intro-import').css({
+                '-webkit-animation-name':'colorChange',
+                '-moz-animation-name':'colorChange',
                 'animation-name':'colorChange',
                 'animation-duration':'1s',
                 'color':'crimson'
@@ -386,7 +386,6 @@
     });
     </script>
     <!-- 윤진 추가 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
