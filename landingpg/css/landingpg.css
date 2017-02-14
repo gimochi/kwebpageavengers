@@ -459,6 +459,12 @@
 }
 /*다섯번째 페이지 미디어쿼리*/
 @media screen and (max-width:768px){
+    .contact-intro-titlebox{
+        margin-bottom: 0;
+    }
+    .intro-titlebox{
+        margin-top: 0;
+    }
     .contact-box{
         width:100%;
         margin-top:1vh;
