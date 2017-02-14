@@ -597,12 +597,13 @@
     padding: 8px 30px;
 }
 .president{
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 .contact-icon{
     margin:5%;
+    margin-top:3vh;
     margin-bottom: 0;
-    margin-right: 3%;
+    margin-right: 3vh;
     width: 50px;
     height: 50px;
     filter: invert();
