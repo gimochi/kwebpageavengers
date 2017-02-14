@@ -284,8 +284,8 @@
 }
 /*세번째 페이지 미디어쿼리 */
 @media screen and (max-width:768px){
-        .activity-flex{
-        height: 120vw;
+    .activity-flex{
+        height: 70vh;
         margin-left: 10vw;
         margin-top: 15px;
         display: block;
@@ -301,7 +301,7 @@
     .activity-box{
         position: relative;
         width: 40vw;
-        height: 55vw;
+        height: 35vh;
         margin: 0 auto;
         float: left;
         display: -webkit-box;
