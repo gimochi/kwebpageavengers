@@ -642,9 +642,10 @@
     margin-top: 2vh;
 }
 .contact-icon{
-    margin-bottom: 0;
+    margin-bottom: 7px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
     width: 50px;
     height: 50px;
     -webkit-filter: invert();
@@ -652,15 +653,19 @@
     -ms-filter: invert();
     -o-filter: invert();
     filter: invert();
+    display: inline;
 }
 .contact-icon:hover{
     filter: grayscale(100%);
 }
 .contact-icon-wrapper{
+    display: inline;
     margin-top: 2vh;
+
 }
 #kweb-icon{
     margin: 0;
+    margin-top: 10px;
     width: 70px;
     height: 70px;
 }
@@ -668,4 +673,11 @@
 .kakao-icon{
     width: 30px;
     height: 30px;
+}
+.logo-caption{
+    margin:0;
+    padding:0;
+    font-size: 5px;
+    color:#fff;
+    display: inline;
 }
