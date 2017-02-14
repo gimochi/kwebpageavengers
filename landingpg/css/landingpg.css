@@ -514,7 +514,7 @@
 /*mouse over event->여기를 더 효율적으로 할 방법을 못 찾겠음..*/
 
 /*모바일에서는 이미지 호버 작동 안하도록 설정*/
-@media screen and (min-width:769px){
+/*@media screen and (min-width:769px){
     #activity-01:hover .overlay {
         opacity: 1;
     }
@@ -539,7 +539,7 @@
     #activity-04:hover .bye {
         opacity: 0;
     }
-}
+}*/
 
 /*img 관련*/
 .intro-kweb-img{
