@@ -8,6 +8,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="../css/swiper.css">
     <link rel="stylesheet" href="../css/landingpg.css">
+    
     <!-- 윤진 추가 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -52,15 +53,13 @@
         align-content: center;
     }
     /*이거 왜 css 파일에 분리 안되냐*/
-    a:link { color: #fff; text-decoration: none;}
-    u>a:hover { color: crimson; text-decoration: none;}
     .login-btn{
         background-color: #FF9000;
         color: #fff;
     }
     </style>
+    <script type="text/javascript" src="../js/prefixfree.min.js"></script>
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../js/swiper.min.js"></script>
     <script type="text/javascript" src="../js/landingpg.js"></script>
 </head>
@@ -74,9 +73,9 @@
                     <img id = "kweblogo_hexagon" class = "kweblogo" src="../img/kweblogo_hexagon_final.svg">
                     <img id = "kweblogo_D" class = "kweblogo" src="../img/kweblogo_D_final.svg">
                 </div>
-                    <div id = "kwebchar">
-                        <span >KOREA UNIVERSITY WEBMASTER</span>
-                    </div>
+                <div id = "kwebchar">
+                    <span >KOREA UNIVERSITY WEBMASTER</span>
+                </div>
             </div>
             <div class="swiper-slide intro-history-img" data-class ="HISTORY">
                 <div class="intro-titlebox HISTORY">
@@ -87,14 +86,10 @@
                 </div>
                 <div class="intro-content-box history-font">
                     <span class="intro-import">K</span>orea University <span class="intro-import">WEB</span>master<br>
-                    <br>
-                    KWEB은 1998년 설립된 고려대학교 정보대학 컴퓨터학과 소속 웹개발 동아리입니다<br>
+                    SINCE 1998<br>
                     &nbsp;<br>
-                    학기마다 세미나와 행사들을 진행하고
-                    다양한 스터디를 통해 웹을 공부합니다<br>
-                    <br>
-                    가족같은 분위기에서 웹을 배우고 제작하고 싶은<br>
-                    그 누구라도 환영합니다
+                    현재 <span class="intro-import">41명</span>의<span class="intro-import"> webmaster</span>가 활동 중
+
                 </div>
             </div>
             <div class="swiper-slide intro-bg" data-class ="ACTIVITY">
@@ -113,23 +108,22 @@
                             WEB<br>STUDY
                         </div>
                         <div class="activity-box-overlay overlay">
-                            <div class="activity-blur-content-1"><font class="font-midtitle">다양한 스터디</font></div>
-                            <font class="intro-font-mid">  
+                            <div class="activity-blur-content-1">다양한 스터디</div>
+                              
                                 <div class="activity-blur-content-2 blur-ht">
                                     <div class="blur-item" style="text-align: right">
                                         HTML/CSS<br>
                                         Javascript<br>
-                                        Angular<br>
+                                        Angular.js<br>
                                         Django
                                     </div>
                                     <div class="blur-item">
-                                        Database<br>
+                                        React.js<br>
                                         Node.js<br>
                                         EXPRESS<br>
-                                        MariaDB
+                                        Database
                                     </div>
                                 </div>
-                            </font>
                         </div>
                     </div>
                     <div id="activity-02" class="activity-box intro-img02">
@@ -187,51 +181,44 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide intro-bg" data-class ="ACHV.">
+            <div class="swiper-slide intro-bg" data-class ="PRODUCT">
                 <div class="intro-titlebox">
-                    ACHIEVEMENT
+                    PRODUCT
                 </div>
                 <div class="intro-titlebox">
                     <hr class="intro-titleline">
                 </div>
-                <div id="carousel-example-generic" class="carousel slide intro-content-box" data-ride="carousel">
+                <div id="carousel-example-generic" class="carousel slide intro-content-box" data-ride="carousel" data-interval="false">
                   <!-- Indicators -->
                   <ol class="carousel-indicators intro-circle-color">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                      <img src="../img/acheive_01.png" alt="http://cs.korea.ac.kr/">
+                      <img class = "achieve-img" src="../img/acheive_01.png" alt="http://cs.korea.ac.kr/" imgsrc1="../img/acheive_01.png" imgsrc2="../img/acheive_01_mobile.png">
                       <div class="carousel-caption">
                         <h4 class="intro-font-color">고려대 컴퓨터학과 홈페이지</h4>
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../img/acheive_02.png" alt="http://klue.kr/">
+                      <img class = "achieve-img" src="../img/acheive_02.png" alt="http://klue.kr/" imgsrc1="../img/acheive_02.png" imgsrc2="../img/acheive_02_mobile.png">
                       <div class="carousel-caption">
                         <h4 class="intro-font-color">강의평가 사이트 KLUE</h4>
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../img/acheive_03.png" alt="http://psy.korea.ac.kr/psy/index.do">
-                      <div class="carousel-caption">
-                        <h4 class="intro-font-color">고려대 심리학과 홈페이지</h4>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="../img/acheive_04.png" alt="http://www.kumentalfitness.org/">
+                      <img class = "achieve-img" src="../img/acheive_04.png" alt="http://www.kumentalfitness.org/" imgsrc1="../img/acheive_04.png" imgsrc2="../img/acheive_04_mobile.png">
                       <div class="carousel-caption">
                         <h4 class="intro-font-color">KU Mental Fitness 홈페이지</h4>
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../img/acheive_05.png" alt="http://www.coopera.kr/restaurant.asp">
+                      <img class = "achieve-img" src="../img/acheive_05.png" alt="http://www.coopera.kr/restaurant.asp" imgsrc1="../img/acheive_05.png" imgsrc2="../img/acheive_05_mobile.png">
                       <div class="carousel-caption">
                         <h4 class="intro-font-color">COOPERA 홈페이지</h4>
                       </div>
@@ -249,27 +236,30 @@
                   </a>
                 </div>
             </div>
-            <div class="swiper-slide intro-contact-img" data-class ="CONTACTUS">
+            <div class="swiper-slide intro-contact-img" data-class ="CONTACT">
                 <div class="intro-titlebox">
-                    CONTACT US
+                    CONTACT
                 </div>
                 <div class="intro-titlebox">
                     <hr class="intro-titleline">
                 </div>
                 <div class="contact-box">
-                    <p class="intro-font-big">KWEB Forum</p>
+                    <!-- <p class="intro-font-big">KWEB Forum</p>
                     <div class="contact-flex">
                         <a href="/" class="f-btn f-btn-primary page-scroll" data-toggle="modal" data-target="#login-modal">로그인</a>
                         <a href="/" class="f-btn f-btn-primary page-scroll" data-toggle="modal" data-target="#signup-modal">회원가입</a>
+                    </div> -->
+                    <div>
+                        <a href="https://goo.gl/forms/08Ql3bROkmsdIUVn1" class="l-btn"><span>지금 지원하기</span></a>
                     </div>
-                    <div style="margin-bottom: 2rem;">
-                        <a href="http://kr.battle.net/heroes/ko/" class="l-btn page-scroll sr-button">가입신청</a>
+                    <div class="contact-icon-wrapper"><a href="https://www.facebook.com/kwebfamily"><img src="../img/Facebook-icon.png" id = "fb-icon" class = "contact-icon"><figcaption class ="logo-caption">페이스북</figcaption></a></div><div class="contact-icon-wrapper">
+                    <a href="http://cost-mg.co.kr/websection.php"><img src="../img/kweblogo.png" id = "kweb-icon" class = "contact-icon"><figcaption class ="logo-caption">커리큘럼</figcaption></a></div>
+                    <div class = "president">
+                        <font class="intro-font-big">회장</font> &nbsp;&nbsp;<span class="font-name">배민근</span><p><img class ="kakao-icon" src="../img/kakaotalk-icon2.png"><span class="font-name"> &nbsp;&nbsp;bmgenistal</span></p>
+                        <font class="intro-font-big">부회장</font> &nbsp;&nbsp;<span class="font-name">정예주</span><p><img class ="kakao-icon" src="../img/kakaotalk-icon2.png"><span class="font-name">  &nbsp;&nbsp;chongyeju&nbsp;</span></p>
                     </div>
-                    <p><font class="intro-font-big">회장</font> &nbsp;&nbsp;<span class="font-name">배민근&nbsp;&nbsp;chung1685@gmail.com</span></p>
-                    <p><font class="intro-font-big">부회장</font> &nbsp;&nbsp;<span class="font-name">정예주&nbsp;&nbsp;chung1685@gmail.com</span></p>
-                    <br>
                     <footer class="footer-wrapper intro-font-small">
-                        <div class="intro-titlebox">
+                        <div class="intro-titlebox footer-titlebox">
                             <hr class="intro-titleline footer-line">
                         </div>
                         COPYRIGHT © 2017 KWEB All Rights Reserved.<br>
@@ -281,11 +271,12 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination hidden-sm hidden-xs"></div>
     </div>
-    <!-- login Modal -->
+
+    <!-- modals
     <div class="modal fade" id="login-modal" role="dialog">
         <div class="modal-dialog">
 
-            <!-- Modal content-->
+           
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -310,10 +301,10 @@
             </div>
         </div>
     </div>
-    <!-- sign up Modal -->
+    
     <div id="signup-modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
-         <!-- Modal content-->
+         
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -353,7 +344,7 @@
             </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Initialize Swiper -->
     <script>
@@ -372,26 +363,29 @@
         keyboardControl: true,
         effect: 'slide',
         onTransitionStart: function(swiper){
-            $('.intro-titlebox').css({opacity: '0'});
-            $('.intro-titleline').css({width: '0%'});
+            $('.swiper-slide-active').find('.intro-titlebox').css({opacity: '0'});
+            $('.swiper-slide-active').find('.intro-titleline').css({width: '0%'});
         },
         onTransitionEnd: function(swiper){
-            $('.intro-titlebox').animate({
+            $('.swiper-slide-active').find('.intro-titlebox').animate({
                     opacity: '1',
             }, 1000);
-            $('.intro-titleline').animate({
-                    width: '30%',
+            $('.swiper-slide-active').find('.intro-titleline').animate({
+                    width: '35%',
             }, 1000);
-            $('.intro-import').css({
+            $('.swiper-slide-active').find('.intro-import').css({
+                '-webkit-animation-name':'colorChange',
+                '-moz-animation-name':'colorChange',
                 'animation-name':'colorChange',
                 'animation-duration':'1s',
                 'color':'crimson'
             });
-        }
+        },
+        threshold: 10
     });
     </script>
     <!-- 윤진 추가 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

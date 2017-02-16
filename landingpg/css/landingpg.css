@@ -1,9 +1,25 @@
 .mirror {
      -moz-transform: scale(-1, 1);
      -webkit-transform: scale(-1, 1);
+     -ms-transform: scale(-1, 1);
+     -o-transform: scale(-1, 1);
      transform: scale(-1, 1);
 }
-
+@-webkit-keyframes logoRotate {
+    0% {-webkit-transform: rotate(180deg);}
+    40% {-webkit-transform: rotate(-20deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes logoRotate {
+    0% {-moz-transform: rotate(180deg);}
+    40% {-moz-transform: rotate(-20deg);}
+    100% {-moz-transform: rotate(0deg);}
+}
+@-o-keyframes logoRotate {
+    0% {-o-transform: rotate(180deg);}
+    40% {-o-transform: rotate(-20deg);}
+    100% {-o-transform: rotate(0deg);}
+}
 @keyframes logoRotate {
 	0% {transform: rotate(180deg);}
 	40% {transform: rotate(-20deg);}
@@ -33,7 +49,11 @@
     margin-top:-150px;
     height: 300px;
     z-index: 1;
+    -webkit-animation-name: logoRotate;
+    -moz-animation-name: logoRotate;
     animation-name: logoRotate;
+    -webkit-animation-duration: 2.5s;
+    -moz-animation-duration: 2.5s;
     animation-duration: 2.5s;
 }
 #kwebchar{
@@ -47,7 +67,7 @@
 }
 /*첫번째 페이지 미디어 쿼리*/
 @media screen and (max-width:768px){
-        #kweblogo_kweb {
+    #kweblogo_kweb {
         position: relative;
         left:0%;
         height: 100px;
@@ -62,7 +82,6 @@
         height: 100px;
         z-index: 2;
     }
-
     #kweblogo_D{
         position: absolute;
         left:50%;
@@ -71,17 +90,23 @@
         margin-top:-50px;
         height: 100px;
         z-index: 1;
+        -webkit-animation-name: logoRotate;
+        -moz-animation-name: logoRotate;
         animation-name: logoRotate;
+        -webkit-animation-duration: 2.5s;
+        -moz-animation-duration: 2.5s;
         animation-duration: 2.5s;
     }
     #kwebchar{
         position: absolute;
         top: 60%;
-        left: 80%;
-        margin-left: -250.9px;
+        left:0;
+        margin-left:0;
+        width:100%;
+        text-align: center;
         color: #fff;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1.5rem;
     }
 }
 
@@ -96,7 +121,7 @@
 }
 .intro-titlebox{
     width: 100%;
-    margin: 10px;
+    margin: 10px;f
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -151,6 +176,7 @@
     background: inherit;
     z-index: -1;
     filter:blur(6px);
+    -ms-filter:blur(6px);
     -webkit-filter:blur(6px);
     -moz-filter:blur(6px);
     -o-filter:blur(6px);
@@ -220,6 +246,8 @@
 .activity-box-text{
     position: relative;
     text-transform: uppercase;
+    -moz-transition: all .25s;
+    -o-transition: all .25s;
     -webkit-transition: all .25s;
     transition: all .25s;
 }
@@ -227,6 +255,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    display: none;
     opacity: 0;
     text-align: center;
     display: -webkit-box;
@@ -243,6 +272,8 @@
     text-align: center;
     background: rgba(230,134,8,0.8);
     -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    -moz-transition: all .35s;
     transition: all .35s;
 }
 .activity-blur-content-1{
@@ -259,17 +290,23 @@
     line-height: 2.5rem;
 }
 .blur-ht{
+    -webkit-align-self: stretch;
     align-self: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     -webkit-box-align: start;
     -ms-flex-align: start;
+    -webkit-align-items: flex-start;
     align-items: flex-start;
     text-align: left;
 }
@@ -281,27 +318,27 @@
 }
 /*세번째 페이지 미디어쿼리 */
 @media screen and (max-width:768px){
-        .activity-flex{
-        height: 150vw;
-        margin-top: 15px;
+    .activity-flex{
+        height: 70vh;
+        margin-left: 10vw;
+        margin-top: 5vh;
         display: block;
-        padding-left:40px;
-        /*-ms-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;*/
+        align-items: center;
     }
     .activity-box{
         position: relative;
         width: 40vw;
-        height: 70vw;
-        margin: 5px;
-        float:left;
-        /*display: -webkit-box;
+        height: 35vh;
+        margin: 0 auto;
+        float: left;
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-flow: row wrap;
@@ -312,11 +349,11 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        text-align: center;*/
+        text-align: center;
         font-weight: 700;
         color: #fff;
         opacity: 1;
-        //background: no-repeat center center / cover scroll;
+        background: no-repeat center center / cover scroll;
     }
     .activity-box-blur-wrapper{
         position: absolute;
@@ -346,6 +383,7 @@
         transition: all .25s;
     }
     .activity-box-overlay{
+        display:none;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -401,6 +439,7 @@
         -ms-flex: 1 1 0px;
         flex: 1 1 0
     }
+
 }
 /*네번째 페이지(Achievement)*/
 .carousel-indicators li{
@@ -408,6 +447,28 @@
 }
 .carousel-indicators .active{
     background-color: #FFC257;
+}
+
+/*네번째 페이지 미디어 쿼리 */
+@media screen and (max-width:536px){
+    .carousel{
+        width:100%;
+        height:60vh;
+    }
+    .carousel-inner{
+        height: 100%;
+        width:auto;
+    }
+    .carousel-inner .item{
+        height:100%;
+        overflow:hidden !important;
+        text-align: center;
+        
+    }
+    .carousel-inner .item img{
+        min-height: 100% !important;
+        width:auto;
+    }
 }
 
 /*다섯번째 페이지 */
@@ -423,7 +484,7 @@
     padding: 0 1rem
 }
 .contact-btn{
-    width: 20%
+    width: 20%;
     height: 0.6rem;
 }
 .contact-box{
@@ -433,31 +494,53 @@
     color: #fff;
     padding: auto;
 }
+/*다섯번째 페이지 미디어쿼리*/
+@media screen and (max-width:768px){
+    .contact-intro-titlebox{
+        margin-bottom: 0;
+    }
+    .intro-titlebox{
+        margin-top: 0;
+    }
+    .contact-box{
+        width:100%;
+        margin-top:1vh;
+    }
+    .contact-box a{
+        margin-right:0;
+    }
+}
+
 /*mouse over event->여기를 더 효율적으로 할 방법을 못 찾겠음..*/
-#activity-01:hover .overlay {
-    opacity: 1;
-}
-#activity-01:hover .bye {
-    opacity: 0;
-}
-#activity-02:hover .overlay {
-    opacity: 1;
-}
-#activity-02:hover .bye {
-    opacity: 0;
-}
-#activity-03:hover .overlay {
-    opacity: 1;
-}
-#activity-03:hover .bye {
-    opacity: 0;
-}
-#activity-04:hover .overlay {
-    opacity: 1;
-}
-#activity-04:hover .bye {
-    opacity: 0;
-}
+
+/*모바일에서는 이미지 호버 작동 안하도록 설정*/
+/*@media screen and (min-width:769px){
+    #activity-01:hover .overlay {
+        opacity: 1;
+    }
+    #activity-01:hover .bye {
+        opacity: 0;
+    }
+    #activity-02:hover .overlay {
+        opacity: 1;
+    }
+    #activity-02:hover .bye {
+        opacity: 0;
+    }
+    #activity-03:hover .overlay {
+        opacity: 1;
+    }
+    #activity-03:hover .bye {
+        opacity: 0;
+    }
+    #activity-04:hover .overlay {
+        opacity: 1;
+    }
+    #activity-04:hover .bye {
+        opacity: 0;
+    }
+}*/
+
 /*img 관련*/
 .intro-kweb-img{
 	background-image: url('../img/ku4.png');
@@ -502,8 +585,13 @@
     font-weight: 500;
     color: #EAE8E4;
 }
+.footer-titlebox{
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
 .footer-wrapper{
-    margin-top: 20%;
+    width:100%;
+    margin-top: 3vh;
     text-align: center;
     padding: auto;
 }
@@ -527,6 +615,7 @@
     -moz-transition: all .35s;
     transition: all .35s;
 }
+
 .l-btn{
     display: inline-block;
     margin-bottom: 0;   
@@ -549,4 +638,46 @@
     background-color: #fff;
     padding: 8px 30px;
 }
+.president{
+    margin-top: 2vh;
+}
+.contact-icon{
+    margin-bottom: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    -webkit-filter: invert();
+    -moz-filter: invert();
+    -ms-filter: invert();
+    -o-filter: invert();
+    filter: invert();
+    display: inline;
+}
+.contact-icon:hover{
+    filter: grayscale(100%);
+}
+.contact-icon-wrapper{
+    display: inline;
+    margin-top: 2vh;
 
+}
+#kweb-icon{
+    margin: 0;
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.kakao-icon{
+    width: 30px;
+    height: 30px;
+}
+.logo-caption{
+    margin:0;
+    padding:0;
+    font-size: 5px;
+    color:#fff;
+    display: inline;
+}
