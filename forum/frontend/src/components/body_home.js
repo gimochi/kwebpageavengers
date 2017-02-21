@@ -18,6 +18,7 @@ var BodyHome = React.createClass ({
                 <div className="row">
                     <div className="col-md-6">
                         <BodyHomeContainer
+                            num="1"
                             container_name="body_home_gongji"
                             more_name="body_home_gongji_more"
                             title="공지사항"
@@ -25,11 +26,13 @@ var BodyHome = React.createClass ({
                     </div>
                     <div id="body_home_study_container" className="col-md-6">
                         <BodyHomeContainer
+                            num="2"
                             container_name="body_home_jeong"
                             more_name="body_home_jeong_more"
                             title="정회원 스터디 자료"
                         /> {/* 최근 정스 */}
                         <BodyHomeContainer
+                            num="3"
                             container_name="body_home_jun"
                             more_name="body_home_jun_more"
                             title="준회원 스터디 자료"
