@@ -3,7 +3,7 @@ import React from 'react';
 var BodyForumPannel = React.createClass ({
     render: function () {
         return(
-            <div id="body_forum_info">      
+            <div id="body_forum_info">
                 <div className={"body_forum_info_float " + this.props.idbox[0]}>
                     공-간
                 </div>

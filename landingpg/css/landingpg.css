@@ -618,7 +618,7 @@
 
 .l-btn{
     display: inline-block;
-    margin-bottom: 0;   
+    margin-bottom: 7px;   
     font-size: 14px;
     line-height: 1.42857143;
     text-align: center;
@@ -642,10 +642,8 @@
     margin-top: 2vh;
 }
 .contact-icon{
-    margin-bottom: 7px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
     width: 50px;
     height: 50px;
     -webkit-filter: invert();
@@ -661,11 +659,9 @@
 .contact-icon-wrapper{
     display: inline;
     margin-top: 2vh;
-
 }
 #kweb-icon{
     margin: 0;
-    margin-top: 10px;
     width: 70px;
     height: 70px;
 }

@@ -4,7 +4,7 @@
 
 
 div{
-	border : 1px solid black; /* div구조의 이해를 위해... 컴파일시에만 확인 */
+	border : none; /* div구조의 이해를 위해... 컴파일시에만 확인 */
 }
 
 hr{
