@@ -6,7 +6,7 @@ var Identification = React.createClass({
   getInitialState() {
     return {
 
-     pw_fun:function(){ // 변경확인 버튼, 비밀번호 바꾸는 정보수정 부분
+     pw_fun: function(){ // 변경확인 버튼, 비밀번호 바꾸는 정보수정 부분
         var pwd = $('#id_password').val();
         var pwdc = $('#id_password_check').val();
         if(pwd.length > 4 && pwd.length < 12 && pwdc.length > 4 && pwdc.length <12){
@@ -27,9 +27,9 @@ var Identification = React.createClass({
         }
      }
     };
-   },
+  },
 
-   render:function () {
+   render: function () {
       var userinfo = ["채호경", "은수저 (정회원)", "2015410019", "ckdwhzjarhk@naver.com", "ckdwhzjarhk"];
       return(
         <div id="id_container">
@@ -105,7 +105,7 @@ var Identification = React.createClass({
           </button>
         </div>
       );
-   } 
+   }
 });
 
 export default Identification;
