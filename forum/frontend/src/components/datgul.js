@@ -9,10 +9,13 @@ var Datgul = React.createClass ({
             dbdata:[
                     ["../static/data/gallery_temp/2.jpg",
                     "채호경", "(은수저)", "2017-02-23 18:10:13",
-                    "내용1"],
+                    "채호경은 채호경이다채호경이다채호경이다채호경이다채호경이다채호경이다채호경이다채호경이다채호경이다"],
                     ["../static/data/gallery_temp/2.jpg",
-                    "채호경", "(은수저)", "2017-02-23 18:10:13",
-                    "내용2"]
+                    "유재효", "(은수저)", "2017-02-23 18:10:13",
+                    "채호경하이채호경이다채호경이다채호경이다채호경이다" +
+                    "채호경이다채호경이다채호경이다채호경이다채호경" +
+                    "채호경이다채호경이다이다" +
+                    "채호경이다채호경이다채호경이다채호경이다채호경이다"]
                     ]
         };
     },
@@ -24,12 +27,13 @@ var Datgul = React.createClass ({
                 </div> 
 
                 <DatgulLoginCheck STATE="2" />    {/* 1은 로그인안됨, 2는 됨 */} 
-
+                <div className="wrapper datgul-wrapper container">
                 {this.state.dbdata.map((data, i) => {
                     return(
                         <DatgulList content={data} />
                     );
                 })}
+                </div>
             </div>
         );
     }

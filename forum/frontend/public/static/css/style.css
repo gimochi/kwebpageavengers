@@ -292,7 +292,7 @@ hr{
 }
 
 /* 내 정보 보기 */
-
+/*
 #id_container{
 	text-align: center;
 	width: 100%;
@@ -328,16 +328,14 @@ hr{
 	width: 100%;
 	height:	100%;
 	font-size:20px;
-}
-<<<<<<< HEAD
->>>>>>> 4eb9bc3a062f0bc92c73fc7e34d35b6097b4884a
-=======
+}*/
 
 /* 댓글 css */
 
 .datgul_box{
 	padding: 3px;
 	padding-left: 12px;
+	margin-bottom:15px;
 }
 
 #datgul_reg_table{
@@ -363,7 +361,39 @@ hr{
 	width:66px;
 	height: 100%;
 }
+.datgul-wrapper{
+	background-color:white;
+}
+.datgul_list{
+	background-color:white;
+	margin-bottom : 15px;
+	border-top:1px solid #c0c0c0;
+	border-left:1px solid #c0c0c0;
+	box-shadow: 2px 2px 4px grey;
+	-moz-box-shadow:2px 2px 4px grey;
+	-webkit-box-shadow:2px 2px 4px grey;
+}
+.datgul_list .datgul_name{
+	font-size:18px;
+}
+.datgul_face{
+	padding:10px;
+}
+@media (max-width: 768px){
+	.datgul_list .col-xs-2{
+		padding:0;
+	}
+	.datgul_face{
+		padding:3px;
+	}
+}
+.datgul_face img{
+	border: 2px gray dotted;
+}
+.datgul_content{
 
+}
+/*
 .datgul_list{
 	padding: 20px;
 	padding-bottom: 25px;
@@ -378,5 +408,9 @@ hr{
 	height:30px;
 	margin-right: 5px;
 	border:1px solid black;
+<<<<<<< HEAD
 }
 >>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
+=======
+}*/
+>>>>>>> 13da6470d2d0f3e6c95a16eb337e80e45f03535d

@@ -5,7 +5,7 @@ header {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -o-border-radius: 0;
-    height: 100px;
+    height: 90px;
     display: block;
 }
 header .container{
@@ -22,7 +22,7 @@ header .container .top-logo{
     color:#f84;
 }
 .navbar {
-	margin-bottom: 100;
+	margin-bottom: 100px;
 	background: #f84;
     z-index:100;
     border-bottom: 1px solid #f2f2f2 !important;
@@ -121,7 +121,7 @@ a.navbar-brand {
 }
 
 .affix + #root {
-    padding-top: 70px;
+    padding-top: 150px;
 }
 
 body{
