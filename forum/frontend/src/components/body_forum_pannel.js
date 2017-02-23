@@ -22,6 +22,18 @@ var BodyForumPannel = React.createClass ({
                 <div className={"body_forum_info_float " + this.props.idbox[5]}>
                     {this.props.content[4]}
                 </div>
+                <div id="body_forum_number_container">
+                    <div className="body_forum_number" id="body_forum_left_shift2">{"<<"}</div>
+                    <div className="body_forum_number" id="body_forum_left_shift">{"<"}</div>
+                    <div className="body_forum_number">1</div>
+                    <div className="body_forum_number">2</div>
+                    <div className="body_forum_number">3</div>
+                    <div className="body_forum_number">4</div>
+                    <div className="body_forum_number">5</div>
+                    <div className="body_forum_number" id="body_forum_right_shift">{">"}</div>
+                    <div className="body_forum_number" id="body_forum_right_shift2">{">>"}</div>
+                </div>
+
             </div>
         );
     }

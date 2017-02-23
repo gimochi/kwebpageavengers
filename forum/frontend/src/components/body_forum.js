@@ -7,8 +7,8 @@ var BodyForum = React.createClass ({
     getInitialState() {
         return {
           fnum : 1,             /* 페이지 수, 초기값은 1 */
-          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보 */
-          name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판"]
+          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기*/
+          name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기"]
         };
      },
     state_change : function(num){
@@ -42,8 +42,12 @@ var BodyForum = React.createClass ({
                         <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
                             정보 게시판
                         </div>
-
-                     </div>
+                    </div>
+                    <div>
+                      <div id="body_forum_write" onClick={this.state_change.bind(this,5)}>
+                        글쓰기
+                      </div>
+                    </div>
                  </div>
 
                 <div id="body_forum_right_container">
@@ -58,19 +62,6 @@ var BodyForum = React.createClass ({
                      {/*글 반복문 추가 부분*/}
 
 
-
-                    <div id="body_forum_number_container">
-                        <div className="body_forum_number" id="body_forum_left_shift2">{"<<"}</div>
-                        <div className="body_forum_number" id="body_forum_left_shift">{"<"}</div>
-                        <div className="body_forum_number">1</div>
-                        <div className="body_forum_number">2</div>
-                        <div className="body_forum_number">3</div>
-                        <div className="body_forum_number">4</div>
-                        <div className="body_forum_number">5</div>
-                        <div className="body_forum_number" id="body_forum_right_shift">{">"}</div>
-                        <div className="body_forum_number" id="body_forum_right_shift2">{">>"}</div>
-                    </div>
-
                    {/*검색기능 추가??*/}
                 </div>
 
@@ -78,7 +69,7 @@ var BodyForum = React.createClass ({
                     {/* absolute가 자리를 차지하지 못하기에 넣어준 div */}
                 </div>
 
-             </div>
+          </div>
         );
     }
 });

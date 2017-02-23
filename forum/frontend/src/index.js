@@ -5,10 +5,11 @@ import BodyHome from './components/body_home';
 import BodyForum from './components/body_forum';
 import BodyGallery from './components/body_gallery';
 import Identification from './components/identification';
+import ForumWriteForm from './components/body_forum_write';
 
 const rootElement = document.getElementById('root');
 
-var BodyForums = React.createClass({ 
+var BodyForums = React.createClass({
 	render: function(){
 		return(
 			<BodyForum STATE={ForumState} />
@@ -102,4 +103,4 @@ function navy_ready(){ // 네비에 클릭함수를 넣어줌
 navy_ready();
 route_start();
 
-//이파일을 webpack을 통해서 컴파일 해서 만든 bundle.js가 script로 쓰이는 구조.	
+//이파일을 webpack을 통해서 컴파일 해서 만든 bundle.js가 script로 쓰이는 구조.
