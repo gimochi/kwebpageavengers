@@ -331,4 +331,54 @@ hr{
 	height:	100%;
 	font-size:20px;
 }
+<<<<<<< HEAD
 >>>>>>> 4eb9bc3a062f0bc92c73fc7e34d35b6097b4884a
+=======
+
+/* 댓글 css */
+
+.datgul_box{
+	padding: 3px;
+	padding-left: 12px;
+}
+
+#datgul_reg_table{
+	width: 100%;
+}
+
+#datgul_reg_td1{
+	height: 66px;
+}
+
+#datgul_reg_td2{
+	width: 76px;
+	padding-left:10px;
+	height: 66px;
+}
+
+#datgul_reg_content{
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+}
+#datgul_reg_button{
+	width:66px;
+	height: 100%;
+}
+
+.datgul_list{
+	padding: 20px;
+	padding-bottom: 25px;
+}
+
+.datgul_list_table{
+
+}
+
+.datgul_list_img{
+	width:30px;
+	height:30px;
+	margin-right: 5px;
+	border:1px solid black;
+}
+>>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
