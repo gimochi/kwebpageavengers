@@ -19,7 +19,12 @@ var Datgul = React.createClass ({
     render: function () {
         return(
             <div>
-                <DatgulLoginCheck STATE="2" />    {/* 1은 로그인안됨, 2는 됨 */}
+                <div className="datgul_box">
+                    {this.state.dbdata.length}개의 댓글이 달려 있습니다.
+                </div> 
+
+                <DatgulLoginCheck STATE="2" />    {/* 1은 로그인안됨, 2는 됨 */} 
+
                 {this.state.dbdata.map((data, i) => {
                     return(
                         <DatgulList content={data} />
