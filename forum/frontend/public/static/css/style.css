@@ -3,8 +3,8 @@
 /*------------------------------------------*/
 
 
-div{
-	border : none; /* div구조의 이해를 위해... 컴파일시에만 확인 */
+div,td,th{
+	border : 1px solid black;	/* div의 구조를 위해... */
 }
 
 hr{
@@ -290,3 +290,45 @@ hr{
 
 	margin-bottom:0;
 }
+<<<<<<< HEAD
+=======
+
+/* 내 정보 보기 */
+
+#id_container{
+	text-align: center;
+	width: 100%;
+	min-width: 400px;
+	min-height: 500px;
+}
+
+#id_img{
+	width: 150px;
+	height: 150px;
+	margin-top: 75px;
+}
+
+#id_table{
+	min-width: 400px;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#id_container td{
+	height:30px;
+	width:300px;
+}
+
+#id_container th{
+	text-align: center;
+	width:140px;
+}
+
+#id_password,#id_password_check{
+	padding-left:5px;
+	width: 100%;
+	height:	100%;
+	font-size:20px;
+}
+>>>>>>> 4eb9bc3a062f0bc92c73fc7e34d35b6097b4884a
