@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 var Identification = React.createClass({
   getInitialState() {
     return {
-
      pw_fun:function(){ // 변경확인 버튼, 비밀번호 바꾸는 정보수정 부분
         var pwd = $('#id_password').val();
         var pwdc = $('#id_password_check').val();
@@ -28,11 +27,22 @@ var Identification = React.createClass({
      }
     };
    },
-
+    /*
+    현재 FORM태그의 default값이 안바뀜.ㅠㅠ 그거 수정하고싶은데 능력부족.
+    //만약 값이 바뀌면 re-render를 하도록 강요.
+    componentWillReceiveProps:function(nextProps){
+        this.setState({value: nextProps.value});
+    },
+    //input이 바뀌면 re-render를 함.
+    _handleChange: function(e){
+        this.setState({value: e.target.value});
+    },*/
+    
    render:function () {
       var userinfo = ["채호경", "은수저 (정회원)", "2015410019", "ckdwhzjarhk@naver.com", "ckdwhzjarhk"];
       return(
           <div className="container">
+              {/* 보이는 프로필 */}
               <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 toppad">
                       <div className="panel panel-default">
@@ -83,11 +93,12 @@ var Identification = React.createClass({
                       </div>
                   </div>
               </div>
-              {/* 개인정보는 본인 것만 수정 가능*/}
+              {/* 안보이는 프로필, 개인정보는 본인 것만 수정 가능*/}
               <div className="row">
+                  {/* 프로필 아코디언 */}
                   <div className="col-xs-12 col-sm-12 col-md-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 toppad">
                       <div className="panel-group" id="profile-edit" role="tablist"  aria-multiselectable="true">
-
+                          {/* 비밀번호 변경 */}
                           <div className="panel panel-default">
                               <div className="panel-heading" role="tab" id="edit-1">
                                   <h3 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse1" aria-expanded="true" aria-controls="collapse1">비밀번호변경</a></h3>
@@ -101,7 +112,7 @@ var Identification = React.createClass({
                                                       <tbody>
                                                       <tr>
                                                           <th>아이디</th>
-                                                          <td>{userinfo[4]}</td>
+                                                          <td><input className="form-control" type="text" value={userinfo[4]} readonly></input></td>
                                                       </tr>
                                                       <tr>
                                                           <th>새 비밀번호</th>
@@ -122,9 +133,10 @@ var Identification = React.createClass({
                                   </div>
                               </div>
                           </div>
+                          {/* 개인정보 변경 */}
                           <div className="panel panel-default">
                               <div className="panel-heading" role="tab" id="edit-2">
-                                  <h3 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보수정</a></h3>
+                                  <h3 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보변경</a></h3>
                               </div>
                               <div id="collapse2" className="panel-collapse collapse" role="tabpanel"  aria-labelledby="edit-1">
                                   <div className="panel-body">
@@ -135,7 +147,7 @@ var Identification = React.createClass({
                                                       <tbody>
                                                       <tr>
                                                           <th>회원 이름</th>
-                                                          <td><input type="text" id="profile_name" value={userinfo[0]}></input></td>
+                                                          <td><input className="form-control" type="text" id="profile_name" value={userinfo[0]}></input></td>
                                                       </tr>
                                                       <tr>
                                                           <th>학번</th>
@@ -143,7 +155,7 @@ var Identification = React.createClass({
                                                       </tr>
                                                       <tr>
                                                           <th>이메일</th>
-                                                          <td><input type="text" id="profile_email" value={userinfo[3]}></input></td>
+                                                          <td><input value={userinfo[3]} className="form-control" type="text" id="profile_email"></input></td>
                                                       </tr>
                                                       </tbody>
                                                   </table>
