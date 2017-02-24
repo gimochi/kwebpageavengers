@@ -26,25 +26,10 @@ var Identification = React.createClass({
         }
      }
     };
-<<<<<<< HEAD
   },
 
    render: function () {
-=======
-   },
-    /*
-    현재 FORM태그의 default값이 안바뀜.ㅠㅠ 그거 수정하고싶은데 능력부족.
-    //만약 값이 바뀌면 re-render를 하도록 강요.
-    componentWillReceiveProps:function(nextProps){
-        this.setState({value: nextProps.value});
-    },
-    //input이 바뀌면 re-render를 함.
-    _handleChange: function(e){
-        this.setState({value: e.target.value});
-    },*/
 
-   render:function () {
->>>>>>> 4e2c531f92000f0949fbb739c78a0dca94d88f96
       var userinfo = ["채호경", "은수저 (정회원)", "2015410019", "ckdwhzjarhk@naver.com", "ckdwhzjarhk"];
       return(
           <div className="container">

@@ -4,7 +4,7 @@
 
 
 div,td,th{
-//	border : 1px solid black;	/* div의 구조를 위해... */
+	border : 1px solid black;	/* div의 구조를 위해... */
 }
 
 hr{
@@ -449,4 +449,3 @@ hr{
 >>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
 =======
 }*/
->>>>>>> 13da6470d2d0f3e6c95a16eb337e80e45f03535d

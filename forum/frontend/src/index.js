@@ -6,7 +6,6 @@ import BodyForum from './components/body_forum';
 import BodyGallery from './components/body_gallery';
 import Identification from './components/identification';
 import Datgul from './components/Datgul';
-import ForumWriteForm from './components/body_forum_write';
 
 const rootElement = document.getElementById('root');
 
