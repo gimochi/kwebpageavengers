@@ -160,7 +160,7 @@ var Identification = React.createClass({
                                                       </tbody>
                                                   </table>
                                                   <button className="btn pull-left">
-                                                      프로필사진 바꾸기
+                                                      프사 바꾸기
                                                   </button>
                                                   <button className="btn pull-right">
                                                       개인정보 변경
