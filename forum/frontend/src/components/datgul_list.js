@@ -31,6 +31,10 @@ var DatgulList = React.createClass ({
 					<div className="datgul_content col-md-12 col-xs-12">
                         {this.props.content[4]}
 					</div>
+					<div className="datgul_like col-md-12 col-xs-12">
+						<p className="pull-left"><strong className="text-success">&nbsp;3&nbsp;</strong><strong className="text-warning">&nbsp;1&nbsp;</strong></p>
+						<p className="pull-right"><a href="#" className="glyphicon glyphicon-thumbs-up">좋아요</a>&nbsp;&nbsp;<a href="#" className="glyphicon glyphicon-thumbs-down">응꺼져</a></p>
+					</div>
 				</div>
 			</div>
         );
