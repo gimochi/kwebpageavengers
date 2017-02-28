@@ -4,7 +4,7 @@
 
 
 div,td,th{
-	border : 1px solid black;	/* div의 구조를 위해... */
+	//border : 1px solid black;	/* div의 구조를 위해... */
 }
 
 hr{
@@ -76,7 +76,7 @@ hr{
 .body_home_container{
 	min-width: 555px;
     clear:both;
-    margin-bottom:25px;
+    margin-bottom:14.66px;
     margin-top:0;
     padding:0;
 }
@@ -127,10 +127,30 @@ hr{
 		min-width: 1px;
 	}
 	.body_home_content_list{
-		width:40vw;
+		width: 50vw;
 		min-width: 1px;
 	}
 }
+@media (max-width: 880px){
+	.body_home_content_list{
+		width: 55vw;
+		min-width: 1px;
+	}
+}
+@media (max-width: 538px){
+	.body_home_content_list{
+		width: 45vw;
+		min-width: 1px;
+	}
+}
+@media (max-width: 432px){
+	.body_home_content_list{
+		width: 30vw;
+		min-width: 1px;
+	}
+}
+
+
 .body_home_more{
     float:right;
 }
