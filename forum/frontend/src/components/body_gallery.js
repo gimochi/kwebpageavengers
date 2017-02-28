@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Gallery_thumb from './gallery_thumb';
 
 var BodyGallery = React.createClass ({
     getInitialState() {
@@ -29,6 +30,15 @@ var BodyGallery = React.createClass ({
                             {name:"2013년고학번MT",num:5},
                             {name:"2014년 KWEB봄소풍",num:24},
                             {name:"2014년 화합의날",num:21}];
+        var thumbnails = [{title:"첫번째",url:"../static/data/gallery_temp/1.jpg"},
+            {title:"두번째",url:"../static/data/gallery_temp/2.jpg"},
+            {title:"세번째",url:"../static/data/gallery_temp/3.jpg"},
+            {title:"네번째",url:"../static/data/gallery_temp/5.jpg"},
+            {title:"다섯번째",url:"../static/data/gallery_temp/1.jpg"},
+            {title:"여섯번째",url:"../static/data/gallery_temp/2.jpg"},
+            {title:"일곱번째",url:"../static/data/gallery_temp/1.jpg"},
+            {title:"여덟번째",url:"../static/data/gallery_temp/5.jpg"}
+        ];
         /*위 카테고리에 추가해서 쓰면됨.*/
 
         return(
@@ -53,86 +63,11 @@ var BodyGallery = React.createClass ({
                             <p className="text-center">사진첩</p>
                         </div>
                         <div className="gallery row">
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        아
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                    인생
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        망했다
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/5.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        Ah
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        Life
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/1.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        Is
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/3.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title text-center">
-                                        Doomed
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="gallery_sajin col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                                <Link href="#" className="thumbnail text-center">
-                                    <div className="sajin_image">
-                                        <img src={"../static/data/gallery_temp/2.jpg"} alt="wrong" className="img img-responsive full-width"/>
-                                    </div>
-                                    <div className="sajin_title">
-                                        망했따
-                                    </div>
-                                </Link>
-                            </div>
+                                {thumbnails.map((item,i) => {
+                                    return(
+                                        <Gallery_thumb content={item} />
+                                    );
+                                })}
                         </div>
                     </div>
                 </div>

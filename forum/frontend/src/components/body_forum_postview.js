@@ -35,10 +35,10 @@ var ForumPostView = React.createClass({
             <table>
               <tr>
                 <td>
-                  <img className = "postview_profilebox_photo" src = "C:\xampp\htdocs\projects\kwebpageavengers\forum\frontend\public\static\data\sujeo\gold.png"/>
+                  <img className = "postview_profilebox_photo" src = "../static/data/sujeo/gold.png"/>
                 </td>
                 <td>
-                  <img className = "postview_profilebox_sujeo" src = "C:\xampp\htdocs\projects\kwebpageavengers\forum\frontend\public\static\data\sujeo\silver.png"/>
+                  <img className = "postview_profilebox_sujeo" src = "../static/data/sujeo/silver.png"/>
                 </td>
                 <td>
                   <span className = "postview_profilebox_username">윤깐식</span>

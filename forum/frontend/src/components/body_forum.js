@@ -19,7 +19,7 @@ var BodyForum = React.createClass ({
     },
     render: function () {
         return(
-            <div>
+            <div className="container-fluid">
                 <div id="body_forum_left_container">
 
                     <div id="body_forum_left_name">
