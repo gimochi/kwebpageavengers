@@ -3,9 +3,15 @@
 /*------------------------------------------*/
 
 
+<<<<<<< HEAD
 /*div,td,th{
 	border : 1px solid black;	/* div의 구조를 위해... 
 }*/
+=======
+div,td,th{
+	//border : 1px solid black;	/* div의 구조를 위해... */
+}
+>>>>>>> f9e32ab7ab527b6ca96ea344da65865bf2f423f1
 
 hr{
     margin-bottom: 0px;
@@ -108,9 +114,11 @@ h2{
 }
 .body_home_content_list{
 	//width:300px;
-	min-width:280px;
+	min-width:260px;
 	max-width:300px;
+	display:inline-block;
 	padding : 1px;
+	padding-right: 30px;
 	margin-top: 2px;
 	overflow: hidden;
 	text-overflow:ellipsis;
@@ -124,7 +132,7 @@ h2{
 .body_home_content_writer{
 	//width: 45px;
 	min-width: 45px;
-}/*
+}
 @media (max-width: 992px){
 	#body_home_div{
 		min-width: 1px;
@@ -133,26 +141,26 @@ h2{
 		min-width: 1px;
 	}
 	.body_home_content_list{
-		width: 50vw;
+		width: 70vw;
+		max-width: 1000px;
 		min-width: 1px;
 	}
-<<<<<<< HEAD
-}*/
+	.body_home_content_date{
+		display: none;
+	}
+	.body_home_content_writer{
+		width: 45px;
+	}
+}
 @media (max-width: 880px){
 	.body_home_content_list{
-		width: 55vw;
+		width: 69vw;
 		min-width: 1px;
 	}
 }
 @media (max-width: 538px){
 	.body_home_content_list{
-		width: 45vw;
-		min-width: 1px;
-	}
-}
-@media (max-width: 432px){
-	.body_home_content_list{
-		width: 30vw;
+		width: 60vw;
 		min-width: 1px;
 	}
 }
