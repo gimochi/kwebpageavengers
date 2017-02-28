@@ -1,6 +1,7 @@
 import React from 'react';
 import BodyForumPannel from './body_forum_pannel';
 import ForumWriteForm from './body_forum_write';
+import ForumPostView from './body_forum_postview';
 
 
 
@@ -14,7 +15,7 @@ var BodyForumInfo = React.createClass ({
             var content = ["등록일자", "마감일자", "제목", "작성자", "조회수"];
             return(
                 <BodyForumPannel idbox={idbox} content={content} />
-                
+
             );
         }
         else if(this.props.STATE == 1 || this.props.STATE == 2 || this.props.STATE == 3
@@ -30,6 +31,10 @@ var BodyForumInfo = React.createClass ({
         else if(this.props.STATE == 5)  /*글쓰기를 클릭했을 경우*/
           return(
             <ForumWriteForm />  /*글쓰기 폼*/
+          );
+        else if(this.props.STATE == 6)
+          return(
+            <ForumPostView />
           );
         else{
             return(

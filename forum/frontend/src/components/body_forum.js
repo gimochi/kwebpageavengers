@@ -7,8 +7,8 @@ var BodyForum = React.createClass ({
     getInitialState() {
         return {
           fnum : 1,             /* 페이지 수, 초기값은 1 */
-          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기*/
-          name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기"]
+          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기, 6 for 글보기(임시)*/
+          name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기", "글보기"]
         };
      },
     state_change : function(num){
@@ -45,6 +45,9 @@ var BodyForum = React.createClass ({
                     </div>
                       <button id="body_forum_write" onClick={this.state_change.bind(this,5)}>
                         글쓰기
+                      </button>
+                      <button id="body_forum_postview" onClick={this.state_change.bind(this,6)}>
+                        글보기&댓글
                       </button>
                  </div>
 
