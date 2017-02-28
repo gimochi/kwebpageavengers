@@ -67,10 +67,8 @@ var BodyHomeContainer = React.createClass({
                           return (
 
                             <tr>
-                              <td>
-                                <div className="body_home_content_list">
+                              <td className="body_home_content_list">
                                   <Link href="javascript:void(0);"> {data[0] + " (" + data[1] + ")"} </Link>
-                                </div>
                               </td>
                               <td className="body_home_content_date">
                                 2016-12-23
