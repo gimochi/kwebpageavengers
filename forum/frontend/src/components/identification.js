@@ -37,8 +37,8 @@ var Identification = React.createClass({
               <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 toppad">
                       <div className="panel panel-default">
-                          <div className="panel-heading" role="tab">
-                              <h3 className="panel-title text-center">프로필</h3>
+                          <div className="panel-heading profile-heading" role="tab">
+                              <h2 className="panel-title text-center">프로필</h2>
                           </div>
                           <div className="panel-body">
                               <div className="profile">
@@ -91,8 +91,8 @@ var Identification = React.createClass({
                       <div className="panel-group" id="profile-edit" role="tablist"  aria-multiselectable="true">
                           {/* 비밀번호 변경 */}
                           <div className="panel panel-default">
-                              <div className="panel-heading" role="tab" id="edit-1">
-                                  <h3 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse1" aria-expanded="true" aria-controls="collapse1">비밀번호변경</a></h3>
+                              <div className="panel-heading profile-heading" role="tab" id="edit-1">
+                                  <h2 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse1" aria-expanded="true" aria-controls="collapse1">비밀번호변경</a></h2>
                               </div>
                               <div id="collapse1" className="panel-collapse collapse" role="tabpanel"  aria-labelledby="edit-1">
                                   <div className="panel-body">
@@ -126,8 +126,8 @@ var Identification = React.createClass({
                           </div>
                           {/* 개인정보 변경 */}
                           <div className="panel panel-default">
-                              <div className="panel-heading" role="tab" id="edit-2">
-                                  <h3 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보변경</a></h3>
+                              <div className="panel-heading profile-heading" role="tab" id="edit-2">
+                                  <h2 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보변경</a></h2>
                               </div>
                               <div id="collapse2" className="panel-collapse collapse" role="tabpanel"  aria-labelledby="edit-1">
                                   <div className="panel-body">
