@@ -4,17 +4,11 @@ import BodyHomeContainer from './body_home_container';
 var BodyHome = React.createClass ({
     getInitialState() {
         return {
-            username : "채호경",
-            grade : "금수저"
         };
      },
     render: function () {
         return(
             <div id="body_home_div" className="container">
-            
-                <div id="body_home_userinfo" className="row">
-                    {this.state.username}님 안녕하세요! (등급:{this.state.grade})
-                </div>
                 <div className="row">
                     <div className="col-md-6">
                         <BodyHomeContainer
