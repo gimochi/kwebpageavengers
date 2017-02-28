@@ -3,13 +3,17 @@
 /*------------------------------------------*/
 
 
-div,td,th{
-	border : 1px solid black;	/* div의 구조를 위해... */
-}
+/*div,td,th{
+	border : 1px solid black;	/* div의 구조를 위해... 
+}*/
 
 hr{
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+h2{
+	font-weight: bold;
+	color: white;
 }
 
 
@@ -174,19 +178,28 @@ hr{
 }
 
 #body_forum_left_name{
-	padding: 80px 0px;
+	background-color: #f84;
+	padding: 50px 0 40px 15px;
 	width:100%;
-	text-align: center;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
 }
-
+.body_forum_subtitle{
+	color: #DAD7D2;
+	margin-left: 3px;
+}
 .body_forum_menu{
 	cursor : pointer;
 	width: 100%;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	padding: 2px 10px 2px 10px;
+	padding: 10px;
 	font-family: sans-serif;
 	font-weight: bold;
+}
+.body_forum_menu:hover{
+	background-color: #FFC78E;
 }
 #body_forum_right_container{
 	position: absolute;
@@ -207,7 +220,10 @@ hr{
 	color: white;
 	border-radius: 10px;
 }
-
+#body_forum_right_content{
+	font-size: 13px;
+	background-color: #f2f2f2;
+}
 #body_forum_info{
 	clear:both;	
 	width:100%;
@@ -215,12 +231,12 @@ hr{
 	font-weight: bold;
 	font-family: sans-serif;
 }
-
 .body_forum_info_float{
 	position:absolute;
 	padding: 4px 0px;
-	font-size:15px;
 	text-align: center;
+	font-size: 13px;
+	background-color: #f2f2f2;
 }
 
 .body_forum_info_space{
@@ -500,16 +516,16 @@ hr{
 
 
 /*윤진 추가*/
-.division{
-	border: 1px gray;
-	height: 0px;
-}
 .write-btn{
 	margin: 5px;
 	font-weight: bold;
+	font-size: 12px;
 	font-family: sans-serif;
-
+	padding: 5px;
 }
 .btn-center{
-	margin: 0px auto;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
 }

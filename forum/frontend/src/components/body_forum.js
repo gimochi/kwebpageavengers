@@ -23,25 +23,32 @@ var BodyForum = React.createClass ({
                 <div id="body_forum_left_container">
 
                     <div id="body_forum_left_name">
-                        게시판
+                      <h2>게시판</h2>
+                      <span className="body_forum_subtitle">bulletin</span>
                     </div>
 
                     <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
+                        <hr/>
                         <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
-                            공지사항 <span className="label label-success">New</span>
+                            공지사항 <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                         </div>
+                        <hr/>
                         <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
                             준회원 스터디
                         </div>
+                        <hr/>
                         <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
                             정회원 스터디
                         </div>
+                        <hr/>
                         <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
-                            자유 게시판
+                            자유 게시판 <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                         </div>
+                        <hr/>
                         <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
                             정보 게시판
                         </div>
+                        <hr/>
                     </div>
                     <div className="btn-center">
                       <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
@@ -59,7 +66,6 @@ var BodyForum = React.createClass ({
                     </div>
 
                      <BodyForumInfo STATE={this.state.STATE} />     {/*글 정보 목록*/}
-
 
 
                      {/*글 반복문 추가 부분*/}
