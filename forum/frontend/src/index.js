@@ -5,7 +5,7 @@ import BodyHome from './components/body_home';
 import BodyForum from './components/body_forum';
 import BodyGallery from './components/body_gallery';
 import Identification from './components/identification';
-import Datgul from './components/Datgul';
+import ForumPostView from './components/body_forum_postview.js';
 
 const rootElement = document.getElementById('root');
 
@@ -24,7 +24,7 @@ function route_start(){
 			<Route path="userinfo" components={Identification} />
 			<Route path="forum" components={BodyForum} />
 			<Route path="gallery" components={BodyGallery} />
-			<Route path="datgul" components={Datgul} />
+			<Route path="postview" components={ForumPostView} />
 		</Router>
 		, rootElement);
 }	// 홈 렌더링

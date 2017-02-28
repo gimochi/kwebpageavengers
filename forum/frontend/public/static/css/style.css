@@ -4,7 +4,7 @@
 
 
 div,td,th{
-	border : 1px solid black;	/* div의 구조를 위해... */
+	border : 1px solid;	/* div의 구조를 위해... */
 }
 
 hr{
@@ -334,6 +334,7 @@ hr{
 
 .datgul.container{
 	background-color:white;
+	width: 100%;
 }
 .datgul_box{
 	//padding: 3px;
@@ -449,3 +450,31 @@ hr{
 >>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
 =======
 }*/
+/*
+.body_forum_postview_titlebox_left{
+	width: 50%;
+}
+.body_forum_postview_titlebox_right{
+	width: 50%;
+}*/
+.body_forum_postview_container{
+	width: 100%;
+	margin-bottom: 1%;
+}
+.body_forum_postview_titlebox{
+	width: 100%;
+	margin-right: 0;
+}
+.body_forum_postview_titlebox_right{
+	padding:0;
+}
+.body_forum_postview_profilebox{
+	width: 100%;
+}
+.body_forum_postview_bodybox{
+	width: 100%;
+}
+
+.body_forum_postview_controlbox{
+	width: 100%;
+}

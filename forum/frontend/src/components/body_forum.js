@@ -43,11 +43,9 @@ var BodyForum = React.createClass ({
                             정보 게시판
                         </div>
                     </div>
-                    <div>
-                      <div id="body_forum_write" onClick={this.state_change.bind(this,5)}>
+                      <button id="body_forum_write" onClick={this.state_change.bind(this,5)}>
                         글쓰기
-                      </div>
-                    </div>
+                      </button>
                  </div>
 
                 <div id="body_forum_right_container">
