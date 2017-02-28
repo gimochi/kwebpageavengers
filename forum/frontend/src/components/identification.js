@@ -92,7 +92,7 @@ var Identification = React.createClass({
                           {/* 비밀번호 변경 */}
                           <div className="panel panel-default">
                               <div className="panel-heading profile-heading" role="tab" id="edit-1">
-                                  <h2 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse1" aria-expanded="true" aria-controls="collapse1">비밀번호변경</a></h2>
+                                  <h2 className="panel-title text-center"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse1" aria-expanded="true" aria-controls="collapse1">비밀번호변경</a></h2>
                               </div>
                               <div id="collapse1" className="panel-collapse collapse" role="tabpanel"  aria-labelledby="edit-1">
                                   <div className="panel-body">
@@ -127,7 +127,7 @@ var Identification = React.createClass({
                           {/* 개인정보 변경 */}
                           <div className="panel panel-default">
                               <div className="panel-heading profile-heading" role="tab" id="edit-2">
-                                  <h2 className="panel-title"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보변경</a></h2>
+                                  <h2 className="panel-title text-center"><a data-toggle="collapse" data-parent="#profile-edit" href="#collapse2" aria-expanded="true" aria-controls="collapse2">개인정보변경</a></h2>
                               </div>
                               <div id="collapse2" className="panel-collapse collapse" role="tabpanel"  aria-labelledby="edit-1">
                                   <div className="panel-body">
