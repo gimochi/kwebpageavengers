@@ -34,7 +34,7 @@ var Datgul = React.createClass ({
     },
     render: function () {
         return(
-            <div className="container datgul">
+            <div className="datgul">
                 <DatgulLoginCheck STATE="2" />    {/* 1은 로그인안됨, 2는 됨 */}
                 <div className="datgul_box row datgul_stat">
                     <hr/>

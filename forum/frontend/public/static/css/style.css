@@ -3,7 +3,9 @@
 /*------------------------------------------*/
 
 
-
+div,td,th{
+	border : 1px solid black;	/* div의 구조를 위해... */
+}
 
 hr{
     margin-bottom: 10px !important;
@@ -325,47 +327,16 @@ hr{
 }
 
 /* 내 정보 보기 */
-/*
-#id_container{
-	text-align: center;
-	width: 100%;
-	min-width: 400px;
-	min-height: 500px;
+.profile-heading{
+	background-color:#f84 !important;
+	color:white !important;
+	font-family: 'Russo One', sans-serif !important;
+	padding-top:10px;
+	padding-bottom:10px;
 }
-
-#id_img{
-	width: 150px;
-	height: 150px;
-	margin-top: 75px;
-}
-
-#id_table{
-	min-width: 400px;
-	margin: 0 auto;
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
-#id_container td{
-	height:30px;
-	width:300px;
-}
-
-#id_container th{
-	text-align: center;
-	width:140px;
-}
-
-#id_password,#id_password_check{
-	padding-left:5px;
-	width: 100%;
-	height:	100%;
-	font-size:20px;
-}*/
-
 /* 댓글 css */
 
-.datgul.container{
+.datgul {
 	background-color:white;
 	width: 100%;
 }
@@ -464,31 +435,6 @@ hr{
 	border: 2px gray dotted;
 }
 /*
-.datgul_list{
-	padding: 20px;
-	padding-bottom: 25px;
-}
-
-.datgul_list_table{
-
-}
-
-.datgul_list_img{
-	width:30px;
-	height:30px;
-	margin-right: 5px;
-	border:1px solid black;
-<<<<<<< HEAD
-}
->>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
-=======
-}*/
-/*
-.body_forum_postview_titlebox_left{
-	width: 50%;
-}
-.body_forum_postview_titlebox_right{
-	width: 50%;
 }*/
 .body_forum_postview_container{
 	width: 100%;
