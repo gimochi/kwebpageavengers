@@ -3,20 +3,6 @@
 /*------------------------------------------*/
 
 
-<<<<<<< HEAD
-/*div,td,th{
-	border : 1px solid black;	/* div의 구조를 위해... 
-}*/
-=======
-div,td,th{
-	//border : 1px solid black;	/* div의 구조를 위해... */
-}
->>>>>>> f9e32ab7ab527b6ca96ea344da65865bf2f423f1
-
-hr{
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
 h2{
 	font-weight: bold;
 	color: white;
@@ -114,11 +100,9 @@ h2{
 }
 .body_home_content_list{
 	//width:300px;
-	min-width:260px;
+	min-width:280px;
 	max-width:300px;
-	display:inline-block;
 	padding : 1px;
-	padding-right: 30px;
 	margin-top: 2px;
 	overflow: hidden;
 	text-overflow:ellipsis;
@@ -132,7 +116,7 @@ h2{
 .body_home_content_writer{
 	//width: 45px;
 	min-width: 45px;
-}
+}/*
 @media (max-width: 992px){
 	#body_home_div{
 		min-width: 1px;
@@ -141,26 +125,26 @@ h2{
 		min-width: 1px;
 	}
 	.body_home_content_list{
-		width: 70vw;
-		max-width: 1000px;
+		width: 50vw;
 		min-width: 1px;
 	}
-	.body_home_content_date{
-		display: none;
-	}
-	.body_home_content_writer{
-		width: 45px;
-	}
-}
+<<<<<<< HEAD
+}*/
 @media (max-width: 880px){
 	.body_home_content_list{
-		width: 69vw;
+		width: 55vw;
 		min-width: 1px;
 	}
 }
 @media (max-width: 538px){
 	.body_home_content_list{
-		width: 60vw;
+		width: 45vw;
+		min-width: 1px;
+	}
+}
+@media (max-width: 432px){
+	.body_home_content_list{
+		width: 30vw;
 		min-width: 1px;
 	}
 }
@@ -176,7 +160,6 @@ h2{
 /*------------------------------------------*/
 /*	     FORUM BODY
 /*------------------------------------------*/
-
 #body_forum_left_container{
 	position:absolute;
 	margin-left: 0.8%;
@@ -202,7 +185,7 @@ h2{
 .body_forum_menu{
 	cursor : pointer;
 	width: 100%;
-	padding: 10px;
+	padding: 13px;
 	font-family: sans-serif;
 	font-weight: bold;
 }
@@ -231,6 +214,9 @@ h2{
 #body_forum_right_content{
 	font-size: 13px;
 	background-color: #f2f2f2;
+}
+.body_forum_line{
+	margin: 0px;
 }
 #body_forum_info{
 	clear:both;	
