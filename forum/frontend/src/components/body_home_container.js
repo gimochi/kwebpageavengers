@@ -74,7 +74,7 @@ var BodyHomeContainer = React.createClass({
                                   <Link href="javascript:void(0);"> {data[0]} </Link>
                               </td>
 
-                              <td className="body_home_content_date">
+                              <td className="body_home_content_date hidden-xs">
                                 {data[1]}
                               </td>
                               <td className="body_home_content_writer">

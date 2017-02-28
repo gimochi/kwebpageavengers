@@ -104,8 +104,9 @@ hr{
 }
 .body_home_content_list{
 	//width:300px;
-	min-width:280px;
+	min-width:260px;
 	max-width:300px;
+	display:inline-block;
 	padding : 1px;
 	margin-top: 2px;
 	overflow: hidden;
@@ -132,24 +133,18 @@ hr{
 		width: 50vw;
 		min-width: 1px;
 	}
-<<<<<<< HEAD
 }*/
+
 @media (max-width: 880px){
 	.body_home_content_list{
-		width: 55vw;
-		min-width: 1px;
+		max-width: 280px;
+		min-width:250px;
 	}
 }
 @media (max-width: 538px){
 	.body_home_content_list{
-		width: 45vw;
-		min-width: 1px;
-	}
-}
-@media (max-width: 432px){
-	.body_home_content_list{
-		width: 30vw;
-		min-width: 1px;
+		max-width: 160px;
+		min-width:160px;
 	}
 }
 .body_home_more{
