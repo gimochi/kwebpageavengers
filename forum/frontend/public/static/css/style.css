@@ -158,6 +158,9 @@ hr{
 .notification{
     background-color:#f84;
 }
+.body_home_title.notification{
+	color:white;
+}
 /*------------------------------------------*/
 /*	     FORUM BODY
 /*------------------------------------------*/
