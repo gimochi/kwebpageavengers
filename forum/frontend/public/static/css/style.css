@@ -303,6 +303,7 @@ hr{
 
 .datgul.container{
 	background-color:white;
+	width: 100%;
 }
 .datgul_box{
 	//padding: 3px;
@@ -399,22 +400,25 @@ hr{
 	border: 2px gray dotted;
 }
 /*
-.datgul_list{
-	padding: 20px;
-	padding-bottom: 25px;
-}
-
-.datgul_list_table{
-
-}
-
-.datgul_list_img{
-	width:30px;
-	height:30px;
-	margin-right: 5px;
-	border:1px solid black;
-<<<<<<< HEAD
-}
->>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
-=======
 }*/
+.body_forum_postview_container{
+	width: 100%;
+	margin-bottom: 1%;
+}
+.body_forum_postview_titlebox{
+	width: 100%;
+	margin-right: 0;
+}
+.body_forum_postview_titlebox_right{
+	padding:0;
+}
+.body_forum_postview_profilebox{
+	width: 100%;
+}
+.body_forum_postview_bodybox{
+	width: 100%;
+}
+
+.body_forum_postview_controlbox{
+	width: 100%;
+}
