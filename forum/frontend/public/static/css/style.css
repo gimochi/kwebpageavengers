@@ -104,8 +104,9 @@ hr{
 }
 .body_home_content_list{
 	//width:300px;
-	min-width:280px;
+	min-width:260px;
 	max-width:300px;
+	display:inline-block;
 	padding : 1px;
 	padding-right: 30px;
 	margin-top: 2px;
@@ -130,7 +131,8 @@ hr{
 		min-width: 1px;
 	}
 	.body_home_content_list{
-		width: 60vw;
+		width: 70vw;
+		max-width: 1000px;
 		min-width: 1px;
 	}
 	.body_home_content_date{
@@ -139,7 +141,6 @@ hr{
 	.body_home_content_writer{
 		width: 45px;
 	}
-}
 }
 @media (max-width: 880px){
 	.body_home_content_list{
@@ -150,12 +151,6 @@ hr{
 @media (max-width: 538px){
 	.body_home_content_list{
 		width: 60vw;
-		min-width: 1px;
-	}
-}
-@media (max-width: 432px){
-	.body_home_content_list{
-		width: 1vw;
 		min-width: 1px;
 	}
 }
@@ -176,6 +171,8 @@ hr{
 	position:absolute;
 	margin-left: 0.8%;
 	width:17%;
+	background-color: #fff;
+	border-radius: 10px;
 }
 
 #body_forum_left_name{
@@ -187,27 +184,38 @@ hr{
 .body_forum_menu{
 	cursor : pointer;
 	width: 100%;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	padding: 3px 0px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 2px 10px 2px 10px;
+	font-family: sans-serif;
+	font-weight: bold;
 }
-
 #body_forum_right_container{
 	position: absolute;
 	width:78%;
 	height:600px;
 	margin-left: 20%;
+	background-color: #fff;
+	border-radius: 10px;
 }
 
 #body_forum_right_name{
 	padding : 4px;
 	font-size: 18px;
+	font-weight: 700;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #f84;
+	color: white;
+	border-radius: 10px;
 }
 
 #body_forum_info{
-	clear:both;
-	margin-top: 30px;
+	clear:both;	
 	width:100%;
+	padding-top: 5px;
+	font-weight: bold;
+	font-family: sans-serif;
 }
 
 .body_forum_info_float{
@@ -269,7 +277,7 @@ hr{
 
 #body_forum_number_container{
 	clear:both;
-	width: 294px;
+	width: 303px;
 	height: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -279,10 +287,13 @@ hr{
 .body_forum_number{
 	float: left;
 	text-align: center;
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 23px;
 }
-
+.circle{
+	border: 1px solid black;
+	border-radius: 50%;
+}
 #body_forum_left_shift{
 	margin-right:15px;
 	width:30px;
@@ -487,4 +498,20 @@ hr{
 
 .body_forum_postview_controlbox{
 	width: 100%;
+}
+
+
+/*윤진 추가*/
+.division{
+	border: 1px gray;
+	height: 0px;
+}
+.write-btn{
+	margin: 5px;
+	font-weight: bold;
+	font-family: sans-serif;
+
+}
+.btn-center{
+	margin: 0px auto;
 }

@@ -28,7 +28,7 @@ var BodyForum = React.createClass ({
 
                     <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
                         <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
-                            공지사항
+                            공지사항 <span className="label label-success">New</span>
                         </div>
                         <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
                             준회원 스터디
@@ -43,12 +43,14 @@ var BodyForum = React.createClass ({
                             정보 게시판
                         </div>
                     </div>
-                      <button id="body_forum_write" onClick={this.state_change.bind(this,5)}>
+                    <div className="btn-center">
+                      <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
                         글쓰기
                       </button>
-                      <button id="body_forum_postview" onClick={this.state_change.bind(this,6)}>
+                      <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6)}>
                         글보기&댓글
                       </button>
+                    </div>
                  </div>
 
                 <div id="body_forum_right_container">
