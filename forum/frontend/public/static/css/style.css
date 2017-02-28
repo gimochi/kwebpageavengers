@@ -3,6 +3,10 @@
 /*------------------------------------------*/
 
 
+div,td,th{
+	border : 1px solid black;	/* div의 구조를 위해... */
+}
+
 h2{
 	font-weight: bold;
 	color: white;
