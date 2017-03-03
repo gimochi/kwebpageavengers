@@ -220,7 +220,7 @@ h2{
 	font-family: sans-serif;
 }
 .body_forum_info_float{
-	position:absolute;
+	position:relative;
 	padding: 4px 0px;
 	text-align: center;
 	font-size: 13px;
@@ -235,45 +235,35 @@ h2{
 
 /* 공지사항을 위한 info */
 .body_forum_gongji_regdate{
-	right:88%;
 	width:12%;
 }
 .body_forum_gongji_duedate{
-	right:76%;
 	width:12%;
 }
 .body_forum_gongji_title{
-	right:22%;
 	width:54%;
 }
 .body_forum_gongji_writer{
-	right:10%;
 	width:12%;
 }
 .body_forum_gongji_hits{
-	right:0px;
 	width:10%;
 }
 
 /* 공지사항이 아닌것을 위한 info */
 .body_forum_not_gongji_post_number{
-	right:88%;
 	width:12%;
 }
 .body_forum_not_gongji_title{
-	right:34%;
 	width:54%;
 }
 .body_forum_not_gongji_regdate{
-	right:22%;
 	width:12%;
 }
 .body_forum_not_gongji_writer{
-	right:10%;
 	width:12%;
 }
 .body_forum_not_gongji_hits{
-	right:0px;
 	width:10%;
 }
 
