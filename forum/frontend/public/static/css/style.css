@@ -151,10 +151,14 @@ h2{
 /*------------------------------------------*/
 /*	     FORUM BODY
 /*------------------------------------------*/
+.body_forum_td1{
+	vertical-align: top;
+	width: 212.5px;
+}
 #body_forum_left_container{
-	position:absolute;
+	position:static;
 	margin-left: 0.8%;
-	width:17%;
+	max-width:212.5px;
 	background-color: #fff;
 	border-radius: 10px;
 }
@@ -184,10 +188,9 @@ h2{
 	background-color: #FFC78E;
 }
 #body_forum_right_container{
-	position: absolute;
-	width:78%;
-	height:600px;
-	margin-left: 20%;
+	position: relative;
+	max-width:985.4px;
+	margin-left: 30px;
 	background-color: #fff;
 	border-radius: 10px;
 }
@@ -277,10 +280,10 @@ h2{
 #body_forum_number_container{
 	clear:both;
 	width: 303px;
-	height: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
+	padding-bottom:40px;
 }
 
 .body_forum_number{
@@ -311,11 +314,6 @@ h2{
 #body_forum_right_shift2{
 	margin-left:3px;
 	width:40px;
-}
-
-#body_forum_bottom_space{
-	width:100%;
-	height:600px;
 }
 /*------------------------------------------*/
 /*	     사진첩
