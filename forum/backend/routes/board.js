@@ -48,7 +48,7 @@ router.get('/:board_sq', function(req,res,next){ //게시글가져오기
 });
 
 router.put('/:board_sq', function(req,res,next){ //게시글수정하기
- console.log("PUT, /api/board/:board_sq, 게시물 상세가져오기");
+ console.log("PUT, /api/board/:board_sq, 게시물 수정하기");
   models.board.update({
     title : req.params.title,
     contents : req.params.contents
