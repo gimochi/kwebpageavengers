@@ -1,25 +1,82 @@
 var express = require('express');
 var router = express.Router();
+var models = require('../model');
 
 
 router.get('/list/:board_type', function(req, res, next) { //게시글목록
-  res.send('respond with a resource'+req.params.board_type);
+  console.log("GET, /api/board/list/:board_type 게시물목록");
+  models.board.findAll({
+    where : {
+      board_type : req.params.board_type
+    }
+  }).then(function(board){
+     console.log("게시물 목록 SUCCESS");
+     console.log("가져온값"+board);
+     res.setHeader('Content-Type', 'application/json');
+     res.send(JSON.stringify(board));
+  });
+ 
 });
 
 router.post('/', function(req,res,next){ //게시글등록하기
-  res.send('board add SUCCESS');
+  console.log("POST, /api/board/  게시물등록");
+  models.board.create({
+    user_sq : req.params.user_sq,
+    board_type : req.params.board_type,
+    title : req.params.title,
+    contents : req.params.contents,
+    del_yn : 'N'
+  }).then(function(board){
+     console.log(" 게시물 등록 SUCCESS");
+     res.send('respond with a resource'+req.params.board_type);
+  });
 });
 
 router.get('/:board_sq', function(req,res,next){ //게시글가져오기
-  res.send('board get SUCCESS');
+  console.log("GET, /api/board/:board_sq, 게시물 상세가져오기");
+  models.board.findAll({
+      where: {
+       board_sq: req.params.board_sq
+      }
+  }).then(function(board) {
+    console.log("SUCCESS");
+    console.log("가져온값"+board);
+   res.setHeader('Content-Type', 'application/json');
+   res.send(JSON.stringify(board));
+  });
+ 
 });
 
 router.put('/:board_sq', function(req,res,next){ //게시글수정하기
-  res.send('board put SUCCESS');
+ console.log("PUT, /api/board/:board_sq, 게시물 상세가져오기");
+  models.board.update({
+    title : req.params.title,
+    contents : req.params.contents
+  }, {
+      where: {
+       board_sq: req.params.board_sq
+      }
+  }).then(function(board) {
+    console.log("SUCCESS");
+    console.log("가져온값"+board);
+   res.setHeader('Content-Type', 'application/json');
+   res.send(JSON.stringify(board));
+  });
 });
 
 router.delete('/:board_sq', function(req,res,next){ //게시글삭제하기
-  res.send('board delete SUCCESS');
+console.log("DELETE, /api/board/:board_sq, 게시물 삭제하기");
+  models.board.update({
+    del_yn : 'Y'
+  }, {
+      where: {
+       board_sq: req.params.board_sq
+      }
+  }).then(function(board) {
+    console.log("SUCCESS");
+   res.setHeader('Content-Type', 'application/json');
+   res.send(JSON.stringify(board));
+  });
 });
 
 module.exports = router;
