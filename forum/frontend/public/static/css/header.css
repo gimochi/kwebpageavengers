@@ -135,3 +135,14 @@ a:active{
     outline: 0;
     text-decoration: none;
 }
+@media (max-width: 992px){
+    .navbar-default .navbar-toggle{
+        border-color:#f84;
+    }
+    .navbar-default .navbar-toggle:focus{
+        background-color:transparent;
+    }
+    .navbar-nav{
+        margin:0;
+    }
+}

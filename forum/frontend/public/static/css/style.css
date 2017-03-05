@@ -4,12 +4,16 @@
 
 
 div,td,th{
+<<<<<<< HEAD
 	border : none;	/* div의 구조를 위해... */
+=======
+	//border : 1px solid black;	/* div의 구조를 위해... */
+>>>>>>> f3baa9e20af040b95ac2061bb24e863b42bee992
 }
 
-hr{
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
+h2{
+	font-weight: bold;
+	color: white;
 }
 
 
@@ -70,9 +74,13 @@ hr{
 }
 
 */
+#body_home_div{
+//	min-width: 1169px;
+}
 .body_home_container{
+	min-width: 100%;
     clear:both;
-    margin-bottom:25px;
+    margin-bottom:25.15px;
     margin-top:0;
     padding:0;
 }
@@ -90,65 +98,137 @@ hr{
 .body_home_content{
     background-color:#fff;
     color:inherit;
-    padding:15px 20px 20px 20px;
+    padding:15px 20px 15px 20px;
     border-color:#f2f2f2;
     border-style:solid solid none;
     border-width:1px 0;
 }
+.body_home_content_table{
+	width:100%;
+}
+.body_home_content_list{
+	min-width:280px;
+	max-width:300px;
+	padding : 1px;
+	margin-top: 2px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding-right: 30px;
+}
+.body_home_content_date{
+	//width: 90px;
+	min-width: 90px;
+	max-width: 80px;
+}
+.body_home_content_writer{
+	//width: 45px;
+	min-width: 45px;
+}
+@media (max-width: 992px){
+	#body_home_div{
+		min-width: 1px;
+	}
+	.body_home_container{
+		min-width: 1px;
+	}
+	.body_home_content_list{
+		min-width: 1px;
+		max-width: 1px;
+	}
+	.body_home_content_date{
+		display: none;
+	}
+	.body_home_content_writer{
+		display: none;
+	}
+}
 .body_home_more{
     float:right;
 }
-
 .notification{
     background-color:#f84;
+}
+.body_home_title.notification{
+	color:white;
 }
 /*------------------------------------------*/
 /*	     FORUM BODY
 /*------------------------------------------*/
-
+.body_forum_td1{
+	vertical-align: top;
+	width: 212.5px;
+}
 #body_forum_left_container{
-	position:absolute;
+	position:static;
 	margin-left: 0.8%;
-	width:17%;
+	max-width:212.5px;
+	background-color: #fff;
+	border-radius: 10px;
 }
 
 #body_forum_left_name{
-	padding: 80px 0px;
+	background-color: #f84;
+	padding: 50px 0 40px 15px;
 	width:100%;
-	text-align: center;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
 }
-
+.body_forum_subtitle{
+	color: #DAD7D2;
+	margin-left: 3px;
+}
 .body_forum_menu{
 	cursor : pointer;
 	width: 100%;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	padding: 3px 0px;
+	padding: 13px;
+	font-family: sans-serif;
+	font-weight: bold;
 }
-
+.body_forum_menu:hover{
+	background-color: #FFC78E;
+}
 #body_forum_right_container{
-	position: absolute;
-	width:78%;
-	height:600px;
-	margin-left: 20%;
+	position: relative;
+	max-width:985.4px;
+	margin-left: 30px;
+	background-color: #fff;
+	border-radius: 10px;
 }
 
 #body_forum_right_name{
 	padding : 4px;
 	font-size: 18px;
-}
-
-#body_forum_info{
-	clear:both;
-	margin-top: 30px;
-	width:100%;
-}
-
-.body_forum_info_float{
-	position:absolute;
-	padding: 4px 0px;
-	font-size:15px;
+	font-weight: 700;
+	font-family: sans-serif;
 	text-align: center;
+	background-color: #f84;
+	color: white;
+	border-radius: 10px;
+}
+#body_forum_right_content{
+	font-size: 13px;
+	background-color: #f2f2f2;
+}
+.body_forum_line{
+	margin: 0px;
+}
+#body_forum_info{
+	clear:both;	
+	width:100%;
+	padding-top: 5px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.body_forum_info_float{
+	position:relative;
+	padding: 4px 0px;
+	text-align: center;
+	font-size: 13px;
+	background-color: #f2f2f2;
 }
 
 .body_forum_info_space{
@@ -159,64 +239,57 @@ hr{
 
 /* 공지사항을 위한 info */
 .body_forum_gongji_regdate{
-	right:88%;
 	width:12%;
 }
 .body_forum_gongji_duedate{
-	right:76%;
 	width:12%;
 }
 .body_forum_gongji_title{
-	right:22%;
 	width:54%;
 }
 .body_forum_gongji_writer{
-	right:10%;
 	width:12%;
 }
 .body_forum_gongji_hits{
-	right:0px;
 	width:10%;
 }
 
 /* 공지사항이 아닌것을 위한 info */
 .body_forum_not_gongji_post_number{
-	right:88%;
 	width:12%;
 }
 .body_forum_not_gongji_title{
-	right:34%;
 	width:54%;
 }
 .body_forum_not_gongji_regdate{
-	right:22%;
 	width:12%;
 }
 .body_forum_not_gongji_writer{
-	right:10%;
 	width:12%;
 }
 .body_forum_not_gongji_hits{
-	right:0px;
 	width:10%;
 }
 
 #body_forum_number_container{
 	clear:both;
-	width: 294px;
-	height: 20px;
+	width: 303px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
+	padding-bottom:40px;
 }
 
 .body_forum_number{
 	float: left;
 	text-align: center;
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 23px;
 }
-
+.circle{
+	border: 1px solid black;
+	border-radius: 50%;
+}
 #body_forum_left_shift{
 	margin-right:15px;
 	width:30px;
@@ -235,11 +308,6 @@ hr{
 #body_forum_right_shift2{
 	margin-left:3px;
 	width:40px;
-}
-
-#body_forum_bottom_space{
-	width:100%;
-	height:600px;
 }
 /*------------------------------------------*/
 /*	     사진첩
@@ -292,47 +360,16 @@ hr{
 }
 
 /* 내 정보 보기 */
-/*
-#id_container{
-	text-align: center;
-	width: 100%;
-	min-width: 400px;
-	min-height: 500px;
+.profile-heading{
+	background-color:#f84 !important;
+	color:white !important;
+	font-family: 'Russo One', sans-serif !important;
+	padding-top:10px;
+	padding-bottom:10px;
 }
-
-#id_img{
-	width: 150px;
-	height: 150px;
-	margin-top: 75px;
-}
-
-#id_table{
-	min-width: 400px;
-	margin: 0 auto;
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
-#id_container td{
-	height:30px;
-	width:300px;
-}
-
-#id_container th{
-	text-align: center;
-	width:140px;
-}
-
-#id_password,#id_password_check{
-	padding-left:5px;
-	width: 100%;
-	height:	100%;
-	font-size:20px;
-}*/
-
 /* 댓글 css */
 
-.datgul.container{
+.datgul {
 	background-color:white;
 	width: 100%;
 }
@@ -431,31 +468,6 @@ hr{
 	border: 2px gray dotted;
 }
 /*
-.datgul_list{
-	padding: 20px;
-	padding-bottom: 25px;
-}
-
-.datgul_list_table{
-
-}
-
-.datgul_list_img{
-	width:30px;
-	height:30px;
-	margin-right: 5px;
-	border:1px solid black;
-<<<<<<< HEAD
-}
->>>>>>> 429d207d5b00a36f1d3803554a4ad099bc918447
-=======
-}*/
-/*
-.body_forum_postview_titlebox_left{
-	width: 50%;
-}
-.body_forum_postview_titlebox_right{
-	width: 50%;
 }*/
 .postview_postcontent_container{
 	width: 100%;
@@ -490,4 +502,20 @@ hr{
 .postview_postcontent_container{
 	width: 100%;
 	padding:15px;
+}
+
+
+/*윤진 추가*/
+.write-btn{
+	margin: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: sans-serif;
+	padding: 5px;
+}
+.btn-center{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
 }

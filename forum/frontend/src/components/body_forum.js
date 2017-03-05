@@ -19,56 +19,68 @@ var BodyForum = React.createClass ({
     },
     render: function () {
         return(
-            <div>
-                <div id="body_forum_left_container">
+            <div className="container-fluid">
+                <table style={{"width":"100%"}}>
+                  <tbody>
+                    <td className="body_forum_td1">
+                      <div id="body_forum_left_container">
 
-                    <div id="body_forum_left_name">
-                        게시판
-                    </div>
+                          <div id="body_forum_left_name">
+                            <h2>게시판</h2>
+                            <span className="body_forum_subtitle">bulletin</span>
+                          </div>
 
-                    <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
-                        <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
-                            공지사항
-                        </div>
-                        <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
-                            준회원 스터디
-                        </div>
-                        <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
-                            정회원 스터디
-                        </div>
-                        <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
-                            자유 게시판
-                        </div>
-                        <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
-                            정보 게시판
-                        </div>
-                    </div>
-                      <button id="body_forum_write" onClick={this.state_change.bind(this,5)}>
-                        글쓰기
-                      </button>
-                      <button id="body_forum_postview" onClick={this.state_change.bind(this,6)}>
-                        글보기&댓글
-                      </button>
-                 </div>
+                          <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
+                              <hr className="body_forum_line"/>
+                              <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
+                                  공지사항 <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
+                              </div>
+                              <hr className="body_forum_line"/>
+                              <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
+                                  준회원 스터디
+                              </div>
+                              <hr className="body_forum_line"/>
+                              <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
+                                  정회원 스터디
+                              </div>
+                              <hr className="body_forum_line"/>
+                              <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
+                                  자유 게시판  <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
+                              </div>
+                              <hr className="body_forum_line"/>
+                              <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
+                                  정보 게시판
+                              </div>
+                              <hr className="body_forum_line"/>
+                          </div>
+                          <div className="btn-center">
+                            <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
+                              글쓰기
+                            </button>
+                            <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6)}>
+                              글보기&댓글
+                            </button>
+                          </div>
+                       </div>
+                    </td>
 
-                <div id="body_forum_right_container">
-                    <div id="body_forum_right_name">
-                        {this.state.name[this.state.STATE]}
-                    </div>
+                    <td style={{"verticalAlign":"top"}}>
+                      <div id="body_forum_right_container">
+                          <div id="body_forum_right_name">
+                              {this.state.name[this.state.STATE]}
+                          </div>
 
-                     <BodyForumInfo STATE={this.state.STATE} />     {/*글 정보 목록*/}
-
-
-
-                     {/*글 반복문 추가 부분*/}
+                           <BodyForumInfo STATE={this.state.STATE} />     {/*글 정보 목록*/}
 
 
-                   {/*검색기능 추가??*/}
-                </div>
+                           {/*글 반복문 추가 부분*/}
 
-                <div id="body_forum_bottom_space">
-                    {/* absolute가 자리를 차지하지 못하기에 넣어준 div */}
-                </div>
+
+                         {/*검색기능 추가??*/}
+                      </div>
+                    </td>
+                  </tbody>
+                </table>
 
           </div>
         );
