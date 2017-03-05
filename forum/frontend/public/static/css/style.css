@@ -4,11 +4,8 @@
 
 
 div,td,th{
-<<<<<<< HEAD
+
 	border : none;	/* div의 구조를 위해... */
-=======
-	//border : 1px solid black;	/* div의 구조를 위해... */
->>>>>>> f3baa9e20af040b95ac2061bb24e863b42bee992
 }
 
 h2{
@@ -217,7 +214,7 @@ h2{
 	margin: 0px;
 }
 #body_forum_info{
-	clear:both;	
+	clear:both;
 	width:100%;
 	padding-top: 5px;
 	font-weight: bold;
@@ -371,6 +368,7 @@ h2{
 
 .datgul {
 	background-color:white;
+	padding: 10px;
 	width: 100%;
 }
 .datgul_box{
@@ -471,38 +469,64 @@ h2{
 }*/
 .postview_postcontent_container{
 	width: 100%;
-	margin-bottom: 1%;
 	background-color: white;
+	margin-bottom: 10%;
+	padding: 10px;
+	display: inline-block;
 }
 .postview_postcontent_titlebox{
 	width: 100%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding: 5px;
+	border: 1px solid #F1F1F1;
+	display: inline-block;
+}
+.postview_postcontent_titlebox_boardname{
+	font-size: 10px;
+	color: gray;
 }
 .postview_postcontent_profilebox{
 	width: 100%;
-}
-.postview_postcontent_profilebox_photo{
-	width: 50px;
+	border: 1px solid #F1F1F1;
+	padding: 5px;
+	margin-bottom: 1%;
+	display: inline-block;
 }
 .postview_postcontent_profilebox_sujeo{
 	width: 15px;
 	height: 15px;
+	display: inline-block;
+}
+.postview_postcontent_profilebox_email{
+	font-size: 10px;
+	color: gray;
+	display: inline-block;
 }
 .postview_postcontent_contentbox{
 	width: 100%;
+	margin-bottom: 1%;
+	border: 1px solid #F1F1F1;
+	padding: 5px;
+	display: inline-block;
 }
 .postview_postcontent_controlbox{
 	width: 100%;
+	display: inline-block;
 }
 .postview_postcontent_controlbox_prev{
 	width: 100%;
+	border: 1px solid #F1F1F1;
+	padding: 5px;
+	display: inline-block;
 }
 .postview_postcontent_controlbox_next{
 	width: 100%;
+	border: 1px solid #F1F1F1;
+	padding: 5px;
+	display: inline-block;
 }
-.postview_postcontent_container{
-	width: 100%;
-	padding:15px;
-}
+
 
 
 /*윤진 추가*/

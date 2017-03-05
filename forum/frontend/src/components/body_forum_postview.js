@@ -7,10 +7,14 @@ import PostContent from './body_forum_postview_postcontent.js';
 var ForumPostView = React.createClass({
   render: function (){
     return (
-      <div>
-        <PostContent/>
-        <Datgul/>
-      </div>
+      <table>
+        <tr>
+          <PostContent/>
+        </tr>
+        <tr>
+          <Datgul/>
+        </tr>
+      </table>
     );
   }
 });
