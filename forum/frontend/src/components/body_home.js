@@ -33,14 +33,16 @@ var BodyHome = React.createClass ({
                         /> {/* 최근 준스 */}
                     </div>
                 </div>
-                <div id="body_home_notification" className="row">
+                <div className="row">
                     <div className="col-md-12">
-                        <div className="body_home_title notification">
-                            알림
-                        </div>
-                        <div className="body_home_content">
-                            고려대학교 정보대학 전공소모임 KWEB입니다. 가입 및 기타 문의사항은 회장 배민근[메일]에게 문의해주세요. <br/>
-                            RSS 피드를 이용하시거나, 최소한 하루에 한번 홈페이지 들어와서 게시물을 확인해주세요.
+                        <div id="body_home_notification">
+                            <div className="body_home_title notification">
+                                알림
+                            </div>
+                            <div className="body_home_content">
+                                고려대학교 정보대학 전공소모임 KWEB입니다. 가입 및 기타 문의사항은 회장 배민근[메일]에게 문의해주세요. <br/>
+                                RSS 피드를 이용하시거나, 최소한 하루에 한번 홈페이지 들어와서 게시물을 확인해주세요.
+                            </div>
                         </div>
                     </div>
                 </div> {/* 알림 */}

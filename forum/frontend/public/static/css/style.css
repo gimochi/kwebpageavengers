@@ -80,6 +80,7 @@ h2{
     margin-bottom:25.15px;
     margin-top:0;
     padding:0;
+	box-shadow: 5px 5px 5px lightgray;
 }
 .body_home_title{
     background-color:#fff;
@@ -117,6 +118,10 @@ h2{
 	//width: 90px;
 	min-width: 90px;
 	max-width: 80px;
+
+}
+.body_home_content_date p{
+	margin-bottom:0;
 }
 .body_home_content_writer{
 	//width: 45px;
@@ -143,9 +148,13 @@ h2{
 .body_home_more{
     float:right;
 }
+#body_home_notification{
+	box-shadow: 5px 5px 5px lightgray;
+}
 .notification{
     background-color:#f84;
 }
+
 .body_home_title.notification{
 	color:white;
 }
@@ -356,7 +365,9 @@ h2{
 	margin-bottom:0;
 }
 
-/* 내 정보 보기 */
+/*------------------------------------------*/
+/*	     내 정보 보기
+/*------------------------------------------*/
 .profile-heading{
 	background-color:#f84 !important;
 	color:white !important;
@@ -364,8 +375,9 @@ h2{
 	padding-top:10px;
 	padding-bottom:10px;
 }
-/* 댓글 css */
-
+/*------------------------------------------*/
+/*	     댓글 css
+/*------------------------------------------*/
 .datgul {
 	background-color:white;
 	padding: 10px;
@@ -465,8 +477,9 @@ h2{
 .datgul_face img{
 	border: 2px gray dotted;
 }
-/*
-}*/
+/*------------------------------------------*/
+/*	    글 보기 css
+/*------------------------------------------*/
 .postview_postcontent_container{
 	width: 100%;
 	background-color: white;

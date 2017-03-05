@@ -58,7 +58,7 @@ var BodyHomeContainer = React.createClass({
            <div id={this.props.container_name} className="col-md-12 body_home_container">
                <div className="body_home_title">
                    {this.props.title}
-                   <Link href="javascript:void(0);" onClick={fun}><span id={this.props.more_name} className="body_home_more label label-default">+more</span></Link>
+                   <Link href="javascript:void(0);" onClick={fun}><span id={this.props.more_name} className="body_home_more label label-default">더보기</span></Link>
                </div>
 
                 <div className="body_home_content">
@@ -74,13 +74,12 @@ var BodyHomeContainer = React.createClass({
                               <td className="body_home_content_list">
                                   <Link href="javascript:void(0);"> {data[0]} </Link>
                               </td>
-
-                              <td className="body_home_content_date hidden-xs">
-                                {data[1]}
-                              </td>
                               <td className="body_home_content_writer">
                                 {data[2]}
                               </td>
+                                <td className="body_home_content_date hidden-xs">
+                                    <p className="text-right"><small>{data[1]}</small></p>
+                                </td>
                             </tr>
 
                           );

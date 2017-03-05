@@ -22,7 +22,7 @@ header .container .top-logo{
     color:#f84;
 }
 .navbar {
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	background: #f84;
     z-index:100;
     border-bottom: 1px solid #f2f2f2 !important;
@@ -121,7 +121,7 @@ a.navbar-brand {
 }
 
 .affix + #root {
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 body{
