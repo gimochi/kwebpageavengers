@@ -4,7 +4,7 @@
 
 
 div,td,th{
-	border : 1px solid;	/* div의 구조를 위해... */
+	border : none;	/* div의 구조를 위해... */
 }
 
 hr{
@@ -457,24 +457,37 @@ hr{
 .body_forum_postview_titlebox_right{
 	width: 50%;
 }*/
-.body_forum_postview_container{
+.postview_postcontent_container{
 	width: 100%;
 	margin-bottom: 1%;
+	background-color: white;
 }
-.body_forum_postview_titlebox{
-	width: 100%;
-	margin-right: 0;
-}
-.body_forum_postview_titlebox_right{
-	padding:0;
-}
-.body_forum_postview_profilebox{
+.postview_postcontent_titlebox{
 	width: 100%;
 }
-.body_forum_postview_bodybox{
+.postview_postcontent_profilebox{
 	width: 100%;
 }
-
-.body_forum_postview_controlbox{
+.postview_postcontent_profilebox_photo{
+	width: 50px;
+}
+.postview_postcontent_profilebox_sujeo{
+	width: 15px;
+	height: 15px;
+}
+.postview_postcontent_contentbox{
 	width: 100%;
+}
+.postview_postcontent_controlbox{
+	width: 100%;
+}
+.postview_postcontent_controlbox_prev{
+	width: 100%;
+}
+.postview_postcontent_controlbox_next{
+	width: 100%;
+}
+.postview_postcontent_container{
+	width: 100%;
+	padding:15px;
 }
