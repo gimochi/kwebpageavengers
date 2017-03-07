@@ -541,6 +541,19 @@ h2{
 }
 
 
+.body_forum_write_form{
+	width: 100%;
+}
+.body_forum_write_table{
+	width:100%;
+}
+.body_forum_write_head{
+	width: 100%;
+}
+.body_forum_write_content{
+	width: 100%;
+}
+
 
 /*윤진 추가*/
 .write-btn{
