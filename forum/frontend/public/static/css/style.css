@@ -550,9 +550,31 @@ h2{
 .body_forum_write_head{
 	width: 100%;
 }
-.body_forum_write_content{
+.body_forum_write_file{
 	width: 100%;
 }
+.body_forum_write_label{
+
+	align: left;
+	width: 100px;
+}
+.body_forum_write_form{
+	padding: 10px;
+}
+.body_forum_write_row{
+	border: 1px solid #F1F1F1;
+}
+.body_forum_write_submit_container{
+}
+.body_forum_write_submit{
+	margin: 0 auto;
+}
+textarea {
+	resize: vertical;
+	width: 100%;
+}
+
+
 
 
 /*윤진 추가*/
