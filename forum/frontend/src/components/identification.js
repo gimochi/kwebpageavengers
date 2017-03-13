@@ -24,6 +24,30 @@ var Identification = React.createClass({
         else{
           alert('비밀번호는 5자이상 12자미만이어야 합니다.');
         }
+     },
+     pid_fun:function(){
+      var regExp = /[0-9a-zA-Z][_0-9a-zA-Z-]*@[_0-9a-zA-Z-]+(\.[_0-9a-zA-Z-]+){1,2}$/;
+      var strValue = $('#profile_email').val();
+      //입력을 안했으면
+      if(strValue.length == 0){
+        alert("입력을 하세요!");
+      }
+      //이메일 형식에 맞지않으면
+      else if (!strValue.match(regExp)){
+        alert("이메일 형식이 맞지 않습니다!");
+      }
+      else {
+        /* 개인정보 변경 코드 */
+        alert("변경에 성공했습니다!");
+        history.go(0);
+      }
+     },
+     pic_fun:function(){
+        $('#file_input').click(); //파일 정보 불러오기 클릭
+
+        /* 사진을 업로드해서 디비에 보내는 과정.... 어떻게 할지 모르겟음! */
+
+        //alert($('#file_input').val());
      }
     };
   },
@@ -48,15 +72,17 @@ var Identification = React.createClass({
                                           <img className="img-rounded img-responsive" src={"../static/data/gallery_temp/1.jpg"} alt="User Picture" >
                                           </img>
                                           </div>
-                                          <div className="text-center">얼굴 바꾸기</div>
                                       </div>
+                
                                       <div className="col-sm-6">
                                           <span><h3>{userinfo[0]}</h3></span>
                                           <span><h4>{userinfo[1]}</h4></span>
                                       </div>
                                   </div>
+
                                   <div className="profile-body">
                                       <div className="col-sm-12">
+                                          <div style={{"marginTop":"15px"}}></div>
                                           <table className="table table-bordered">
                                               <tbody>
                                                   <tr>
@@ -103,7 +129,7 @@ var Identification = React.createClass({
                                                       <tbody>
                                                       <tr>
                                                           <th>아이디</th>
-                                                          <td><input className="form-control" type="text" value={userinfo[4]} readonly></input></td>
+                                                          <td><input className="form-control" type="text" value={userinfo[4]} readOnly></input></td>
                                                       </tr>
                                                       <tr>
                                                           <th>새 비밀번호</th>
@@ -138,7 +164,7 @@ var Identification = React.createClass({
                                                       <tbody>
                                                       <tr>
                                                           <th>회원 이름</th>
-                                                          <td><input className="form-control" type="text" id="profile_name" value={userinfo[0]}></input></td>
+                                                          <td><input className="form-control" type="text" id="profile_name" value={userinfo[0]} readOnly></input></td>
                                                       </tr>
                                                       <tr>
                                                           <th>학번</th>
@@ -146,14 +172,15 @@ var Identification = React.createClass({
                                                       </tr>
                                                       <tr>
                                                           <th>이메일</th>
-                                                          <td><input value={userinfo[3]} className="form-control" type="text" id="profile_email"></input></td>
+                                                          <td><input placeholder={userinfo[3]} className="form-control" type="text" id="profile_email"></input></td>
                                                       </tr>
                                                       </tbody>
                                                   </table>
-                                                  <button className="btn pull-left">
+                                                  <input type="file" id="file_input" style={{"height":"0px", "display":"none"}} />
+                                                  <button onClick={ this.state.pic_fun } className="btn pull-left">
                                                       프사 바꾸기
                                                   </button>
-                                                  <button className="btn pull-right">
+                                                  <button onClick={ this.state.pid_fun } className="btn pull-right">
                                                       개인정보 변경
                                                   </button>
                                               </div>
