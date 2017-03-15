@@ -242,6 +242,19 @@ h2{
 	float: left;
 	visibility: hidden;
 }
+.write-btn{
+	margin: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: sans-serif;
+	padding: 5px;
+}
+.btn-center{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
 
 /* 공지사항을 위한 info */
 .body_forum_gongji_regdate{
@@ -540,19 +553,64 @@ h2{
 	display: inline-block;
 }
 
-
-
-/*윤진 추가*/
-.write-btn{
-	margin: 5px;
-	font-weight: bold;
-	font-size: 12px;
-	font-family: sans-serif;
-	padding: 5px;
+/*--------------------------------*/
+/*	      건의사항 
+/*--------------------------------*/
+#body_claim_container{
+	padding: 0px auto;
+	margin: 0px auto;
+    background-color: #fff;
+    width:60%;
+    border-radius: 10px;
 }
-.btn-center{
+.body_claim_title{
+	height: 30px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #f84;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+.body_claim_textcontainer{
+	padding: 0px auto;
+	background-color: white;
+	margin: 10px auto; 
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.body_claim_text{
+	margin: 0px auto;
+	width: 95%;
+	height: 200px;
+	padding: 15px;
+	resize: none;
+}
+.body_claim_sendbox{
 	display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
+}
+.body_claim_sendbtn{
+	margin: 2px 0px 15px 0px;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: sans-serif;
+	color: white;
+	border-radius: 10px;
+	background-color: #f84;
+	width: 20%;
+	height: 30px;
+	box-shadow: none;
+	 transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.body_claim_sendbtn:hover{
+	background-color: #FF432E;
 }
