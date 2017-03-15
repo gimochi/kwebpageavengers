@@ -32,6 +32,7 @@ function route_start(){
 				<Route path="forum" components={BodyForum} />
 				<Route path="gallery" components={BodyGallery} />
 				<Route path="postview" components={ForumPostView} />
+				<Route path="claim" components={BodyClaim} />
 			</Router>
 		</Provider>
 	, rootElement);

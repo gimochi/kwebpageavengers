@@ -553,7 +553,6 @@ h2{
 	display: inline-block;
 }
 
-<<<<<<< HEAD
 /*--------------------------------*/
 /*	      건의사항 
 /*--------------------------------*/
@@ -568,8 +567,12 @@ h2{
 	height: 30px;
 	font-size: 18px;
 	font-weight: 700;
-=======
-
+	font-family: sans-serif;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #f84;
+	text-align: center;
+}
 .body_forum_write_form{
 	width: 100%;
 }
@@ -583,7 +586,6 @@ h2{
 	width: 100%;
 }
 .body_forum_write_label{
-
 	align: left;
 	width: 100px;
 }
@@ -594,6 +596,7 @@ h2{
 	border: 1px solid #F1F1F1;
 }
 .body_forum_write_submit_container{
+
 }
 .body_forum_write_submit{
 	margin: 0 auto;
@@ -602,16 +605,10 @@ textarea {
 	resize: vertical;
 	width: 100%;
 }
-
-
-
-
-/*윤진 추가*/
 .write-btn{
 	margin: 5px;
 	font-weight: bold;
 	font-size: 12px;
->>>>>>> d32a8e91c661604111001034bf3461ccf89b970d
 	font-family: sans-serif;
 	text-align: center;
 	background-color: #f84;
