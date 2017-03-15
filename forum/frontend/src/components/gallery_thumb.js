@@ -13,9 +13,6 @@ var Gallery_thumb = React.createClass({
                     <div className="sajin_image">
                         <img src={this.props.content['url']} alt="wrong" className="img img-responsive full-width"/>
                     </div>
-                    <div className="sajin_title text-center">
-                        {this.props.content['title']}
-                    </div>
                 </Link>
             </div>
         );

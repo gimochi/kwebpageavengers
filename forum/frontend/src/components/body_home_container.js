@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { setGNUM, setForumState, gf_doubleChange } from '../actions';
+import { connect } from 'react-redux';
 
 var BodyHomeContainer = React.createClass({
    getInitialState() {
@@ -19,6 +22,7 @@ var BodyHomeContainer = React.createClass({
    render:function () {
        var fun;
        var dbdata;
+       var gnum; //글번호라 가정
 
        if(Number(this.props.num) == 1){
           fun = this.state.fun1;
@@ -72,7 +76,7 @@ var BodyHomeContainer = React.createClass({
 
                             <tr>
                               <td className="body_home_content_list">
-                                  <Link href="javascript:void(0);"> {data[0]} </Link>
+                                  <Link onClick={this.props.gnumchange} to="/forum"> {data[0]} </Link>
                               </td>
                               <td className="body_home_content_writer">
                                 {data[2]}
@@ -91,5 +95,13 @@ var BodyHomeContainer = React.createClass({
        );
    } 
 });
+
+let mapDispatchToProps = (dispatch) => {
+  return{
+    gnumchange: () => dispatch(gf_doubleChange(6,123)) //2번째 변수는 글번호, 첫번째는 게시판 state
+  }
+}
+
+BodyHomeContainer = connect(undefined, mapDispatchToProps)(BodyHomeContainer);
 
 export default BodyHomeContainer;

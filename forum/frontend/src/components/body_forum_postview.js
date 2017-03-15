@@ -5,6 +5,7 @@ import Datgul from './datgul.js';
 import PostContent from './body_forum_postview_postcontent.js';
 
 var ForumPostView = React.createClass({
+  //GNUM은 글번호
   render: function (){
     return (
       <table>
