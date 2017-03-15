@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Gallery_Category from './body_gallery_category';
 import Gallery_Previews from './body_gallery_previews';
 import GalleryDetail from './body_gallery_detail';
 

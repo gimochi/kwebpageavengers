@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import BodyForumInfo from './body_forum_info';
+import { connect } from 'react-redux';
 
 var BodyForum = React.createClass ({
     getInitialState() {
         return {
           fnum : 1,             /* 페이지 수, 초기값은 1 */
-          STATE : 0,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기, 6 for 글보기(임시)*/
+          STATE : this.props.STATE,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기, 6 for 글보기(임시)*/
           name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기", "글보기"]
         };
      },
@@ -153,5 +154,13 @@ var BodyForum = React.createClass ({
       }
     }
 });
+
+let mapStateToProps = (state) => {
+  return{
+    STATE: state.ForumState.value
+  };
+}
+
+BodyForum=connect(mapStateToProps)(BodyForum);
 
 export default BodyForum;

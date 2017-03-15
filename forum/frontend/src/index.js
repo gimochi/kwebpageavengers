@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import combinedApp from './reducers';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import BodyHome from './components/body_home';
 import BodyForum from './components/body_forum';
@@ -8,6 +11,7 @@ import Identification from './components/identification';
 import ForumPostView from './components/body_forum_postview.js';
 import GalleryDetail from './components/body_gallery_detail';
 
+const store = createStore(combinedApp);
 const rootElement = document.getElementById('root');
 
 var BodyForums = React.createClass({
@@ -20,14 +24,15 @@ var BodyForums = React.createClass({
 
 function route_start(){
 	ReactDOM.render(
-		<Router history={browserHistory}>
-			<Route path="/" components={BodyHome} />
-			<Route path="userinfo" components={Identification} />
-			<Route path="forum" components={BodyForum} />
-			<Route path="gallery" components={BodyGallery} />
-			<Route path="postview" components={ForumPostView} />
-
-		</Router>
+		<Provider store = {store}>
+			<Router history={browserHistory}>
+				<Route path="/" components={BodyHome} />
+				<Route path="userinfo" components={Identification} />
+				<Route path="forum" components={BodyForum} />
+				<Route path="gallery" components={BodyGallery} />
+				<Route path="postview" components={ForumPostView} />
+			</Router>
+		</Provider>
 		, rootElement);
 }	// 홈 렌더링
 /* 어떻게 하는지 잘 모르겠지만 forum/gallery/post?num=숫자 이런식으로 했으면 좋겠음.*/
