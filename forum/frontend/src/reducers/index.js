@@ -1,9 +1,9 @@
-import { GNUM, FORUMSTATE, GFBOTH } from '../actions';
+import { GNUM, FORUMSTATE, GFBOTH, GALLERYSTATE } from '../actions';
 import {combineReducers} from 'redux';
 
 const initialState = {	
 	value: 0,
-	diff: 1
+	diff: 0
 }
 
 const Gnum = (state=initialState, action) => {
@@ -36,9 +36,21 @@ const ForumState = (state=initialState, action) => {
 	}
 }
 
+const GalleryState = (state=initialState, action) => {
+	switch(action.type) {
+		case GALLERYSTATE:
+			return Object.assign({},state,{
+				value: action.diff 
+			});
+		default:
+			return state;
+	}
+}
+
 const combinedApp = combineReducers({
 	Gnum,
-	ForumState
+	ForumState,
+	GalleryState
 });
 
 export default combinedApp;

@@ -2,19 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 import Gallery_Previews from './body_gallery_previews';
 import GalleryDetail from './body_gallery_detail';
+import GallerySelect from './body_gallery_select';
+import { connect } from 'react-redux';
 
 var BodyGallery = React.createClass ({
-    getInitialState() {
-        return {
-            STATE:0 // 0:Total 1~:렌더하는 정보가 달라짐 카테고리에 따라 
-        };
-     },
-     state_change : function(num){
-        this.setState({        /* setState는 기존 state를 변경해주고 변경부분을 render해주는 훌륭한 함수 */
-            STATE:num  
-        });
-        //alert("state has changed!");
-     },
     render: function () {
         var categoryData = [{name:"뒷풀이",num:12},
             {name:"테스트",num:1},
@@ -51,7 +42,7 @@ var BodyGallery = React.createClass ({
                                 {categoryData.map((category, i) => {
                                     return(
                                         <li className="postreport list-group-item">
-                                            <Link onClick={this.state_change.bind(this,i+1)} href="#">{category.name}</Link><span className="badge">{category.num}</span>
+                                            <Link href="#">{category.name}</Link><span className="badge">{category.num}</span>
                                         </li>
                                     );
                                 })}
@@ -61,8 +52,9 @@ var BodyGallery = React.createClass ({
                         1. 메인에선 사진들만 보이게
                         2. 사진누르면 그 사진에 대한 포스팅
                      */}
+                     
+                     <GallerySelect STATE={this.props.STATE} />
                     {/* 1 . <Gallery_Previews /> */}
-                        <Gallery_Previews STATE= {this.state.STATE} />
                     {/* 2 . <GalleryDetail /> */}
 
                 </div>
@@ -70,5 +62,13 @@ var BodyGallery = React.createClass ({
         );
     }
 });
+
+let mapStateToProps = (state) => {
+  return{
+    STATE: state.GalleryState.value
+  };
+}
+
+BodyGallery=connect(mapStateToProps)(BodyGallery);
 
 export default BodyGallery;

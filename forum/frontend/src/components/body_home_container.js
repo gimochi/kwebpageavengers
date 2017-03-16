@@ -8,15 +8,7 @@ import { connect } from 'react-redux';
 var BodyHomeContainer = React.createClass({
    getInitialState() {
     return{
-     fun1:function(){
-        $('#index_gongji').click();
-     },
-     fun2:function(){
-        $('#index_jeong').click();
-     },
-     fun3:function(){
-        $('#index_jun').click();
-     }
+     
     };
    },
    render:function () {
@@ -25,7 +17,7 @@ var BodyHomeContainer = React.createClass({
        var gnum; //글번호라 가정
 
        if(Number(this.props.num) == 1){
-          fun = this.state.fun1;
+          fun = this.props.state_change.bind(this,parseInt(0));
           dbdata = [["글ㅁㄴㅇㄴㅁㅁㅇㅁㅇ1","1996-12-23","글쓴이"],
                   ["글ㄴㅁㅇㄴㅁㅇㅁㅇㄴㅁㅇㄴㅁㅇㅁㅇㄴㅁㅇㅁㅇㄴㅁㅁㄴ2","1996-12-23","글쓴이"],
                   ["글3ㅁㄴㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㄴㅁㅇㅇㄴㅁ","1996-12-23","글쓴이"],
@@ -33,17 +25,17 @@ var BodyHomeContainer = React.createClass({
                   ["글5ㅁㄴㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇ","1996-12-23","글쓴이"],
                   ["글6ㄴㅁㅇㅁㅇㅁㅇㅁㄴㅇㄴㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁ","1996-12-23","글쓴이"],
                   ["글7ㄴㅁㅇㄴㅁㅇㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㅁㄴㅇㄴㅁ","1996-12-23","글쓴이"],
-                  ["글8ㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁ","1996-12-23","글쓴이"],
+                  ["글8ㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁ","1996-12-23","asdsasd"],
                   ["글9ㄴㅁㅇㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㄴㅁㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㅁㅇㄴㅁㅇㅁㄴㄴㅁㅇㄴㅁㅇ","1996-12-23","글쓴이"],
                   ["글1ㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴ0","1996-12-23","글쓴이"],
                   ["글ㄴㅁㅇㄴㅁㅇㄴㅁㅇㅁㅇㄴㅁㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇㄴ11","1996-12-23","글쓴이"],
                   ["글","1996-12-23","글쓴이"],
-                  ["글","1996-12-23","글쓴이"],
+                  ["글","1996-12-23","sadsadadededede"],
                   ["글","1996-12-23","글쓴이"],
                   ["글","1996-12-23","글쓴이"]];
        }
        else if(Number(this.props.num) == 2){
-          fun = this.state.fun2;
+          fun = this.props.state_change.bind(this,parseInt(2));
           dbdata = [["글1","1996-12-23","글쓴이"],
                   ["글2","1996-12-23","글쓴이"],
                   ["글3","1996-12-23","글쓴이"],
@@ -51,7 +43,7 @@ var BodyHomeContainer = React.createClass({
                   ["글5","1996-12-23","글쓴이"]];
        }
        else if(Number(this.props.num) == 3){
-          fun = this.state.fun3;
+          fun = this.props.state_change.bind(this,parseInt(1));
           dbdata = [["글1","1996-12-23","글쓴이"],
                   ["글2","1996-12-23","글쓴이"],
                   ["글3","1996-12-23","글쓴이"],
@@ -62,7 +54,7 @@ var BodyHomeContainer = React.createClass({
            <div id={this.props.container_name} className="col-md-12 body_home_container">
                <div className="body_home_title">
                    {this.props.title}
-                   <Link href="javascript:void(0);" onClick={fun}><span id={this.props.more_name} className="body_home_more label label-default">더보기</span></Link>
+                   <Link onClick={fun} to="/forum"><span id={this.props.more_name} className="body_home_more label label-default">더보기</span></Link>
                </div>
 
                 <div className="body_home_content">
@@ -76,14 +68,14 @@ var BodyHomeContainer = React.createClass({
 
                             <tr>
                               <td className="body_home_content_list">
-                                  <Link onClick={this.props.gnumchange} to="/forum"> {data[0]} </Link>
+                                  <Link onClick={this.props.gnumchange.bind(this,120)} to="/forum"> {data[0]} </Link>
                               </td>
-                              <td className="body_home_content_writer">
+                              <td className="body_home_content_writer" style={{"paddingRight":"10px"}}>
                                 {data[2]}
                               </td>
-                                <td className="body_home_content_date hidden-xs">
-                                    <p className="text-right"><small>{data[1]}</small></p>
-                                </td>
+                              <td className="body_home_content_date hidden-xs">
+                                  <p className="text-right"><small>{data[1]}</small></p>
+                              </td>
                             </tr>
 
                           );
@@ -98,7 +90,8 @@ var BodyHomeContainer = React.createClass({
 
 let mapDispatchToProps = (dispatch) => {
   return{
-    gnumchange: () => dispatch(gf_doubleChange(6,123)) //2번째 변수는 글번호, 첫번째는 게시판 state
+    gnumchange: (value) => dispatch(gf_doubleChange(6,value)), //2번째 변수는 글번호, 첫번째는 게시판 state
+    state_change: (value) => dispatch(setForumState(value))
   }
 }
 

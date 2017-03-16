@@ -5,8 +5,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import Gallery_thumb from './gallery_thumb';
+import { setGalleryState } from '../actions';
+import { connect } from 'react-redux';
 
-var Galley_Previews = React.createClass({
+var Gallery_Previews = React.createClass({
     render: function(){
         var thumbnails = [{title:"첫번째",url:"../static/data/gallery_temp/1.jpg"},
             {title:"두번째",url:"../static/data/gallery_temp/2.jpg"},
@@ -25,7 +27,9 @@ var Galley_Previews = React.createClass({
                 <div className="gallery row">
                     {thumbnails.map((item,i) => {
                         return(
-                            <Gallery_thumb content={item} />
+                            <div onClick={this.props.state_change}>
+                                <Gallery_thumb onClick={this.props.state_change.bind(this,1)} content={item} />
+                            </div>
                         );
                     })}
                 </div>
@@ -34,5 +38,12 @@ var Galley_Previews = React.createClass({
     }
 });
 
+let mapDispatchToProps = (dispatch) => {
+  return{
+    state_change: (value) => dispatch(setGalleryState(value)) //2번째 변수는 글번호, 첫번째는 게시판 state
+  }
+}
 
-export default Galley_Previews;
+Gallery_Previews = connect(undefined, mapDispatchToProps)(Gallery_Previews);
+
+export default Gallery_Previews;

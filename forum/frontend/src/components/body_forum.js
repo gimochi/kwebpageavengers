@@ -6,16 +6,32 @@ import { connect } from 'react-redux';
 var BodyForum = React.createClass ({
     getInitialState() {
         return {
+          startpush : 0,        /* 0이면 히스토리에 푸쉬릉 안하고 그뒤부터 함 */
           fnum : 1,             /* 페이지 수, 초기값은 1 */
           STATE : this.props.STATE,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기, 6 for 글보기(임시)*/
           name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기", "글보기"]
         };
-     },
+    },
+    componentDidMount(){
+      window.onpopstate = function(e){ //뒤로가기가 적용되면 이전 state로 돌아간다.
+        if(e.state.STATE!=undefined){
+           this.setState({
+             fnum : e.state.fnum,
+             STATE : e.state.STATE
+           });
+          }
+      }.bind(this);
+    },
     state_change : function(num){
-        this.setState({        /* setState는 기존 state를 변경해주고 변경부분을 render해주는 훌륭한 함수 */
-            fnum:1,
-            STATE:num
-        });
+      if(this.state.startpush==0){
+        this.state.startpush=1;
+      } else{
+        window.history.pushState({STATE:this.state.STATE, fnum:this.state.fnum},null,"/forum");
+      } // 히스토리를 수동적으로 집어넣어 url변경없이도 뒤로가기가 state변경만으로 이루어질수 있는 요건을 만들어줌.
+      this.setState({        /* setState는 기존 state를 변경해주고 변경부분을 render해주는 훌륭한 함수 */
+          fnum:1,
+          STATE:num
+      });
     },
     render: function () {
       if(this.state.STATE == 5 || this.state.STAE == 6){
