@@ -10,6 +10,7 @@ import BodyGallery from './components/body_gallery';
 import Identification from './components/identification';
 import ForumPostView from './components/body_forum_postview.js';
 import GalleryDetail from './components/body_gallery_detail';
+import BodyClaim from './components/body_claim';
 
 const store = createStore(combinedApp);
 const rootElement = document.getElementById('root');
@@ -31,9 +32,10 @@ function route_start(){
 				<Route path="forum" components={BodyForum} />
 				<Route path="gallery" components={BodyGallery} />
 				<Route path="postview" components={ForumPostView} />
+				<Route path="claim" components={BodyClaim} />
 			</Router>
 		</Provider>
-		, rootElement);
+	, rootElement);
 }	// 홈 렌더링
 /* 어떻게 하는지 잘 모르겠지만 forum/gallery/post?num=숫자 이런식으로 했으면 좋겠음.*/
 function root_userinfo(){
@@ -73,6 +75,10 @@ function root_gallery(){
 	browserHistory.push('/gallery');
 }	// 사진첩
 
+function root_claim(){
+	browserHistory.push('/claim');
+}	// 건의사항
+
 function navy_ready(){ // 네비에 클릭함수를 넣어줌
 	$("#index_userinfo").click(function(){
 		root_userinfo();
@@ -103,6 +109,10 @@ function navy_ready(){ // 네비에 클릭함수를 넣어줌
 
 	$('#index_gallery').click(function(){
 		root_gallery();
+	});
+
+	$('#index_claim').click(function(){
+		root_claim();
 	});
 }
 
