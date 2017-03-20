@@ -4,6 +4,10 @@ export const FORUMSTATE = 'FORUMSTATE';
 export const GFBOTH = 'GFBOTH';
 export const GALLERYSTATE = 'GALLERYSTATE';
 export const GNUM = 'GNUM'; //글번호 from DB
+export const SNUM = 'GNUM'; //사진첩 사진 번호 from DB
+export const CATEGORY = 'CATEGORY'; //사진첩 카테고리 번호 from DB
+export const G_2 = 'G_2'; //사진첩 2개 인포 from DB
+export const G_ALL = 'G_ALL'; //사진첩 모든 인포 from DB
 
 
 export function setGNUM(value){
@@ -34,3 +38,34 @@ export function setGalleryState(value){
 		diff: value
 	}
 } 	//갤러리 스테이트 변경
+
+export function GalleryNUM(value){
+	return{
+		type: SNUM,
+		diff: value
+	}
+} 	//갤러리 사진 번호
+
+export function GalleryCategory(value){
+	return{
+		type: CATEGORY,
+		diff: value
+	}
+} 	//갤러리 사진 번호
+
+export function set2Gallery(value1, value2, value3){
+	return{
+		type: G_2,
+		diff_s : value1,
+		diff_n : value2
+	}
+}
+
+export function setAllGallery(value1, value2, value3){
+	return{
+		type: G_ALL,
+		diff_s : value1,
+		diff_n : value2,
+		diff_c : value3
+	}
+}

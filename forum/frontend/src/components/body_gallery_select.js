@@ -5,8 +5,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Gallery_Previews from './body_gallery_previews';
 import GalleryDetail from './body_gallery_detail';
+import { connect } from 'react-redux';
 
-var GalleySelect = React.createClass({
+var GallerySelect = React.createClass({
     render: function(){
         if(this.props.STATE==0){
             return (
@@ -21,5 +22,12 @@ var GalleySelect = React.createClass({
     }
 });
 
+let mapStateToProps = (state) => {
+  return{
+    STATE: state.GalleryState.STATE
+  };
+}
 
-export default GalleySelect;
+GallerySelect=connect(mapStateToProps)(GallerySelect);
+
+export default GallerySelect;

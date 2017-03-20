@@ -44,7 +44,7 @@ var Datgul = React.createClass ({
                 <div className="datgul-wrapper row"> {/*container은 임시.*/}
                 {this.state.dbdata.map((data, i) => {
                     return(
-                        <DatgulList content={data} />
+                        <DatgulList content={data} key={i} />
                     );
                 })}
                 </div>

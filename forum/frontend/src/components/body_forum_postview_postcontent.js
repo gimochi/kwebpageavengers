@@ -8,6 +8,7 @@ var PostContent = React.createClass({
           <div className = "postview_postcontent_titlebox">
             <div className = "postview_postcontent_titlebox_left pull-left">
               <table>
+                <tbody>
                 <tr>
                   <td>
                     <span className = "postview_postcontent_titlebox_head">제목</span>
@@ -16,15 +17,18 @@ var PostContent = React.createClass({
                     <span className = "postview_postcontent_titlebox_boardname">&nbsp;&nbsp;게시판이름</span>
                   </td>
                 </tr>
+                </tbody>
               </table>
             </div>
             <div className ="postview_postcontent_titlebox_right pull-right">
               <table>
+                <tbody>
                 <tr>
                   <td>
                     <span>1111.01.01. 11:11</span>
                   </td>
                 </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -32,6 +36,7 @@ var PostContent = React.createClass({
           <div className = "postview_postcontent_profilebox pull-left">
             <div className = "postview_postcontent_profilecard">
               <table>
+                <tbody>
                 <tr>
                   <td>
                     <img className = "postview_postcontent_profilebox_sujeo" src = "../static/data/sujeo/gold.png"/>
@@ -41,6 +46,7 @@ var PostContent = React.createClass({
                     <span className = "postview_postcontent_profilebox_email">&nbsp;&nbsp;yoonhs96@gmail.com</span>
                   </td>
                 </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -59,6 +65,7 @@ Etiam sed tincidunt nulla. Aenean vel urna a enim placerat euismod nec quis null
             <div className = "postview_postcontent_controlbox_prev pull left">
               <div className = "postview_postcontent_controlbox_prev_left pull-left">
                 <table>
+                  <tbody>
                   <tr>
                     <td>
                       <span>△이전글</span>
@@ -67,10 +74,12 @@ Etiam sed tincidunt nulla. Aenean vel urna a enim placerat euismod nec quis null
                       <span>&nbsp;&nbsp;제목</span>
                     </td>
                   </tr>
+                  </tbody>
                 </table>
               </div>
               <div className = "postview_postcontent_controlbox_prev_right pull-right">
                 <table>
+                  <tbody>
                   <tr>
                     <td>
                       <img className = "postview_postcontent_profilebox_sujeo" src = "../static/data/sujeo/gold.png"/>
@@ -81,12 +90,14 @@ Etiam sed tincidunt nulla. Aenean vel urna a enim placerat euismod nec quis null
                       <span>1111.01.01. 11:11</span>
                     </td>
                   </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
             <div className = "postview_postcontent_controlbox_next pull-right">
               <div className = "postview_postcontent_controlbox_next_left pull-left">
                 <table>
+                  <tbody>
                   <tr>
                     <td>
                       <span>▽다음글</span>
@@ -95,10 +106,12 @@ Etiam sed tincidunt nulla. Aenean vel urna a enim placerat euismod nec quis null
                       <span>&nbsp;&nbsp;제목</span>
                     </td>
                   </tr>
+                  </tbody>
                 </table>
               </div>
               <div className = "postview_postcontent_controlbox_next_right pull-right">
                 <table>
+                  <tbody>
                   <tr>
                     <td>
                       <img className = "postview_postcontent_profilebox_sujeo" src = "../static/data/sujeo/gold.png"/>
@@ -109,6 +122,7 @@ Etiam sed tincidunt nulla. Aenean vel urna a enim placerat euismod nec quis null
                       <span>1111.01.01. 11:11</span>
                     </td>
                   </tr>
+                  </tbody>
                 </table>
               </div>
             </div>

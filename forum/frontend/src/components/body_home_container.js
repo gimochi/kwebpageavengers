@@ -61,15 +61,15 @@ var BodyHomeContainer = React.createClass({
 
                   <table className="body_home_content_table">
                     <tbody>
-                      {/* 내용이 들어가야 함. */}
-                      {
+                      {/* 내용이 들어가야 함. */
                         dbdata.map((data, i) => {
                           return (
-
-                            <tr>
+                            <tr key={i}>
                               <td className="body_home_content_list">
-                                  <Link onClick={this.props.gnumchange.bind(this,120)} to="/forum"> {data[0]} </Link>
-                              </td>
+                                  <Link onClick={this.props.gnumchange.bind(this,120)} to="/forum">
+                                    {data[0]} 
+                                  </Link>
+                              </td>{/* 글번호는 계산해서 넣어야함. */}
                               <td className="body_home_content_writer" style={{"paddingRight":"10px"}}>
                                 {data[2]}
                               </td>
@@ -77,7 +77,6 @@ var BodyHomeContainer = React.createClass({
                                   <p className="text-right"><small>{data[1]}</small></p>
                               </td>
                             </tr>
-
                           );
                       })}
                     </tbody>

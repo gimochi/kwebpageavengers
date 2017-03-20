@@ -68,7 +68,7 @@ var Identification = React.createClass({
                               <div className="profile">
                                   <div className="profile-head">
                                       <div className="col-sm-6">
-                                          <div align="center">
+                                          <div>
                                           <img className="img-rounded img-responsive" src={"../static/data/gallery_temp/1.jpg"} alt="User Picture" >
                                           </img>
                                           </div>

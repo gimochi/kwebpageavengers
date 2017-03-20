@@ -5,10 +5,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import Gallery_thumb from './gallery_thumb';
-import { setGalleryState } from '../actions';
+import { setGalleryState, set2Gallery } from '../actions';
 import { connect } from 'react-redux';
 
 var Gallery_Previews = React.createClass({
+    sajin_click: function(num){    //num:사진첩 사진 SQ 번호
+        window.history.pushState({STATE: 1, snum: num, cnum:this.props.cnum },null,"/gallery");  // cnum은 카테고리 번호
+        this.props.state_change(num);
+    },
     render: function(){
         var thumbnails = [{title:"첫번째",url:"../static/data/gallery_temp/1.jpg"},
             {title:"두번째",url:"../static/data/gallery_temp/2.jpg"},
@@ -27,8 +31,8 @@ var Gallery_Previews = React.createClass({
                 <div className="gallery row">
                     {thumbnails.map((item,i) => {
                         return(
-                            <div onClick={this.props.state_change}>
-                                <Gallery_thumb onClick={this.props.state_change.bind(this,1)} content={item} />
+                            <div onClick={this.sajin_click.bind(this,120)} key={i}>
+                                <Gallery_thumb content={item} />
                             </div>
                         );
                     })}
@@ -38,12 +42,18 @@ var Gallery_Previews = React.createClass({
     }
 });
 
+let mapStateToProps = (state) => {
+  return{
+    cnum: state.GalleryState.category
+  };
+}
+
 let mapDispatchToProps = (dispatch) => {
   return{
-    state_change: (value) => dispatch(setGalleryState(value)) //2번째 변수는 글번호, 첫번째는 게시판 state
+    state_change: (value) => dispatch(set2Gallery(1,value)) //게시판 state=1, 사진 번호, 카테고리 번호
   }
 }
 
-Gallery_Previews = connect(undefined, mapDispatchToProps)(Gallery_Previews);
+Gallery_Previews = connect(mapStateToProps, mapDispatchToProps)(Gallery_Previews);
 
 export default Gallery_Previews;

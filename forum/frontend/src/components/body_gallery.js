@@ -3,9 +3,32 @@ import { Link } from 'react-router';
 import Gallery_Previews from './body_gallery_previews';
 import GalleryDetail from './body_gallery_detail';
 import GallerySelect from './body_gallery_select';
+import { setAllGallery } from '../actions';
 import { connect } from 'react-redux';
 
 var BodyGallery = React.createClass ({
+    componentDidMount(){
+      //console.log("mounted");
+      window.onpopstate = function(e){ //뒤로가기가 적용되면 이전 state로 돌아간다.
+        if(e.state.STATE!=undefined){
+          //console.log("pop: " + e.state);
+            this.props.update(e.state.STATE,e.state.snum,e.state.cnum);
+        }
+      }.bind(this);
+      window.history.replaceState({STATE:0, snum:0, cnum:0},null,"/gallery");
+      this.props.update(0,0,0);
+      //console.log(history.state.gnum);
+    },
+    category_click : function(num){
+        var data = {
+            STATE : this.props.STATE,
+            snum : 0,
+            cnum : Number(num)
+        }
+        window.history.pushState(data,null,"/gallery");  // 카테고리 변경
+        this.props.update(this.props.STATE,0,Number(num));
+        //alert(history.state.STATE);
+    },
     render: function () {
         var categoryData = [{name:"뒷풀이",num:12},
             {name:"테스트",num:1},
@@ -36,13 +59,13 @@ var BodyGallery = React.createClass ({
                     {/* 왼쪽 사이드 바*/}
                         <div id="body_gallery_category" className="sidebar col-sm-3">
                             <ul className="list-group">
-                                <li className="postreport list-group-item"><Link href="#">Total</Link></li>
+                                <li className="postreport list-group-item"><Link href="javascript:void(0);" onClick={this.category_click.bind(this,0)}>Total</Link></li>
                             </ul>
                             <ul className="list-group">
                                 {categoryData.map((category, i) => {
                                     return(
-                                        <li className="postreport list-group-item">
-                                            <Link href="#">{category.name}</Link><span className="badge">{category.num}</span>
+                                        <li className="postreport list-group-item" key={i}>
+                                            <Link href="javascript:void(0);" onClick={this.category_click.bind(this,i+1)}>{category.name}</Link><span className="badge">{category.num}</span>
                                         </li>
                                     );
                                 })}
@@ -53,7 +76,7 @@ var BodyGallery = React.createClass ({
                         2. 사진누르면 그 사진에 대한 포스팅
                      */}
                      
-                     <GallerySelect STATE={this.props.STATE} />
+                     <GallerySelect />
                     {/* 1 . <Gallery_Previews /> */}
                     {/* 2 . <GalleryDetail /> */}
 
@@ -65,10 +88,17 @@ var BodyGallery = React.createClass ({
 
 let mapStateToProps = (state) => {
   return{
-    STATE: state.GalleryState.value
+    STATE: state.GalleryState.STATE
   };
 }
 
-BodyGallery=connect(mapStateToProps)(BodyGallery);
+let mapDispatchToProps = (dispatch) => {
+  return{
+    update: (value1,value2,value3) => dispatch(setAllGallery(value1,value2,value3))
+                                     // 순서대로 사진보기/목록 state , 사진 SQ 번호, 카테고리 번호
+    }
+}
+
+BodyGallery=connect(mapStateToProps, mapDispatchToProps)(BodyGallery);
 
 export default BodyGallery;

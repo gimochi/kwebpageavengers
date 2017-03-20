@@ -6,31 +6,36 @@ import { connect } from 'react-redux';
 var BodyForum = React.createClass ({
     getInitialState() {
         return {
-          startpush : 0,        /* 0이면 히스토리에 푸쉬릉 안하고 그뒤부터 함 */
+          gnum : 0,             /* 글번호, 몇번째 SQ에 해당하는 글을 불러올 것인가. */
           fnum : 1,             /* 페이지 수, 초기값은 1 */
           STATE : this.props.STATE,           /* STATE : 0 for 공지, 1 for 준스, 2 for 정스, 3 for 자유, 4 for 정보, 5 for 글쓰기, 6 for 글보기(임시)*/
           name : ["공지사항", "준회원 스터디", "정회원 스터디", "자유 게시판", "정보 게시판", "글쓰기", "글보기"]
         };
     },
     componentDidMount(){
+      //console.log("mounted");
       window.onpopstate = function(e){ //뒤로가기가 적용되면 이전 state로 돌아간다.
         if(e.state.STATE!=undefined){
+          //console.log("pop: " + e.state);
            this.setState({
              fnum : e.state.fnum,
-             STATE : e.state.STATE
+             STATE : e.state.STATE,
+             gnum : e.state.gnum
            });
           }
       }.bind(this);
+
+      window.history.replaceState({STATE:this.props.STATE, fnum:1, gnum:this.props.GNUM},null,"/forum");
+      //console.log(history.state.gnum);
     },
-    state_change : function(num){
-      if(this.state.startpush==0){
-        this.state.startpush=1;
-      } else{
-        window.history.pushState({STATE:this.state.STATE, fnum:this.state.fnum},null,"/forum");
-      } // 히스토리를 수동적으로 집어넣어 url변경없이도 뒤로가기가 state변경만으로 이루어질수 있는 요건을 만들어줌.
+    state_change : function(num1,num2){
+      window.history.pushState({STATE:num1, fnum:num2, gnum:this.props.GNUM},null,"/forum");
+      //console.log("push: " + num1 + " " + num2);
+      // 히스토리를 수동적으로 집어넣어 url변경없이도 뒤로가기가 state변경만으로 이루어질수 있는 요건을 만들어줌.
       this.setState({        /* setState는 기존 state를 변경해주고 변경부분을 render해주는 훌륭한 함수 */
-          fnum:1,
-          STATE:num
+          fnum:num2,
+          STATE:num1,
+          gnum:this.props.GNUM
       });
     },
     render: function () {
@@ -39,6 +44,7 @@ var BodyForum = React.createClass ({
           <div className="container-fluid">
               <table style={{"width":"100%"}}>
                 <tbody>
+                  <tr>
                   <td className="body_forum_td1">
                     <div id="body_forum_left_container">
 
@@ -49,32 +55,32 @@ var BodyForum = React.createClass ({
 
                         <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
                             <hr className="body_forum_line"/>
-                            <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
+                            <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0,1)}>
                                 공지사항 <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                             </div>
                             <hr className="body_forum_line"/>
-                            <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
+                            <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1,1)}>
                                 준회원 스터디
                             </div>
                             <hr className="body_forum_line"/>
-                            <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
+                            <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2,1)}>
                                 정회원 스터디
                             </div>
                             <hr className="body_forum_line"/>
-                            <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
+                            <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3,1)}>
                                 자유 게시판  <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                             </div>
                             <hr className="body_forum_line"/>
-                            <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
+                            <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4,1)}>
                                 정보 게시판
                             </div>
                             <hr className="body_forum_line"/>
                         </div>
                         <div className="btn-center">
-                          <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
+                          <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5,1)}>
                             글쓰기
                           </button>
-                          <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6)}>
+                          <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6,1)}>
                             글보기&댓글
                           </button>
                         </div>
@@ -88,6 +94,7 @@ var BodyForum = React.createClass ({
                         <BodyForumInfo STATE={this.state.STATE} />
                     </div>
                   </td>
+                  </tr>
                 </tbody>
               </table>
           </div>
@@ -97,6 +104,7 @@ var BodyForum = React.createClass ({
             <div className="container-fluid">
                 <table style={{"width":"100%"}}>
                   <tbody>
+                    <tr>
                     <td className="body_forum_td1">
                       <div id="body_forum_left_container">
 
@@ -107,32 +115,32 @@ var BodyForum = React.createClass ({
 
                           <div> {/*react는 함수를 만들고 this에 bind시켜야하므로, this와 인자를 bind함수로 받는다.*/}
                               <hr className="body_forum_line"/>
-                              <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0)}>
+                              <div className="body_forum_menu" id="body_forum_gongji" onClick={this.state_change.bind(this,0,1)}>
                                   공지사항 <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                               </div>
                               <hr className="body_forum_line"/>
-                              <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1)}>
+                              <div className="body_forum_menu" id="body_forum_jun" onClick={this.state_change.bind(this,1,1)}>
                                   준회원 스터디
                               </div>
                               <hr className="body_forum_line"/>
-                              <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2)}>
+                              <div className="body_forum_menu" id="body_forum_jeong" onClick={this.state_change.bind(this,2,1)}>
                                   정회원 스터디
                               </div>
                               <hr className="body_forum_line"/>
-                              <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3)}>
+                              <div className="body_forum_menu" id="body_forum_liberty" onClick={this.state_change.bind(this,3,1)}>
                                   자유 게시판  <span className="label label-success">New</span> {/*새로운 게시물이 올라오면 뜰 수 있게 이벤트*/}
                               </div>
                               <hr className="body_forum_line"/>
-                              <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4)}>
+                              <div className="body_forum_menu" id="body_forum_information" onClick={this.state_change.bind(this,4,1)}>
                                   정보 게시판
                               </div>
                               <hr className="body_forum_line"/>
                           </div>
                           <div className="btn-center">
-                            <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
+                            <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5,1)}>
                               글쓰기
                             </button>
-                            <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6)}>
+                            <button type="button" id="body_forum_postview" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,6,1)}>
                               글보기&댓글
                             </button>
                           </div>
@@ -156,12 +164,13 @@ var BodyForum = React.createClass ({
                                 <div className="body_forum_number" id="body_forum_right_shift2">{">>"}</div>
                             </div>
                             <div id="body_forum_button_container">
-                              <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5)}>
+                              <button type="button" id="body_forum_write" className="btn btn-warning hover write-btn" onClick={this.state_change.bind(this,5,1)}>
                                 글쓰기
                               </button>
                             </div>
                       </div>
                     </td>
+                    </tr>
                   </tbody>
                 </table>
 
@@ -173,7 +182,8 @@ var BodyForum = React.createClass ({
 
 let mapStateToProps = (state) => {
   return{
-    STATE: state.ForumState.value
+    STATE: state.ForumState.value,
+    GNUM: state.Gnum.value
   };
 }
 

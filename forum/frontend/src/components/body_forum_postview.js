@@ -9,12 +9,18 @@ var ForumPostView = React.createClass({
   render: function (){
     return (
       <table>
-        <tr>
-          <PostContent/>
-        </tr>
-        <tr>
-          <Datgul/>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <PostContent/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Datgul/>
+            </td>
+          </tr>
+        </tbody>
       </table>
     );
   }

@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 var ForumWriteForm = React.createClass({
+  submit_button: function(){
+    return false;
+  },
   render: function (){
     return (
-      <form className = "body_forum_write_form" action="" enctype="multipart/form-data" method="post" onsubmit="return false;">
+      <form className = "body_forum_write_form" action="" encType="multipart/form-data" method="post" onSubmit={this.submit_button}>
         <table className = "body_forum_write_table">
+          <tbody>
           <tr className = "body_forum_write_row">
             <td className = "body_forum_write_label">
               게시판 선택
@@ -52,6 +56,7 @@ var ForumWriteForm = React.createClass({
               <input type = "date"/>
             </td>
           </tr>
+          </tbody>
         </table>
         <div className = "body_forum_write_submit_container"><input className = "body_forum_write_submit" type="submit" value="글 등록하기" /></div>
       </form>

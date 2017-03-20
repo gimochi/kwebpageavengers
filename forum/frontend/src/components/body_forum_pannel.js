@@ -6,6 +6,7 @@ var BodyForumPannel = React.createClass ({
             <div id="body_forum_info">
                 <table style={{"width":"100%"}}>
                     <tbody>
+                        <tr>
                         <td className={"body_forum_info_float " + this.props.idbox[1]}>
                             {this.props.content[0]}
                         </td>
@@ -21,6 +22,7 @@ var BodyForumPannel = React.createClass ({
                         <td className={"body_forum_info_float " + this.props.idbox[5]}>
                             {this.props.content[4]}
                         </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
