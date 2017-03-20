@@ -21,12 +21,12 @@ var BodyGallery = React.createClass ({
     },
     category_click : function(num){
         var data = {
-            STATE : this.props.STATE,
+            STATE : 0,
             snum : 0,
             cnum : Number(num)
         }
         window.history.pushState(data,null,"/gallery");  // 카테고리 변경
-        this.props.update(this.props.STATE,0,Number(num));
+        this.props.update(0,0,Number(num));
         //alert(history.state.STATE);
     },
     render: function () {
