@@ -7,7 +7,7 @@ var ForumWriteForm = React.createClass({
   render: function (){
     return (
       <form className = "body_forum_write_form" action="" encType="multipart/form-data" method="post" onSubmit={this.submit_button}>
-        <table className = "body_forum_write_table">
+        <table cellpadding="10" className = "body_forum_write_table">
           <tbody>
           <tr className = "body_forum_write_row">
             <td className = "body_forum_write_label">
@@ -58,7 +58,9 @@ var ForumWriteForm = React.createClass({
           </tr>
           </tbody>
         </table>
-        <div className = "body_forum_write_submit_container"><input className = "body_forum_write_submit" type="submit" value="글 등록하기" /></div>
+        <div className = "body_forum_write_submit_container">
+          <input className = "body_forum_write_submit" type="submit" value="글 등록하기" />
+        </div>
       </form>
     );
   }
