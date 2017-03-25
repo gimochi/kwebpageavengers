@@ -4,7 +4,7 @@ var multer = require('multer');
 var models = require('../model');
 var Q = require('q');
 
-var upload = function (req, res) {
+var upload = function (req, res) { //파일 업로드 함수
   var deferred = Q.defer();
   var imagePath = "tmp/upload";
   var storage = multer.diskStorage({
@@ -33,7 +33,7 @@ var upload = function (req, res) {
 };
 
 /* Create new image */
-router.post('/upload', function(req, res, next) {
+router.post('/upload', function(req, res, next) {  //파일 업로드
   upload(req, res).then(function (file) {
       models.files.create({
       file_name : file.name,
