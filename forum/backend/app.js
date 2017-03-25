@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 var api = require('./routes/index');
 
 
@@ -22,6 +22,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({ //session
+ secret: '@#@$KWEB#@$#$',
+ resave: false,
+ saveUninitialized: true
+}));
 
 // app.use('/', path.join(__dirname, '../public', 'index.html')); //여기에 리액트 빌드한경로로
 //app.use('/resource') 이미지등등 가져올때경로
