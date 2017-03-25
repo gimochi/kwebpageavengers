@@ -20,18 +20,21 @@ router.get('/list/:board_type', function(req, res, next) { //게시글목록
 });
 
 router.post('/', function(req,res,next){ //게시글등록하기
+  var sess = req.session;
+
   console.log("POST, /api/board/  게시물등록");
   models.board.create({
-    user_sq : req.params.user_sq,
-    board_type : req.params.board_type,
-    title : req.params.title,
-    contents : req.params.contents,
+    user_sq : sess.user_sq,
+    board_type : req.body.board_type,
+    title : req.body.title,
+    contents : req.body.contents,
     del_yn : 'N'
   }).then(function(board){
      console.log(" 게시물 등록 SUCCESS");
      res.send('respond with a resource'+req.params.board_type);
   });
 });
+
 
 router.get('/:board_sq', function(req,res,next){ //게시글가져오기
   console.log("GET, /api/board/:board_sq, 게시물 상세가져오기");
@@ -49,13 +52,15 @@ router.get('/:board_sq', function(req,res,next){ //게시글가져오기
 });
 
 router.put('/:board_sq', function(req,res,next){ //게시글수정하기
- console.log("PUT, /api/board/:board_sq, 게시물 수정오기");
+    var sess = req.session;
+ console.log("PUT, /api/board/:board_sq, 게시물 수정하기");
   models.board.update({
-    title : req.params.title,
-    contents : req.params.contents
+    title : req.body.title,
+    contents : req.body.contents
   }, {
       where: {
-       board_sq: req.params.board_sq
+       board_sq : req.params.board_sq,
+       user_sq : sess.user_sq
       }
   }).then(function(board) {
     console.log("SUCCESS");
@@ -66,12 +71,14 @@ router.put('/:board_sq', function(req,res,next){ //게시글수정하기
 });
 
 router.delete('/:board_sq', function(req,res,next){ //게시글삭제하기
+    var sess = req.session;
 console.log("DELETE, /api/board/:board_sq, 게시물 삭제하기");
   models.board.update({
     del_yn : 'Y'
   }, {
       where: {
-       board_sq: req.params.board_sq
+       board_sq : req.params.board_sq,
+       user_sq : sess.user_sq
       }
   }).then(function(board) {
     console.log("SUCCESS");
