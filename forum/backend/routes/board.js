@@ -8,7 +8,8 @@ router.get('/list/:board_type', function(req, res, next) { //게시글목록
   console.log("GET, /api/board/list/:board_type 게시물목록");
   models.board.findAll({
     where : {
-      board_type : req.params.board_type
+      board_type : req.params.board_type,
+      del_yn : 'N'
     }
   }).then(function(board){
      console.log("게시물 목록 SUCCESS");
@@ -40,7 +41,8 @@ router.get('/:board_sq', function(req,res,next){ //게시글가져오기
   console.log("GET, /api/board/:board_sq, 게시물 상세가져오기");
   models.board.findAll({
       where: {
-       board_sq: req.params.board_sq
+       board_sq: req.params.board_sq,
+       del_yn : 'N'
       }
   }).then(function(board) {
     console.log("SUCCESS");
@@ -60,7 +62,8 @@ router.put('/:board_sq', function(req,res,next){ //게시글수정하기
   }, {
       where: {
        board_sq : req.params.board_sq,
-       user_sq : sess.user_sq
+       user_sq : sess.user_sq,
+       del_yn : 'N'
       }
   }).then(function(board) {
     console.log("SUCCESS");
@@ -78,7 +81,8 @@ console.log("DELETE, /api/board/:board_sq, 게시물 삭제하기");
   }, {
       where: {
        board_sq : req.params.board_sq,
-       user_sq : sess.user_sq
+       user_sq : sess.user_sq,
+       del_yn : 'N'
       }
   }).then(function(board) {
     console.log("SUCCESS");
