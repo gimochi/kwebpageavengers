@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../model');
-var session = require('express-session');
+
 
 
 router.get('/list/:board_type', function(req, res, next) { //게시글목록

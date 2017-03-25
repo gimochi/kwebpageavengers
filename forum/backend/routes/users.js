@@ -10,19 +10,19 @@ router.post('/login', function(req, res, next) { //로그인
   console.log("POST, /api/users/login 로그인하기");
   models.user.findAll({
     where : {
-      id : req.params.id,
-      pw : req.params.pw,
+      id : req.body.id,
+      pw : req.body.pw,
       del_yn : 'N'
     }
   }).then(function(user){
     console.log("로그인 SUCCESS");
-    sess.user_sq = users.user_sq;
-    sess.id = req.params.id;
-    sess.name = users.name;
-    sess.email = users.email;
-    sess.auth_sq = users.auth_sq;
+    sess.user_sq = user.user_sq;
+    sess.id = req.body.id;
+    sess.name = user.name;
+    sess.email = user.email;
+    sess.auth_sq = user.auth_sq;
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(users));
+    res.send(JSON.stringify(user));
   });
 });
 
@@ -60,34 +60,36 @@ router.post('/join', function(req, res, next) { //회원등록
   });
 });
 
-router.get('/checkId', function(req,res,next){
-  console.log("GET, /api/users/checkId 아이디중복체크");
+router.post('/checkId', function(req,res,next){ //아이디 중복체크 
+  console.log("POST, /api/users/checkId 아이디중복체크");
   models.user.findAll({
     where : {
-      id : req.params.id
+      id : req.body.id
     }
   }).then(function(user){
     console.log("아이디가져오기성공");
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(users));
+    res.send(JSON.stringify(user));
   })
 });
 
-router.put('info/:user_sq', function(req, res, next) { //회원정보 수정
-  res.send('respond with a resource');
-});
 
-router.delete('/secession/:user_sq', function(req, res, next) { //회원 탈퇴
-  res.send('respond with a resource');
-});
 
-router.post('/pwFind', function(req, res, next) { //비밀번호 찾기
-  res.send('respond with a resource');
-});
+// router.put('info/:user_sq', function(req, res, next) { //회원정보 수정
+//   res.send('respond with a resource');
+// });
 
-router.post('/idFind', function(req, res, next) { //아이디 찾기
-  res.send('respond with a resource');
-});
+// router.delete('/secession/:user_sq', function(req, res, next) { //회원 탈퇴
+//   res.send('respond with a resource');
+// });
+
+// router.post('/pwFind', function(req, res, next) { //비밀번호 찾기
+//   res.send('respond with a resource');
+// });
+
+// router.post('/idFind', function(req, res, next) { //아이디 찾기
+//   res.send('respond with a resource');
+// });
 
 
 module.exports = router;
