@@ -21,3 +21,9 @@ localhost:7777에서 확인할수있음
 
 
 backend 에서 테스트 모드로 실행하려면 backend 폴더안에서 DEBUG=backend:* npm start 을 입력하면 localhost:3000번에서 express 가 실행됨
+
+#AJAX구현
+
+cmd 두개 켜서 frontend랑 backend에서 npm install -> npm start
+
+게시판에서 값을 받는걸 볼수있음
