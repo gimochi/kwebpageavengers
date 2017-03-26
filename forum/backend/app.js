@@ -6,10 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var api = require('./routes/index');
-
+var CORS = require('cors')();
 
 var app = express();
 
+app.use(CORS); //같은 서버내에서 ajax 구현을 위한 크로스도메인허용모듈
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
