@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import BodyForumInfo from './body_forum_info';
+import { setForumState } from '../actions';
 import { connect } from 'react-redux';
 
 var BodyForum = React.createClass ({
@@ -187,6 +188,12 @@ let mapStateToProps = (state) => {
   };
 }
 
-BodyForum=connect(mapStateToProps)(BodyForum);
+let mapDispatchToProps = (dispatch) => {
+  return{
+    reducer_change: (value) => dispatch(setForumState(value))
+  }
+}
+
+BodyForum=connect(mapStateToProps,mapDispatchToProps)(BodyForum);
 
 export default BodyForum;

@@ -48,28 +48,39 @@ function root_home(){
 	browserHistory.push('/');
 }
 
+function forum_url_check(){
+	var link = document.location.href;
+	var check = link.substring(link.length-5,link.length);;
+	//console.log(check);
+
+	if(check != 'forum' && check != 'orum#'){
+		browserHistory.push('/forum');
+		window.history.replaceState({STATE:0, fnum:1, gnum:1},null,"/forum");
+	}
+}
+
 function root_forum_gongji(){
-	browserHistory.push('/forum');
+	forum_url_check();
 	$('#body_forum_gongji').click();
 }	// 공지사항
 
 function root_forum_jun(){
-	browserHistory.push('/forum');
+	forum_url_check();
 	$('#body_forum_jun').click();
 }	// 준스
 
 function root_forum_jeong(){
-	browserHistory.push('/forum');
+	forum_url_check();
 	$('#body_forum_jeong').click();
 }	// 정스
 
 function root_forum_liberty(){
-	browserHistory.push('/forum');
+	forum_url_check();
 	$('#body_forum_liberty').click();
 }	// 자유게시판
 
 function root_forum_information(){
-	browserHistory.push('/forum');
+	forum_url_check();
 	$('#body_forum_information').click();
 }	// 정보게시판
 
