@@ -12,7 +12,7 @@ var BodyGallery = React.createClass ({
       window.onpopstate = function(e){ //뒤로가기가 적용되면 이전 state로 돌아간다.
         if(e.state.STATE!=undefined){
           //console.log("pop: " + e.state);
-            this.props.update(e.state.STATE,e.state.snum,e.state.cnum);
+            this.props.update(e.state.STATE,e.state.snum,e.state.cnum); //사진보기/목록 , 사진 SQ번호, 카테고리 번호
         }
       }.bind(this);
       window.history.replaceState({STATE:0, snum:0, cnum:0},null,"/gallery");

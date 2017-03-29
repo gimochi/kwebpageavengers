@@ -1,4 +1,4 @@
-import { G_ALL, G_2, CATEGORY, SNUM, GNUM, FORUMSTATE, GFBOTH, GALLERYSTATE } from '../actions';
+import { USERINFO ,G_ALL, G_2, CATEGORY, SNUM, GNUM, FORUMSTATE, GFBOTH, GALLERYSTATE } from '../actions';
 import {combineReducers} from 'redux';
 
 const initialState = {	
@@ -11,6 +11,14 @@ const g_initialState = {
 	snum: 0,			// 사진 SQ 번호
 	category: 0,		// 몇번째 카테고리를 택했는가
 	diff: 0
+}
+
+const userState = {
+	name: "default",
+	grade: "default",
+	num: 0,
+	lgcheck: 0, //차례대로 이름, 등급, sq번호, 로그인여부
+	admin: 0
 }
 
 const Gnum = (state=initialState, action) => {
@@ -73,11 +81,27 @@ const GalleryState = (state=g_initialState, action) => {
 	}
 }
 
+const Userinfo = (state=userState, action) => {
+	switch(action.type) {
+		case USERINFO:
+			return Object.assign({},state,{
+				name: action.diff_n,
+				grade: action.diff_g,
+				num: action.diff_m,
+				lgcheck: action.diff_l, 
+				admin: action.diff_a
+			});
+		default:
+			return state;
+	}
+}
+
 
 const combinedApp = combineReducers({
 	Gnum,
 	ForumState,
-	GalleryState
+	GalleryState,
+	Userinfo
 });
 
 export default combinedApp;

@@ -187,6 +187,25 @@ h2{
     flex-direction: column;
     border-radius: 10px 10px 0 0;
 }
+
+.admin_left_container{
+	position:static;
+	margin-left: 0.8%;
+	max-width:212.5px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.admin_left_name{
+	background-color: #f84;
+	padding: 50px 0 40px 15px;
+	width:100%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+}
 .body_forum_subtitle{
 	color: #DAD7D2;
 	margin-left: 3px;
@@ -223,6 +242,30 @@ h2{
 	font-size: 13px;
 	background-color: #f2f2f2;
 }
+
+.admin_right_container{
+	position: relative;
+	max-width:985.4px;
+	margin-left: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.admin_right_name{
+	padding : 4px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #f84;
+	color: white;
+	border-radius: 10px;
+}
+.admin_right_content{
+	font-size: 13px;
+	background-color: #f2f2f2;
+}
+
 .body_forum_line{
 	margin: 0px;
 }

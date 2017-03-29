@@ -8,7 +8,18 @@ export const SNUM = 'GNUM'; //사진첩 사진 번호 from DB
 export const CATEGORY = 'CATEGORY'; //사진첩 카테고리 번호 from DB
 export const G_2 = 'G_2'; //사진첩 2개 인포 from DB
 export const G_ALL = 'G_ALL'; //사진첩 모든 인포 from DB
+export const USERINFO = 'USERINFO'; //사용자 로그인 및 개인정보
 
+export function setUserinfo(name,grade,num,lgcheck,admin){//차례대로 이름, 등급, sq번호, 로그인여부, 어드민
+	return{
+		type: USERINFO,
+		diff_n: name,
+		diff_g: grade,
+		diff_m: num,
+		diff_l: lgcheck,
+		diff_a: admin
+	}
+}
 
 export function setGNUM(value){
 	return{

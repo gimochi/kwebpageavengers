@@ -11,6 +11,7 @@ import Identification from './components/identification';
 import ForumPostView from './components/body_forum_postview.js';
 import GalleryDetail from './components/body_gallery_detail';
 import BodyClaim from './components/body_claim';
+import AdminPage from './components/admin_page';
 
 const store = createStore(combinedApp);
 const rootElement = document.getElementById('root');
@@ -33,6 +34,7 @@ function route_start(){
 				<Route path="gallery" components={BodyGallery} />
 				<Route path="postview" components={ForumPostView} />
 				<Route path="claim" components={BodyClaim} />
+				<Route path="admin" components={AdminPage} />
 			</Router>
 		</Provider>
 	, rootElement);
