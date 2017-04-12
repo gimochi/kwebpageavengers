@@ -7,7 +7,7 @@ var ForumWriteForm = React.createClass({
   render: function (){
     return (
       <form className = "body_forum_write_form" action="" encType="multipart/form-data" method="post" onSubmit={this.submit_button}>
-        <table cellpadding="10" className = "body_forum_write_table">
+        <table cellPadding="10" className = "body_forum_write_table">
           <tbody>
           <tr className = "body_forum_write_row">
             <td className = "body_forum_write_label">

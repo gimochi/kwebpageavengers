@@ -58,18 +58,20 @@ var BodyGallery = React.createClass ({
                 <div className="body_gallery_main row">
                     {/* 왼쪽 사이드 바*/}
                         <div id="body_gallery_category" className="sidebar col-sm-3">
+                            <div className="category_wrapper">
                             <ul className="list-group">
-                                <li className="postreport list-group-item"><Link href="javascript:void(0);" onClick={this.category_click.bind(this,0)}>Total</Link></li>
+                                <li className="category_total list-group-item"><Link href="javascript:void(0);" onClick={this.category_click.bind(this,0)}>Total</Link></li>
                             </ul>
                             <ul className="list-group">
                                 {categoryData.map((category, i) => {
                                     return(
-                                        <li className="postreport list-group-item" key={i}>
+                                        <li className="category_details list-group-item" key={i}>
                                             <Link href="javascript:void(0);" onClick={this.category_click.bind(this,i+1)}>{category.name}</Link><span className="badge">{category.num}</span>
                                         </li>
                                     );
                                 })}
                             </ul>
+                            </div>
                         </div>
                     {/* 메인 내용
                         1. 메인에선 사진들만 보이게
