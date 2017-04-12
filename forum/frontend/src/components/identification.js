@@ -56,7 +56,7 @@ var Identification = React.createClass({
 
       var userinfo = ["채호경", "은수저 (정회원)", "2015410019", "ckdwhzjarhk@naver.com", "ckdwhzjarhk"];
       return(
-          <div className="container">
+          <div className="container identity">
               {/* 보이는 프로필 */}
               <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 toppad">

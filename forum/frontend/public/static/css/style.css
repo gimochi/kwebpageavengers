@@ -1,7 +1,7 @@
 /*------------------------------------------*/
 /*	    전역 css
 /*------------------------------------------*/
-
+/* 그림자 : box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
 div,td,th{
 
@@ -76,30 +76,28 @@ h2{
 }
 .body_home_container{
 	min-width: 100%;
-    clear:both;
-    margin-bottom:25.15px;
-    margin-top:0;
-    padding:0;
-	box-shadow: 5px 5px 5px lightgray;
+	clear:both;
+	margin-bottom:25.15px;
+	margin-top:0;
+	padding:0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .body_home_title{
-    background-color:#fff;
-    border-color:#f2f2f2;
-    border-style:solid solid none;
-    border-width: 2px 0 0;
-    margin-bottom:0;
-    padding: 15px 15px 7px;
-    font-weight: bold;
-    font-size:14pt;
-    color:#f84
+	background-color:#fff;
+	border-width: 2px 0 0;
+	margin-bottom:0;
+	padding: 15px 15px 7px;
+	font-weight: bold;
+	font-size:14pt;
+	color:#f84
 }
 .body_home_content{
-    background-color:#fff;
-    color:inherit;
-    padding:15px 20px 15px 20px;
-    border-color:#f2f2f2;
-    border-style:solid solid none;
-    border-width:1px 0;
+	background-color:#fff;
+	color:inherit;
+	padding:15px 20px 15px 20px;
+	border-color:#f2f2f2;
+	border-style:solid solid none;
+	border-width:1px 0;
 }
 .body_home_content_table{
 	width:100%;
@@ -115,7 +113,7 @@ h2{
 	padding-right: 30px;
 }
 .body_home_content_date{
-	//width: 90px;
+//width: 90px;
 	min-width: 65px;
 	max-width: 90px;
 
@@ -124,7 +122,7 @@ h2{
 	margin-bottom:0;
 }
 .body_home_content_writer{
-	//width: 45px;
+//width: 45px;
 	min-width: 45px;
 	max-width: 57px;
 	overflow: hidden;
@@ -150,13 +148,13 @@ h2{
 	}
 }
 .body_home_more{
-    float:right;
+	float:right;
 }
 #body_home_notification{
-	box-shadow: 5px 5px 5px lightgray;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .notification{
-    background-color:#f84;
+	background-color:#f84;
 }
 
 .body_home_title.notification{
@@ -165,47 +163,32 @@ h2{
 /*------------------------------------------*/
 /*	     FORUM BODY
 /*------------------------------------------*/
-.body_forum_td1{
+
+.body_forum_table{
+	display: inline-block;
+}
+.body_forum_table .forum_dashboard{
+	float:left;
 	vertical-align: top;
 	width: 212.5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#body_forum_left_container{
+.body_forum_table .forum_dashboard #body_forum_left_container{
 	position:static;
-	margin-left: 0.8%;
 	max-width:212.5px;
 	background-color: #fff;
-	border-radius: 10px;
 }
 
-#body_forum_left_name{
+.body_forum_table .forum_dashboard #body_forum_left_container #body_forum_left_name{
 	background-color: #f84;
 	padding: 50px 0 40px 15px;
 	width:100%;
 	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    border-radius: 10px 10px 0 0;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
-.admin_left_container{
-	position:static;
-	margin-left: 0.8%;
-	max-width:212.5px;
-	background-color: #fff;
-	border-radius: 10px;
-}
-
-.admin_left_name{
-	background-color: #f84;
-	padding: 50px 0 40px 15px;
-	width:100%;
-	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    border-radius: 10px 10px 0 0;
-}
 .body_forum_subtitle{
 	color: #DAD7D2;
 	margin-left: 3px;
@@ -220,12 +203,17 @@ h2{
 .body_forum_menu:hover{
 	background-color: #FFC78E;
 }
-#body_forum_right_container{
-	position: relative;
-	max-width:985.4px;
+.body_forum_table .forum_main{
+	vertical-align: top;
+	float:left;
+	width:895px;
 	margin-left: 30px;
+}
+.body_forum_table .forum_main #body_forum_right_container{
+	max-width:985.4px;
+	min-height:800px; /* flag 임시로 길게 함.*/
 	background-color: #fff;
-	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #body_forum_right_name{
@@ -236,32 +224,8 @@ h2{
 	text-align: center;
 	background-color: #f84;
 	color: white;
-	border-radius: 10px;
 }
 #body_forum_right_content{
-	font-size: 13px;
-	background-color: #f2f2f2;
-}
-
-.admin_right_container{
-	position: relative;
-	max-width:985.4px;
-	margin-left: 30px;
-	background-color: #fff;
-	border-radius: 10px;
-}
-
-.admin_right_name{
-	padding : 4px;
-	font-size: 18px;
-	font-weight: 700;
-	font-family: sans-serif;
-	text-align: center;
-	background-color: #f84;
-	color: white;
-	border-radius: 10px;
-}
-.admin_right_content{
 	font-size: 13px;
 	background-color: #f2f2f2;
 }
@@ -272,7 +236,7 @@ h2{
 #body_forum_info{
 	clear:both;
 	width:100%;
-	padding-top: 5px;
+	padding-top:0;
 	font-weight: bold;
 	font-family: sans-serif;
 }
@@ -298,9 +262,55 @@ h2{
 }
 .btn-center{
 	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.body_forum_table{
+	width:100%;
+}
+
+.admin_right_container{
+	position: relative;
+	max-width:985.4px;
+	margin-left: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.admin_right_name{
+	padding : 4px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #f84;
+	color: white;
+	border-radius: 10px;
+}
+.admin_right_content{
+	font-size: 13px;
+	background-color: #f2f2f2;
+}
+
+.admin_left_container{
+	position:static;
+	margin-left: 0.8%;
+	max-width:212.5px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.admin_left_name{
+	background-color: #f84;
+	padding: 50px 0 40px 15px;
+	width:100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	border-radius: 10px 10px 0 0;
 }
 
 /* 공지사항을 위한 info */
@@ -426,14 +436,24 @@ h2{
 }
 
 /*------------------------------------------*/
-/*	     내 정보 보기
+/*	     내 정보 보기 identification identity
 /*------------------------------------------*/
-.profile-heading{
+.identity .panel{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border:0;
+}
+.identity .profile-heading{
 	background-color:#f84 !important;
 	color:white !important;
 	font-family: 'Russo One', sans-serif !important;
 	padding-top:10px;
 	padding-bottom:10px;
+}
+.identity .panel-heading{
+	border-radius: 0;
+}
+.identity .panel-body{
+
 }
 /*------------------------------------------*/
 /*	     댓글 css
@@ -444,7 +464,7 @@ h2{
 	width: 100%;
 }
 .datgul_box{
-	//padding: 3px;
+//padding: 3px;
 	width:100%;
 	margin-left:0;
 	margin-right:0;
@@ -528,7 +548,7 @@ h2{
 		padding-left:3px;
 	}
 	.datgul_box #datgul_reg_btn{
-		 padding-left:3px;
+		padding-left:3px;
 	}
 	.datgul_box #datgul_reg_btn button{
 		padding:0;
@@ -606,9 +626,9 @@ h2{
 #body_claim_container{
 	padding: 0px auto;
 	margin: 0px auto;
-    background-color: #fff;
-    width:60%;
-    border-radius: 10px;
+	background-color: #fff;
+	width:60%;
+	border-radius: 10px;
 }
 .body_claim_title{
 	height: 30px;
@@ -623,11 +643,11 @@ h2{
 .body_claim_textcontainer{
 	padding: 0px auto;
 	background-color: white;
-	margin: 10px auto; 
+	margin: 10px auto;
 	display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 #body_claim_text{
 	margin: 0px auto;
@@ -638,9 +658,9 @@ h2{
 }
 .body_claim_sendbox{
 	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
 }
 .body_claim_sendbtn{
 	margin: 2px 0px 15px 0px;
@@ -654,10 +674,10 @@ h2{
 	width: 20%;
 	height: 30px;
 	box-shadow: none;
-	 transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 }
 .body_claim_sendbtn:hover{
 	background-color: #FF432E;
@@ -696,9 +716,9 @@ h2{
 .body_forum_write_submit_container{
 	padding: 10px;
 	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
 }
 .body_forum_write_submit{
 	height: 35px;
