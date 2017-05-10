@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>KWEB FORUM</title>
+		<meta charset="utf-8">
+		<!-- 기기 화면 비율에 대한 정보 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 합쳐지고 최소화된 최신 CSS -->
+		<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css">
+		<!-- font awesome 파일 CDN -->
+		<link rel="stylesheet" href="./static/font-awesome/css/font-awesome.min.css" type="text/css">
+		<!-- Header 및 Navbar 에 대한 css 불러오기 -->
+		<link rel="stylesheet" type="text/css" href="./static/css/header.css">
+		<!-- Footer에 대한 css 불러오기 -->
+		<link rel="stylesheet" type="text/css" href="./static/css/footer.css">
+		<!-- 현재 페이지에 대한 css 불러오기 -->
+		<link rel="stylesheet" type="text/css" href="./static/css/style.css">
+
+		<!-- 상단 바에 케이웹 글씨  웹폰트 불러오기 -->
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+</head>
+<body>
+    <header>
+			<div class="container">
+				<!-- 최상단 동아리 -->
+				<div class="row text-center">
+					<a href="javascript:void(0);" class="top-logo" id="index_home">KWEB</a>
+				</div>
+			</div>
+		</header>
+		  <!-- Navbar 시작 -->
+		<nav class="navbar navbar-default navbar-top" data-spy="affix" data-offset-top="90">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- 모바일 사용자를 위한 토글메뉴 시작-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					<!-- 모바일 사용자를 위한 토글메뉴 끝-->
+					<!-- 케이웹 로고 혹은 글자 -->
+					<a class="navbar-brand" id="index_userinfo" href="javascript:void(0);">로그인 해주세요.</a>
+				</div>
+				<!-- 네비바 리스트 시작 -->
+				<div class="collapse navbar-collapse">
+					<!-- 사용자 정보 시작 -->
+					<div class="nav navbar-nav navbar-left">
+						<p class="user-info">no information</p>
+					</div>
+					<!-- 사용자 정보 끝 -->
+					<!-- 게시판 이동 링크들 시작-->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#Wiki">Wiki</a></li>
+						<li><a href="javascript:void(0);" id="index_gallery">사진첩</a></li>
+						<li class="dropdown"><a href="#board1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">게시판<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="javascript:void(0);" id="index_gongji">공지사항</a></li>
+								<li><a href="javascript:void(0);" id="index_jun">준회원스터디</a></li>
+								<li><a href="javascript:void(0);" id="index_jeong">정회원스터디</a></li>
+								<li class="divider"></li>
+								<li><a href="javascript:void(0);" id="index_liberty">자유게시판</a></li>
+								<li><a href="javascript:void(0);" id="index_information">정보게시판</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="#board2" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">비주류게시판<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="javascript:void(0);">운터디</a></li>
+								<li><a href="javascript:void(0);">용구비어</a></li>
+								<li><a href="javascript:void(0);">오버워치</a></li>
+								<li><a href="javascript:void(0);">혼밥매칭러</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" id="index_claim">건의사항</a></li>
+						<li><a href="#etc">기타</a></li>
+					</ul>
+					<!-- 게시판 이동 링크들 끝-->
+				</div>
+				<!-- 네비바 리스트 끝 -->
+			</div>
+		</nav>
+		<!-- Navbar 끝 -->
+
+		<!-- 몸통 부분 시작 -->
+		<div id="root">
+
+		</div>
+		<!-- 몸통 부분 끝 -->
+		<!-- FOOTER 시작 -->
+		<footer class="footer text-center font-weight-bold visible-sm-block visible-md-block visible-lg-block">
+			<div class="container">
+				<!-- 피씨버전 -->
+				<div class="row">
+					<div class="col-sm-3">
+						<img src="./static/data/kweb.png" class="kweb-logo" alt="kwebLOGO">
+					</div>
+					<div class="col-sm-9">
+						<div class="contact text-center">
+							<i class="fa fa-envelope contact_logo" aria-hidden="true"></i>jongwow73@gmail.com<img src="./static/data/kakao_logo_e.png" class="kakao_logo contact_logo">jongwow73
+							<a href="https://www.facebook.com/kwebfamily/">
+								<i class="fa fa-facebook-official contact_logo" aria-hidden="true"></i>	페이스북 @kwebfamily
+							</a>
+						</div>
+						<p>당신이 웹마스터로 가는 길</p>
+						<p class="text-muted">COPYRIGHT © 2017 KWEB All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<footer class="container-fluid mobile-footer hidden-sm hidden-md hidden-lg">
+			<!-- 모바일버전 -->
+			<div class="row">
+				<div class="col-sm-4">
+					<p class="contact">
+						<strong>CONTACT</strong>
+						<br>메일이나 카톡으로 문의주세요.
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;jongwow73@gmail.com<img src="./static/data/kakao_logo_e.png" class="logo">&nbsp;&nbsp;jongwow73</p>
+				</div>
+				<div class="col-sm-4">
+					<a href="https://www.facebook.com/kwebfamily/">
+						<p><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;페이스북 @kwebfamily</p>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<p class="text-muted">COPYRIGHT © 2017 KWEB All Rights Reserved.</p>
+			</div>
+		</footer>
+
+    <!-- JQuery 가져오기 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="./static/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
