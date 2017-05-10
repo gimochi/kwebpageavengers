@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "zpdldnpqrhksflwk!@#",
+    "password": "root",
     "database": "kweb",
-    "host": "52.33.55.145",
+    "host": "minsub.kim",
     "port": 3306,
-    "dialect": "mariadb",
+    "dialect": "mysql",
     "pool": { "max": 5, "min": 0, "idle": 10000 }
   }
 }

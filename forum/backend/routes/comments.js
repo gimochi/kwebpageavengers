@@ -11,65 +11,75 @@ router.get('/list/:board_sq', function(req, res, next) { //해당게시물 댓�
       del_yn : 'N'
     }
   }).then(function(comments){
-     console.log("댓글 목록 SUCCESS");
-     console.log("가져온값"+comments);
-     res.setHeader('Content-Type', 'application/json');
-     res.send(JSON.stringify(comments));
+    if(comments.length == 0){
+        res.json({
+          status: 'GET COMMENTS FAIL',
+          code: '0302'
+        })
+    } else {
+      res.json({
+        status: 'GET COMMENTS SUCCESS',
+        code: '0000',
+        data: comments
+      })
+    }
   });
  
 });
 
 router.post('/', function(req,res,next){ //댓글등록하기
-  var sess = req.session;
 
   console.log("POST, /api/comments/  댓글 등록");
   models.comments.create({
-    user_sq : sess.user_sq,
+    user_sq : req.decoded.user_sq,
     board_sq : req.body.board_sq,
     contents : req.body.contents,
     del_yn : 'N'
   }).then(function(comments){
-     console.log(" 댓글 등록 SUCCESS");
-     res.send('respond with a resource');
+    res.json({
+      status: 'POST COMMENTS SUCCESS',
+      code: '0000'
+    })
   });
 });
 
 
 router.put('/:comments_sq', function(req,res,next){ //댓글수정하기
-  var sess = req.session;
+
  console.log("PUT, /api/comments/:comments_sq, 댓글 수정하기");
   models.comments.update({
     contents : req.body.contents
   }, {
       where: {
        comments_sq : req.params.comments_sq,
-       user_sq : sess.user_sq,
+       user_sq : req.decoded.user_sq,
        del_yn : 'N'
       }
   }).then(function(comments) {
-    console.log("SUCCESS");
-    console.log("가져온값"+comments);
-   res.setHeader('Content-Type', 'application/json');
-   res.send(JSON.stringify(comments));
+    res.json({
+      status: 'PUT COMMENTS SUCCESS',
+      code: '0000'
+    })
   });
 });
 
-router.delete('/:comments_sq', function(req,res,next){ //댓글삭제하기
+router.put('/:comments_sq', function(req,res,next){ //댓글삭제하기
 
 console.log("DELETE, /api/comments/:comments_sq, 게시물 삭제하기");
-var sess = req.session;
+
   models.comments.update({
     del_yn : 'Y'
   }, {
       where: {
        comments_sq : req.params.comments_sq,
-       user_sq : sess.user_sq,
+       user_sq : req.decoded.user_sq,
        del_yn : ' N'
       }
   }).then(function(comments) {
-    console.log("SUCCESS");
-   res.setHeader('Content-Type', 'application/json');
-   res.send(JSON.stringify(comments));
+    res.json({
+      status: 'DELETE COMMENTS SUCCESS',
+      code: '0000'
+    })
   });
 });
  
